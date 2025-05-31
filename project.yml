@@ -1,0 +1,40 @@
+name: paul
+
+options:
+  bundleIdPrefix: io.github.takeiteasy
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "15.0"
+
+settings:
+  GCC_C_LANGUAGE_STANDARD: c11
+  CLANG_WARN_DOCUMENTATION_COMMENTS: false
+
+targets:
+  paul:
+    type: application
+    platform: macOS
+    info:
+        path: Info.plist
+    sources:
+        - path: paul.h
+        - path: native/macos
+        - path: native/
+          type: folder
+        - path: deps/
+          type: folder
+        - path: build/
+          type: folder
+        - path: README.md
+          type: folder
+        - path: project.yml
+          type: folder
+        - path: Makefile
+          type: folder
+    dependencies:
+        - sdk: Cocoa.framework
+    settings:
+        HEADER_SEARCH_PATHS: [$(PROJECT_DIR),
+                              $(PROJECT_DIR)/deps,
+                              $(PROJECT_DIR)/native]
+        OTHER_CFLAGS: [-x objective-c]
