@@ -3,7 +3,7 @@
 > [!WARNING]
 > Work in progress
 
-**P**latform **A**gnostic **U**tility **L**ibrary
+**P**latform **A**gnostic **U**tility **L**ibrary -- inspired by [Plyer](https://github.com/kivy/plyer)
 
 ## Platform support
 
