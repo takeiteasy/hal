@@ -31,7 +31,7 @@ names = [
   "proximity",
   "screenshot",
   "sms",
-  "spatial_roientation",
+  "spatial_orientation",
   "speech_to_text",
   "storage_path",
   "temperature",

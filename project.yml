@@ -35,6 +35,5 @@ targets:
         - sdk: Cocoa.framework
     settings:
         HEADER_SEARCH_PATHS: [$(PROJECT_DIR),
-                              $(PROJECT_DIR)/deps,
-                              $(PROJECT_DIR)/native]
+                              $(PROJECT_DIR)/deps]
         OTHER_CFLAGS: [-x objective-c]

@@ -15,4 +15,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#include "../spatial_roientation.h"
+#ifndef PAUL_SPATIAL_ORIENTATION_HEAD
+#define PAUL_SPATIAL_ORIENTATION_HEAD
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef __cplusplus
+}
+#endif // PAUL_SPATIAL_ORIENTATION_HEAD
