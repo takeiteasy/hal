@@ -15,5 +15,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#define PAUL_ONLY_SPEACH_TO_TEXT
-#include "paul.h"
+#ifndef PAUL_TEXT_TO_SPEECH_HEAD
+#define PAUL_TEXT_TO_SPEECH_HEAD
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef __cplusplus
+}
+#endif // PAUL_TEXT_TO_SPEECH_HEAD

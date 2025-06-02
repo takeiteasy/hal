@@ -29,10 +29,10 @@ names = [
   "screenshot",
   "sms",
   "spatial_roientation",
-  "speach_to_text",
+  "speech_to_text",
   "storage_path",
   "temperature",
-  "speech_to_text",
+  "text_to_speech",
   "unique_id",
   "vibrator",
   "voip",
@@ -78,6 +78,7 @@ platforms = [
   "ios",
   "linux",
   "macos",
+  "web",
   "windows"
 ]
 
@@ -87,8 +88,7 @@ def generate_source(name):
         if not os.path.exists(pa):
             with open(pa, "w") as fh:
                 fh.write(license)
-                fh.write(f"#define PAUL_ONLY_{name.upper()}\n")
-                fh.write("#include \"paul.h\"\n")
+                fh.write(f"#include \"../{name}.h\"\n")
 
 output = []
 

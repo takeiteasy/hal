@@ -15,12 +15,4 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_SPEACH_TO_TEXT_HEAD
-#define PAUL_SPEACH_TO_TEXT_HEAD
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#ifdef __cplusplus
-}
-#endif // PAUL_SPEACH_TO_TEXT_HEAD
+#include "../ir_blaster.h"
