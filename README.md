@@ -10,6 +10,7 @@
 | Platform                       | Android | iOS | Windows | macOS | Linux | Web |
 | ------------------------------ |:-------:|:---:|:-------:|:-----:|:-----:|:---:|
 | Accelerometer                  |         |     |         |       |       |     |
+| Arguments                      |         |     |         |       |       |     |
 | Audio recording                |         |     |         |       |       |     |
 | Barometer                      |         |     |         |       |       |     |
 | Battery                        |         |     |         |       |       |     |
@@ -18,9 +19,12 @@
 | Call                           |         |     |         |       |       |     |
 | Camera (taking picture)        |         |     |         |       |       |     |
 | Compass                        |         |     |         |       |       |     |
+| Clipboard                      |         |     |         |       |       |     |
 | CPU count                      |         |     |         |       |       |     |
-| Devicename                     |         |     |         |       |       |     |
+| Device name                    |         |     |         |       |       |     |
 | Email (open mail client)       |         |     |         |       |       |     |
+| File chooser (Native)          |         |     |         |       |       |     |
+| File system                    |         |     |         |       |       |     |
 | Flash                          |         |     |         |       |       |     |
 | GPS                            |         |     |         |       |       |     |
 | Gravity                        |         |     |         |       |       |     |
@@ -30,7 +34,6 @@
 | Keystore                       |         |     |         |       |       |     |
 | Light                          |         |     |         |       |       |     |
 | Maps                           |         |     |         |       |       |     |
-| Native file chooser            |         |     |         |       |       |     |
 | Notifications                  |         |     |         |       |       |     |
 | Orientation                    |         |     |         |       |       |     |
 | Proximity                      |         |     |         |       |       |     |
@@ -41,6 +44,7 @@
 | Storage Path                   |         |     |         |       |       |     |
 | Temperature                    |         |     |         |       |       |     |
 | Text to speech                 |         |     |         |       |       |     |
+| Threads                        |         |     |         |       |       |     |
 | Unique ID                      |         |     |         |       |       |     |
 | Vibrator                       |         |     |         |       |       |     |
 | Voip                           |         |     |         |       |       |     |
