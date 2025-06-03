@@ -24,9 +24,6 @@ extern "C" {
 #define PAUL_ONLY_THREADS
 #include "../paul.h"
 
-typedef void (*tss_dtor_t)(void*);
-typedef int (*thrd_start_t)(void*);
-
 #ifdef PLATFORM_WINDOWS
 #include <windows.h>
 
@@ -106,7 +103,6 @@ typedef struct paul_mtx_t {
 typedef struct paul_once_flag {
     pthread_once_t flag;
 } paul_once_flag;
-
 #endif
 
 #include <time.h>
@@ -130,6 +126,11 @@ enum {
     PAUL_THRD_BUSY,        // resource busy
     PAUL_THRD_NOMEM        // out of memory
 };
+
+typedef void (*tss_dtor_t)(void*);
+typedef int (*thrd_start_t)(void*);
+
+bool paul_threads_available(void);
 
 void paul_call_once(paul_once_flag *flag, void (*func)(void));
 

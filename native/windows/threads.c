@@ -174,6 +174,10 @@ static void impl_tss_dtor_invoke() {
     }
 }
 
+bool paul_threads_available(void) {
+    return true;
+}
+
 void paul_call_once(paul_once_flag *flag, void (*func)(void)) {
     assert(flag && func);
 #ifdef EMULATED_THREADS_USE_NATIVE_CALL_ONCE

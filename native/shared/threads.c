@@ -39,10 +39,14 @@ struct impl_thrd_param {
     void *arg;
 };
 
-void *impl_thrd_routine(void *p)
+void *impl_thrd_routine(void *p) {
     struct impl_thrd_param pack = *((struct impl_thrd_param *)p);
     free(p);
     return (void*)pack.func(pack.arg);
+}
+
+bool paul_threads_available(void) {
+    return true;
 }
 
 void paul_call_once(paul_once_flag *flag, void (*func)(void)) {

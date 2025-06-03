@@ -19,6 +19,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 #ifndef __EMSCRIPTEN_PTHREADS__
 #warning emscripten is not targeting pthreads, see https://emscripten.org/docs/porting/pthreads.html
 
+bool paul_threads_available(void) {
+    return false;
+}
+
 void paul_call_once(paul_once_flag *flag, void (*func)(void)) {}
 
 int paul_cnd_broadcast(paul_cnd_t *cond) {
