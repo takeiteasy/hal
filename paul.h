@@ -148,6 +148,16 @@ typedef enum bool { false = 0, true = !false } bool;
 #define __has_include(x) 1
 #endif
 
+#if defined(PLATFORM_MAC) || defined(PLATFORM_IOS)
+#define MAX_PATH_LEN 255
+#elif defined(PLATFORM_WINDOWS)
+#define MAX_PATH_LEN 256
+#elif defined(PLATFORM_LINUX)
+#define MAX_PATH_LEN 4096
+#else
+#define MAX_PATH_LEN 1024
+#endif
+
 // BEGIN INCLUDES
 #ifdef PAUL_ONLY_ACCELEROMETER
 #define PAUL_NO_AUDIO_RECORDING

@@ -22,7 +22,7 @@
 | CPU count                      |         |     |         |       |       |     |
 | Device name                    |         |     |         |       |       |     |
 | Email (open mail client)       |         |     |         |       |       |     |
-| File chooser (Native)          |         |     |         |       |       |     |
+| File chooser (native)          |         |     |         |       |       |     |
 | File system                    |         |     |         |       |       |     |
 | Flash                          |         |     |         |       |       |     |
 | GPS                            |         |     |         |       |       |     |

@@ -21,10 +21,6 @@ targets:
         - path: native/macos
         - path: native/
           type: folder
-        - path: deps/
-          type: folder
-        - path: build/
-          type: folder
         - path: README.md
           type: folder
         - path: project.yml
