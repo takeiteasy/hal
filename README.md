@@ -19,7 +19,7 @@
 | Call                           |         |     |         |       |       |     |
 | Camera (taking picture)        |         |     |         |       |       |     |
 | Compass                        |         |     |         |       |       |     |
-| Clipboard                      |   NO    | NO  |   YES   |  YES  |  YES  | YES |
+| Clipboard                      |  TODO   | YES |   YES   |  YES  |  YES  | YES |
 | CPU count                      |         |     |         |       |       |     |
 | Device name                    |         |     |         |       |       |     |
 | Email (open mail client)       |         |     |         |       |       |     |

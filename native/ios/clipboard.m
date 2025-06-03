@@ -16,13 +16,18 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 #include "../clipboard.h"
+#import <UIKit/UIKit.h>
 
 bool paul_clipboard_available(void) {
-    return false;
+    return [UIPasteboard generalPasteboard] != NULL;
 }
 
 const char *paul_clipboard_get(void) {
-    return NULL
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    return strdup([[pasteboard string] UTF8String]);
 }
 
-void paul_clipboard_set(const char *str) {}
+void paul_clipboard_set(const char *str) {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:[NSString stringWithUTF8String:str]];
+}
