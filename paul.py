@@ -75,6 +75,7 @@ def generate_header(name):
         fh.write("#endif\n\n")
         fh.write("#ifdef __cplusplus\n")
         fh.write("}\n")
+        fh.write("#endif\n")
         fh.write(f"#endif // PAUL_{uname}_HEAD\n")
 
 platforms = [
@@ -88,10 +89,13 @@ platforms = [
 
 def generate_source(name):
     for p in platforms:
-        pa = os.path.join(os.getcwd(), f"native/{p}/{name}.c")
+        ext = ".m" if p in ["ios", "macos"] else ".c"
+        pa = os.path.join(os.getcwd(), f"native/{p}/{name}{ext}")
         if not os.path.exists(pa):
             with open(pa, "w") as fh:
                 fh.write(license)
+                fh.write(f"#define PAUL_ONLY_{name.upper()}\n")
+                fh.write("#include \"../../paul.h\"\n")
                 fh.write(f"#include \"../{name}.h\"\n")
 
 output = []
@@ -101,7 +105,7 @@ for n in upper_names:
     block = [
       f"#ifdef PAUL_ONLY_{n}",
       "\n".join([f"#define PAUL_NO_{nn}" for nn in on]),
-      f"#endif // PAUL_ONLY_{n}\n"
+      f"#endif // PAUL_ONLY_{n}\n",
     ]
     output.append(block)
 

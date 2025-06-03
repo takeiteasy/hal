@@ -23,4 +23,5 @@ extern "C" {
 
 #ifdef __cplusplus
 }
+#endif
 #endif // PAUL_NOTIFICATIONS_HEAD

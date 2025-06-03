@@ -9,7 +9,7 @@
 
 | Platform                       | Android | iOS | Windows | macOS | Linux | Web |
 | ------------------------------ |:-------:|:---:|:-------:|:-----:|:-----:|:---:|
-| Accelerometer                  |         |     |         |       |       |     |
+| Accelerometer                  |  TODO   | YES |    NO   |  YES  |  YES  | NO  |
 | Arguments                      |         |     |         |       |       |     |
 | Audio recording                |         |     |         |       |       |     |
 | Barometer                      |         |     |         |       |       |     |

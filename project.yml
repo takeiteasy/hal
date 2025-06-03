@@ -12,7 +12,7 @@ settings:
 
 targets:
   paul:
-    type: application
+    type: library.dynamic
     platform: macOS
     info:
         path: Info.plist
@@ -36,4 +36,4 @@ targets:
     settings:
         HEADER_SEARCH_PATHS: [$(PROJECT_DIR),
                               $(PROJECT_DIR)/deps]
-        OTHER_CFLAGS: [-x objective-c]
+        OTHER_CFLAGS: [-x objective-c -fno-objc-arc]

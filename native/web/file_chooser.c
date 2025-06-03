@@ -15,4 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#define PAUL_ONLY_FILE_CHOOSER
+#include "../../paul.h"
 #include "../file_chooser.h"

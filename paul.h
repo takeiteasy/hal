@@ -109,9 +109,9 @@ extern "C" {
 #error compiler is not supported yet
 #endif
 
-#if defined(ARCH_X64)
+#if defined(ARCH_X64) || defined(ARCH_ARM64)
 #define ARCH_64BIT
-#elif defined(ARCH_X86)
+#elif defined(ARCH_X86) || defined(ARCH_ARM32)
 #define ARCH_32BIT
 #else
 #error architecture not supported yet

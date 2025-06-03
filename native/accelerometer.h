@@ -21,6 +21,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 extern "C" {
 #endif
 
+void accelerometer_enable(void);
+void accelerometer_disable(void);
+bool accelerometer_enabled(void);
+bool accelerometer_disabled(void);
+bool accelerometer_toggle(void);
+bool accelerometer_acceleration(float *x, float *y, float *z);
+
 #ifdef __cplusplus
 }
+#endif
 #endif // PAUL_ACCELEROMETER_HEAD
