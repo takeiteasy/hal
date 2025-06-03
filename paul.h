@@ -21,6 +21,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 extern "C" {
 #endif
 
+// TODO: Add emcc + mobile platform checks
+
 #ifdef _MSC_VER
 #define COMPILER_CL
 

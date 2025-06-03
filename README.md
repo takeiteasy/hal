@@ -3,14 +3,13 @@
 > [!WARNING]
 > Work in progress
 
-**P**latform **A**gnostic **U**tility **L**ibrary -- inspired by [Plyer](https://github.com/kivy/plyer)
+**P**latform **A**gnostic **U**tility **L**ibrary -- inspired by [kivy/plyer](https://github.com/kivy/plyer)
 
 ## Platform support
 
 | Platform                       | Android | iOS | Windows | macOS | Linux | Web |
 | ------------------------------ |:-------:|:---:|:-------:|:-----:|:-----:|:---:|
 | Accelerometer                  |  TODO   | YES |    NO   |  YES  |  YES  | NO  |
-| Arguments                      |         |     |         |       |       |     |
 | Audio recording                |         |     |         |       |       |     |
 | Barometer                      |         |     |         |       |       |     |
 | Battery                        |         |     |         |       |       |     |
@@ -44,7 +43,7 @@
 | Storage Path                   |         |     |         |       |       |     |
 | Temperature                    |         |     |         |       |       |     |
 | Text to speech                 |         |     |         |       |       |     |
-| Threads                        |         |     |         |       |       |     |
+| Threads                        |   YES   | YES |   YES   |  YES  |  YES  | [YES](https://emscripten.org/docs/porting/pthreads.html) |
 | Unique ID                      |         |     |         |       |       |     |
 | Vibrator                       |         |     |         |       |       |     |
 | Voip                           |         |     |         |       |       |     |

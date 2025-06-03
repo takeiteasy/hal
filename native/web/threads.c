@@ -16,3 +16,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 #include "../threads.h"
+#ifndef __EMSCRIPTEN_PTHREADS__
+#error emscripten is not targeting pthreads, see https://emscripten.org/docs/porting/pthreads.html
+#include "../shared/threads.c"

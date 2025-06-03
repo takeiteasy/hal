@@ -25,7 +25,7 @@ extern "C" {
 #include "../paul.h"
 
 bool paul_clipboard_available(void);
-const char *paul_clipboard_get(void);
+const char* paul_clipboard_get(void);
 void paul_clipboard_set(const char *str);
 
 #ifdef __cplusplus
