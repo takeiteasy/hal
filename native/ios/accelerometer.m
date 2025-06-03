@@ -25,9 +25,14 @@ static CMMotionManager* _manager(void) {
     return [[[UIApplication sharedApplication] delegate] sharedManager];
 }
 
+bool accelerometer_available(void) {
+    CMMotionManager *manager = _manager();
+    return manager && [manager isAccelerometerAvailable];
+}
+
 void accelerometer_enable(void) {
     CMMotionManager *manager = _manager();
-    if (![manager isAccelerometerAvailable])
+    if (!manager || ![manager isAccelerometerAvailable])
         return;
     if (![manager isAccelerometerActive])
         [manager startAccelerometerUpdates];
@@ -35,7 +40,7 @@ void accelerometer_enable(void) {
 
 void accelerometer_disable(void) {
     CMMotionManager *manager = _manager();
-    if (![manager isAccelerometerAvailable])
+    if (!manager || ![manager isAccelerometerAvailable])
         return;
     if ([manager isAccelerometerActive])
         [manager stopAccelerometerUpdates];
@@ -43,12 +48,12 @@ void accelerometer_disable(void) {
 
 bool accelerometer_enabled(void) {
     CMMotionManager *manager = _manager();
-    return [manager isAccelerometerAvailable] && [manager isAccelerometerActive];
+    return manager && [manager isAccelerometerAvailable] && [manager isAccelerometerActive];
 }
 
 bool accelerometer_disabled(void) {
     CMMotionManager *manager = _manager();
-    return ![manager isAccelerometerAvailable] || ![manager isAccelerometerActive];
+    return !manager || ![manager isAccelerometerAvailable] || ![manager isAccelerometerActive];
 }
 
 bool accelerometer_toggle(void) {

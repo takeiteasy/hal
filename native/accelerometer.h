@@ -21,6 +21,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 extern "C" {
 #endif
 
+bool accelerometer_available(void);
 void accelerometer_enable(void);
 void accelerometer_disable(void);
 bool accelerometer_enabled(void);

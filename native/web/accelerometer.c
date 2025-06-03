@@ -19,6 +19,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 #include "../../paul.h"
 #include "../accelerometer.h"
 
+bool accelerometer_available(void) {
+    return false;
+}
+
 void accelerometer_enable(void) {}
 
 void accelerometer_disable(void) {}

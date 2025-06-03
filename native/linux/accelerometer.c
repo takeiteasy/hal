@@ -28,6 +28,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 static bool _enabled = false;
 
+bool accelerometer_available(void) {
+    return accelerometer_acceleration(NULL, NULL, NULL);
+}
+
 void accelerometer_enable(void) {
     _enabled = true;
 }

@@ -28,7 +28,7 @@ typedef struct {
 @interface Accelerometer : NSObject
 @property io_connect_t dataPort;
 -(id)init;
-- (BOOL)getCoords:(float*)x Y:(float*)y Z:(float*)z;
+- (BOOL)getCoordsX:(float*)x Y:(float*)y Z:(float*)z;
 @end
 
 @implementation Accelerometer
@@ -66,7 +66,7 @@ typedef struct {
     [super dealloc];
 }
 
-- (BOOL)getCoords:(float*)x Y:(float*)y Z:(float*)z {
+- (BOOL)getCoordsX:(float*)x Y:(float*)y Z:(float*)z {
     if (dataPort == IO_OBJECT_NULL)
         goto BAIL;
     in_struct _in = {0}, _out = {0};
@@ -95,6 +95,15 @@ BAIL:
 @end
 
 static Accelerometer* _accelerometer = NULL;
+
+bool accelerometer_available(void) {
+    Accelerometer *tmp = [Accelerometer new];
+    if (!tmp)
+        return false;
+    bool result = [tmp getCoordsX:NULL Y:NULL Z:NULL];
+    [tmp dealloc];
+    return result;
+}
 
 void accelerometer_enable(void) {
     if (!_accelerometer)
@@ -127,7 +136,7 @@ bool accelerometer_toggle(void) {
 
 bool accelerometer_acceleration(float *x, float *y, float *z)  {
     if (accelerometer_enabled()) {
-        [_accelerometer getCoords:x Y:y Z:z];
+        [_accelerometer getCoordsX:x Y:y Z:z];
         return true;
     } else {
         if (x)

@@ -21,6 +21,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 // TODO
 
+bool accelerometer_available(void) {
+    return false;
+}
+
 void accelerometer_enable(void) {}
 
 void accelerometer_disable(void) {}
