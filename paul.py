@@ -2,7 +2,6 @@ import os
 
 names = [
   "accelerometer",
-  "arguments",
   "audio_recording",
   "barometer",
   "battery",

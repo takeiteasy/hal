@@ -148,7 +148,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 // BEGIN INCLUDES
 #ifdef PAUL_ONLY_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -189,51 +188,8 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_WIFI
 #endif // PAUL_ONLY_ACCELEROMETER
 
-#ifdef PAUL_ONLY_ARGUMENTS
-#define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_AUDIO_RECORDING
-#define PAUL_NO_BAROMETER
-#define PAUL_NO_BATTERY
-#define PAUL_NO_BLUETOOTH
-#define PAUL_NO_BRIGHTNESS
-#define PAUL_NO_CALL
-#define PAUL_NO_CAMERA
-#define PAUL_NO_COMPASS
-#define PAUL_NO_CLIPBOARD
-#define PAUL_NO_CPU_COUNT
-#define PAUL_NO_DEVICE_NAME
-#define PAUL_NO_EMAIL
-#define PAUL_NO_FILE_CHOOSER
-#define PAUL_NO_FILE_SYSTEM
-#define PAUL_NO_FLASH
-#define PAUL_NO_GPS
-#define PAUL_NO_GRAVITY
-#define PAUL_NO_GYROSCOPE
-#define PAUL_NO_HUMIDITY
-#define PAUL_NO_IR_BLASTER
-#define PAUL_NO_KEYSTORE
-#define PAUL_NO_LIGHT
-#define PAUL_NO_MAPS
-#define PAUL_NO_NOTIFICATIONS
-#define PAUL_NO_ORIENTATION
-#define PAUL_NO_PROXIMITY
-#define PAUL_NO_SCREENSHOT
-#define PAUL_NO_SMS
-#define PAUL_NO_SPATIAL_ORIENTATION
-#define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
-#define PAUL_NO_TEMPERATURE
-#define PAUL_NO_TEXT_TO_SPEECH
-#define PAUL_NO_THREADS
-#define PAUL_NO_UNIQUE_ID
-#define PAUL_NO_VIBRATOR
-#define PAUL_NO_VOIP
-#define PAUL_NO_WIFI
-#endif // PAUL_ONLY_ARGUMENTS
-
 #ifdef PAUL_ONLY_AUDIO_RECORDING
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
 #define PAUL_NO_BLUETOOTH
@@ -275,7 +231,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_BAROMETER
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BATTERY
 #define PAUL_NO_BLUETOOTH
@@ -317,7 +272,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_BATTERY
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BLUETOOTH
@@ -359,7 +313,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_BLUETOOTH
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -401,7 +354,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_BRIGHTNESS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -443,7 +395,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_CALL
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -485,7 +436,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_CAMERA
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -527,7 +477,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_COMPASS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -569,7 +518,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_CLIPBOARD
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -611,7 +559,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_CPU_COUNT
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -653,7 +600,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_DEVICE_NAME
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -695,7 +641,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_EMAIL
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -737,7 +682,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_FILE_CHOOSER
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -779,7 +723,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_FILE_SYSTEM
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -821,7 +764,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_FLASH
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -863,7 +805,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_GPS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -905,7 +846,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_GRAVITY
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -947,7 +887,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_GYROSCOPE
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -989,7 +928,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_HUMIDITY
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1031,7 +969,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_IR_BLASTER
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1073,7 +1010,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_KEYSTORE
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1115,7 +1051,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_LIGHT
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1157,7 +1092,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_MAPS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1199,7 +1133,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_NOTIFICATIONS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1241,7 +1174,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_ORIENTATION
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1283,7 +1215,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_PROXIMITY
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1325,7 +1256,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_SCREENSHOT
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1367,7 +1297,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_SMS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1409,7 +1338,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_SPATIAL_ORIENTATION
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1451,7 +1379,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_SPEECH_TO_TEXT
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1493,7 +1420,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_STORAGE_PATH
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1535,7 +1461,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_TEMPERATURE
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1577,7 +1502,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_TEXT_TO_SPEECH
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1619,7 +1543,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_THREADS
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1661,7 +1584,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_UNIQUE_ID
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1703,7 +1625,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_VIBRATOR
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1745,7 +1666,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_VOIP
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1787,7 +1707,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #ifdef PAUL_ONLY_WIFI
 #define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_ARGUMENTS
 #define PAUL_NO_AUDIO_RECORDING
 #define PAUL_NO_BAROMETER
 #define PAUL_NO_BATTERY
@@ -1829,9 +1748,6 @@ typedef enum bool { false = 0, true = !false } bool;
 
 #if !defined(PAUL_NO_ACCELEROMETER) && __has_include("native/accelerometer.h")
 #include "native/accelerometer.h"
-#endif
-#if !defined(PAUL_NO_ARGUMENTS) && __has_include("native/arguments.h")
-#include "native/arguments.h"
 #endif
 #if !defined(PAUL_NO_AUDIO_RECORDING) && __has_include("native/audio_recording.h")
 #include "native/audio_recording.h"
