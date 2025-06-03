@@ -21,6 +21,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 extern "C" {
 #endif
 
+#define PAUL_ONLY_SPATIAL_ORIENTATION
+#include "../paul.h"
+
 #ifdef __cplusplus
 }
 #endif

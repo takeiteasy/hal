@@ -72,6 +72,8 @@ def generate_header(name):
         fh.write("#ifdef __cplusplus\n")
         fh.write("extern \"C\" {\n")
         fh.write("#endif\n\n")
+        fh.write(f"#define PAUL_ONLY_{name.upper()}\n")
+        fh.write("#include \"../paul.h\"\n\n")
         fh.write("#ifdef __cplusplus\n")
         fh.write("}\n")
         fh.write("#endif\n")
@@ -93,8 +95,6 @@ def generate_source(name):
         if not os.path.exists(pa):
             with open(pa, "w") as fh:
                 fh.write(license)
-                fh.write(f"#define PAUL_ONLY_{name.upper()}\n")
-                fh.write("#include \"../../paul.h\"\n")
                 fh.write(f"#include \"../{name}.h\"\n")
 
 output = []

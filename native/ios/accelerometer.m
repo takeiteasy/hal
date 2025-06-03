@@ -25,12 +25,12 @@ static CMMotionManager* _manager(void) {
     return [[[UIApplication sharedApplication] delegate] sharedManager];
 }
 
-bool accelerometer_available(void) {
+bool paul_accelerometer_available(void) {
     CMMotionManager *manager = _manager();
     return manager && [manager isAccelerometerAvailable];
 }
 
-void accelerometer_enable(void) {
+void paul_accelerometer_enable(void) {
     CMMotionManager *manager = _manager();
     if (!manager || ![manager isAccelerometerAvailable])
         return;
@@ -38,7 +38,7 @@ void accelerometer_enable(void) {
         [manager startAccelerometerUpdates];
 }
 
-void accelerometer_disable(void) {
+void paul_accelerometer_disable(void) {
     CMMotionManager *manager = _manager();
     if (!manager || ![manager isAccelerometerAvailable])
         return;
@@ -46,28 +46,28 @@ void accelerometer_disable(void) {
         [manager stopAccelerometerUpdates];
 }
 
-bool accelerometer_enabled(void) {
+bool paul_accelerometer_enabled(void) {
     CMMotionManager *manager = _manager();
     return manager && [manager isAccelerometerAvailable] && [manager isAccelerometerActive];
 }
 
-bool accelerometer_disabled(void) {
+bool paul_accelerometer_disabled(void) {
     CMMotionManager *manager = _manager();
     return !manager || ![manager isAccelerometerAvailable] || ![manager isAccelerometerActive];
 }
 
-bool accelerometer_toggle(void) {
-    bool state = accelerometer_enabled();
+bool paul_accelerometer_toggle(void) {
+    bool state = paul_accelerometer_enabled();
     if (state)
-        accelerometer_disable();
+        paul_accelerometer_disable();
     else
-        accelerometer_enable();
+        paul_accelerometer_enable();
     return !state;
 }
 
-bool accelerometer_acceleration(float *x, float *y, float *z)  {
+bool paul_accelerometer_acceleration(float *x, float *y, float *z)  {
     CMMotionManager *manager = _manager();
-    if (accelerometer_enabled()) {
+    if (paul_accelerometer_enabled()) {
         [manager setAccelerometerUpdateInterval:.1];
         [manager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue]
                                       withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {

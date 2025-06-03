@@ -96,7 +96,7 @@ BAIL:
 
 static Accelerometer* _accelerometer = NULL;
 
-bool accelerometer_available(void) {
+bool paul_accelerometer_available(void) {
     Accelerometer *tmp = [Accelerometer new];
     if (!tmp)
         return false;
@@ -105,37 +105,37 @@ bool accelerometer_available(void) {
     return result;
 }
 
-void accelerometer_enable(void) {
+void paul_accelerometer_enable(void) {
     if (!_accelerometer)
         _accelerometer = [Accelerometer new];
 }
 
-void accelerometer_disable(void) {
+void paul_accelerometer_disable(void) {
     if (_accelerometer) {
         [_accelerometer dealloc];
         _accelerometer = NULL;
     }
 }
 
-bool accelerometer_enabled(void) {
+bool paul_accelerometer_enabled(void) {
     return _accelerometer != NULL;
 }
 
-bool accelerometer_disabled(void) {
+bool paul_accelerometer_disabled(void) {
     return _accelerometer == NULL;
 }
 
-bool accelerometer_toggle(void) {
-    bool state = accelerometer_enabled();
+bool paul_accelerometer_toggle(void) {
+    bool state = paul_accelerometer_enabled();
     if (state)
-        accelerometer_disable();
+        paul_accelerometer_disable();
     else
-        accelerometer_enable();
+        paul_accelerometer_enable();
     return !state;
 }
 
-bool accelerometer_acceleration(float *x, float *y, float *z)  {
-    if (accelerometer_enabled()) {
+bool paul_accelerometer_acceleration(float *x, float *y, float *z)  {
+    if (paul_accelerometer_enabled()) {
         [_accelerometer getCoordsX:x Y:y Z:z];
         return true;
     } else {

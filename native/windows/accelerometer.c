@@ -15,31 +15,29 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#define PAUL_ONLY_ACCELEROMETER
-#include "../../paul.h"
 #include "../accelerometer.h"
 
-bool accelerometer_available(void) {
+bool paul_accelerometer_available(void) {
     return false;
 }
 
-void accelerometer_enable(void) {}
+void paul_accelerometer_enable(void) {}
 
-void accelerometer_disable(void) {}
+void paul_accelerometer_disable(void) {}
 
-bool accelerometer_enabled(void) {
+bool paul_accelerometer_enabled(void) {
     return false;
 }
 
-bool accelerometer_disabled(void) {
+bool paul_accelerometer_disabled(void) {
     return true;
 }
 
-bool accelerometer_toggle(void) {
+bool paul_accelerometer_toggle(void) {
     return false;
 }
 
-bool accelerometer_acceleration(float *x, float *y, float *z) {
+bool paul_accelerometer_acceleration(float *x, float *y, float *z) {
     if (x)
         *x = -1;
     if (y)

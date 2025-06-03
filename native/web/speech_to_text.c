@@ -15,6 +15,4 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#define PAUL_ONLY_SPEECH_TO_TEXT
-#include "../../paul.h"
 #include "../speech_to_text.h"

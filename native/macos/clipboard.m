@@ -15,6 +15,25 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#define PAUL_ONLY_CLIPBOARD
-#include "../../paul.h"
 #include "../clipboard.h"
+#import <AppKit/AppKit.h>
+
+bool paul_clipboard_available(void) {
+    return [NSPasteboard generalPasteboard] != NULL;
+}
+
+const char *paul_clipboard_get(void) {
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    if ([[pb types] containsObject:NSPasteboardTypeString]) {
+        NSString *text = [pb stringForType:NSPasteboardTypeString];
+        return strdup([text UTF8String]);
+    }
+    return NULL;
+}
+
+void paul_clipboard_set(const char *str) {
+    NSPasteboard *pb = [NSPasteboard generalPasteboard];
+    [pb clearContents];
+    [pb setString:@(str)
+          forType:NSPasteboardTypeString];
+}

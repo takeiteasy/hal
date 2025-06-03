@@ -21,6 +21,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 extern "C" {
 #endif
 
+#define PAUL_ONLY_CLIPBOARD
+#include "../paul.h"
+
+bool paul_clipboard_available(void);
+const char *paul_clipboard_get(void);
+void paul_clipboard_set(const char *str);
+
 #ifdef __cplusplus
 }
 #endif

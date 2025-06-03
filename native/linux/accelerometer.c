@@ -28,31 +28,31 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 static bool _enabled = false;
 
-bool accelerometer_available(void) {
-    return accelerometer_acceleration(NULL, NULL, NULL);
+bool paul_accelerometer_available(void) {
+    return paul_accelerometer_acceleration(NULL, NULL, NULL);
 }
 
-void accelerometer_enable(void) {
+void paul_accelerometer_enable(void) {
     _enabled = true;
 }
 
-void accelerometer_disable(void) {
+void paul_accelerometer_disable(void) {
     _enabled = false;
 }
 
-bool accelerometer_enabled(void) {
+bool paul_accelerometer_enabled(void) {
     return _enabled == true;
 }
 
-bool accelerometer_disabled(void) {
+bool paul_accelerometer_disabled(void) {
     return _enabled != true;
 }
 
-bool accelerometer_toggle(void) {
-    if (accelerometer_enabled())
-        accelerometer_disable();
+bool paul_accelerometer_toggle(void) {
+    if (paul_accelerometer_enabled())
+        paul_accelerometer_disable();
     else
-        accelerometer_enable();
+        paul_accelerometer_enable();
 }
 
 static char _peek(FILE *fh, int cursor) {
@@ -151,8 +151,8 @@ BAIL:
     return result;
 }
 
-bool accelerometer_acceleration(float *x, float *y, float *z) {
-    if (accelerometer_disabled)
+bool paul_accelerometer_acceleration(float *x, float *y, float *z) {
+    if (paul_accelerometer_disabled)
         goto BAIL;
     struct dirent *entry;
     DIR *dir = opendir("/sys/devices/platform/");
