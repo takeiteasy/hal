@@ -15,7 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#include <pthread.h>
 #include <time.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -35,38 +34,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 #define EMULATED_THREADS_USE_NATIVE_TIMEDLOCK
 #endif
 
-struct paul_cnd_t {
-    pthread_cond_t cnd;
-};
-
-struct paul_thrd_t {
-    pthread_t thrd;
-};
-
-struct paul_tss_t {
-    pthread_key_t key;
-};
-
-struct paul_mtx_t {
-    pthread_mutex_t mtx;
-};
-
-struct paul_once_flag {
-    pthread_once_t flag;
-};
-
 struct impl_thrd_param {
     thrd_start_t func;
     void *arg;
 };
 
-struct paul_thrd_timeout {
-    time_t sec;
-    long nsec;
-};
-
 void *impl_thrd_routine(void *p)
-{
     struct impl_thrd_param pack = *((struct impl_thrd_param *)p);
     free(p);
     return (void*)pack.func(pack.arg);

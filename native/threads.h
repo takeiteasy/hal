@@ -24,16 +24,97 @@ extern "C" {
 #define PAUL_ONLY_THREADS
 #include "../paul.h"
 
-typedef struct paul_cnd_t       paul_cnd_t;
-typedef struct paul_thrd_t      paul_thrd_t;
-typedef struct paul_tss_t       paul_tss_t;
-typedef struct paul_mtx_t       paul_mtx_t;
-typedef struct paul_once_flag   paul_once_flag;
-
 typedef void (*tss_dtor_t)(void*);
 typedef int (*thrd_start_t)(void*);
 
-typedef struct paul_thrd_timeout paul_thrd_timeout;
+#ifdef PLATFORM_WINDOWS
+#include <windows.h>
+
+#if defined(EMULATED_THREADS_USE_NATIVE_CALL_ONCE) && (_WIN32_WINNT < 0x0600)
+#error EMULATED_THREADS_USE_NATIVE_CALL_ONCE requires _WIN32_WINNT>=0x0600
+#endif
+
+#if defined(EMULATED_THREADS_USE_NATIVE_CV) && (_WIN32_WINNT < 0x0600)
+#error EMULATED_THREADS_USE_NATIVE_CV requires _WIN32_WINNT>=0x0600
+#endif
+
+#ifdef EMULATED_THREADS_USE_NATIVE_CALL_ONCE
+#define ONCE_FLAG_INIT INIT_ONCE_STATIC_INIT
+#else
+#define ONCE_FLAG_INIT {0}
+#endif
+#define TSS_DTOR_ITERATIONS 1
+
+#if _WIN32_WINNT >= 0x0600
+// Prefer native WindowsAPI on newer environment.
+#define EMULATED_THREADS_USE_NATIVE_CALL_ONCE
+#define EMULATED_THREADS_USE_NATIVE_CV
+#endif
+#define EMULATED_THREADS_TSS_DTOR_SLOTNUM 64  // see TLS_MINIMUM_AVAILABLE
+
+typedef struct paul_cnd_t {
+#ifdef EMULATED_THREADS_USE_NATIVE_CV
+    CONDITION_VARIABLE condvar;
+#else
+    int blocked;
+    int gone;
+    int to_unblock;
+    HANDLE sem_queue;
+    HANDLE sem_gate;
+    CRITICAL_SECTION monitor;
+#endif
+} paul_cnd_t;
+
+typdef struct paul_thrd_t {
+    HANDLE hndl;
+} paul_thrd_t;
+
+typedef struct paul_tss_t {
+    DWORD key;
+} paul_tss_t;
+
+typedef struct paul_mtx_t {
+    CRITICAL_SECTION cs;
+} paul_mtx_t;
+
+typedef struct paul_once_flag {
+#ifdef EMULATED_THREADS_USE_NATIVE_CALL_ONCE
+    INIT_ONCE status;
+#else
+    volatile LONG status;
+#endif
+} paul_once_flag;
+#else
+#include <pthread.h>
+
+typedef struct paul_cnd_t {
+    pthread_cond_t cnd;
+} paul_cnd_t;
+
+typedef struct paul_thrd_t {
+    pthread_t thrd;
+} paul_thrd_t;
+
+typedef struct paul_tss_t {
+    pthread_key_t key;
+} paul_tss_t;
+
+typedef struct paul_mtx_t {
+    pthread_mutex_t mtx;
+} paul_mtx_t;
+
+typedef struct paul_once_flag {
+    pthread_once_t flag;
+} paul_once_flag;
+
+#endif
+
+#include <time.h>
+
+typedef struct paul_thrd_timeout {
+    time_t sec;
+    long nsec;
+} paul_thrd_timeout;
 
 enum {
     PAUL_MTX_PLAIN     = 0,

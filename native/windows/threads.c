@@ -19,67 +19,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 #include <windows.h>
 #include <time.h>
 
-#if defined(EMULATED_THREADS_USE_NATIVE_CALL_ONCE) && (_WIN32_WINNT < 0x0600)
-#error EMULATED_THREADS_USE_NATIVE_CALL_ONCE requires _WIN32_WINNT>=0x0600
-#endif
-
-#if defined(EMULATED_THREADS_USE_NATIVE_CV) && (_WIN32_WINNT < 0x0600)
-#error EMULATED_THREADS_USE_NATIVE_CV requires _WIN32_WINNT>=0x0600
-#endif
-
-#ifdef EMULATED_THREADS_USE_NATIVE_CALL_ONCE
-#define ONCE_FLAG_INIT INIT_ONCE_STATIC_INIT
-#else
-#define ONCE_FLAG_INIT {0}
-#endif
-#define TSS_DTOR_ITERATIONS 1
-
-#if _WIN32_WINNT >= 0x0600
-// Prefer native WindowsAPI on newer environment.
-#define EMULATED_THREADS_USE_NATIVE_CALL_ONCE
-#define EMULATED_THREADS_USE_NATIVE_CV
-#endif
-#define EMULATED_THREADS_TSS_DTOR_SLOTNUM 64  // see TLS_MINIMUM_AVAILABLE
-
-struct paul_cnd_t {
-#ifdef EMULATED_THREADS_USE_NATIVE_CV
-    CONDITION_VARIABLE condvar;
-#else
-    int blocked;
-    int gone;
-    int to_unblock;
-    HANDLE sem_queue;
-    HANDLE sem_gate;
-    CRITICAL_SECTION monitor;
-#endif
-};
-
-struct paul_thrd_t {
-    HANDLE hndl;
-};
-
-struct paul_tss_t {
-    DWORD key;
-};
-
-struct paul_mtx_t {
-    CRITICAL_SECTION cs;
-};
-
-struct paul_once_flag {
-#ifdef EMULATED_THREADS_USE_NATIVE_CALL_ONCE
-    INIT_ONCE status;
-#else
-    volatile LONG status;
-#endif
-};
-#endif
-
-struct paul_thrd_timeout {
-    time_t sec;
-    long nsec;
-};
-
 static void impl_tss_dtor_invoke();  // forward decl.
 
 struct impl_thrd_param {
