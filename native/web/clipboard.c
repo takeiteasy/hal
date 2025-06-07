@@ -17,6 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 /* Based off: https://github.com/RobLoach/emscripten_clipboard [Zlib] */
 
+#ifndef PAUL_NO_CLIPBOARD
 #include "../clipboard.h"
 #include <string.h>
 #include <emscripten.h>
@@ -75,3 +76,4 @@ void paul_clipboard_set(const char *str) {
     // Tell the browser there is new clipboard text.
     emscripten_clipboard__write_text(clipboard->text);
 }
+#endif // PAUL_NO_CLIPBOARD

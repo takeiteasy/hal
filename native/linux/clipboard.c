@@ -17,6 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 /* Based off: https://github.com/exebook/x11clipboard [UNLICENSED] */
 
+#ifndef PAUL_NO_CLIPBOARD
 #include "../clipboard.h"
 #include <stdio.h>
 #include <string.h>
@@ -119,3 +120,4 @@ void paul_clipboard_set(const char *str) {
         }
     }
 }
+#endif // PAUL_NO_CLIPBOARD

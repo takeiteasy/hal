@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#ifndef PAUL_NO_THREADS
 #include "../threads.h"
 #include <windows.h>
 #include <time.h>
@@ -418,3 +419,4 @@ int paul_timeout(paul_thrd_timeout *xt, int base) {
     }
     return 0;
 }
+#endif // PAUL_NO_THREADS

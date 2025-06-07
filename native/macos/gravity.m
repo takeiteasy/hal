@@ -15,4 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#include "../gravity.h"
+#ifndef PAUL_NO_GRAVITY#include "../gravity.h"
+
+#endif // PAUL_NO_GRAVITY

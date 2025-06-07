@@ -43,6 +43,12 @@ names = [
 ]
 upper_names = [n.upper() for n in names]
 
+ignore_files = [
+  "accelerometer",
+  "clipboard",
+  "threads"
+]
+
 license = """/* https://github.com/takeiteasy/paul
 
 paul Copyright (C) 2025 George Watson
@@ -61,9 +67,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */\n\n"""
 
 def generate_header(name):
-    p = os.path.join(os.getcwd(), f"native/{name}.h")
-    if os.path.exists(p):
+    if name in ignore_files:
         return
+    p = os.path.join(os.getcwd(), f"native/{name}.h")
     uname = name.upper()
     with open(p, "w") as fh:
         fh.write(license)
@@ -89,13 +95,16 @@ platforms = [
 ]
 
 def generate_source(name):
+    if name in ignore_files:
+        return
     for p in platforms:
         ext = ".m" if p in ["ios", "macos"] else ".c"
         pa = os.path.join(os.getcwd(), f"native/{p}/{name}{ext}")
-        if not os.path.exists(pa):
-            with open(pa, "w") as fh:
-                fh.write(license)
-                fh.write(f"#include \"../{name}.h\"\n")
+        with open(pa, "w") as fh:
+            fh.write(license)
+            fh.write(f"#ifndef PAUL_NO_{name.upper()}")
+            fh.write(f"#include \"../{name}.h\"\n\n")
+            fh.write(f"#endif // PAUL_NO_{name.upper()}")
 
 output = []
 

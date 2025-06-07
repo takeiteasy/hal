@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#ifndef PAUL_NO_THREADS
 #include "../threads.h"
 #ifndef __EMSCRIPTEN_PTHREADS__
 #warning emscripten is not targeting pthreads, see https://emscripten.org/docs/porting/pthreads.html
@@ -115,3 +116,4 @@ int paul_timeout(paul_thrd_timeout *xt, int base) {
 #else
 #include "../shared/threads.c"
 #endif
+#endif // PAUL_NO_THREADS

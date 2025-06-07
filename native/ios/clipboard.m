@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#ifndef PAUL_NO_CLIPBOARD
 #include "../clipboard.h"
 #import <UIKit/UIKit.h>
 
@@ -31,3 +32,4 @@ void paul_clipboard_set(const char *str) {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     [pasteboard setString:[NSString stringWithUTF8String:str]];
 }
+#endif // PAUL_NO_CLIPBOARD

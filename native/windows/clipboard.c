@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#ifndef PAUL_NO_CLIPBOARD
 #include "../clipboard.h"
 #include <windows.h>
 
@@ -51,3 +52,4 @@ void paul_clipboard_set(const char *str) {
     GlobalUnlock(hMem);
     CloseClipboard();
 }
+#endif // PAUL_NO_CLIPBOARD

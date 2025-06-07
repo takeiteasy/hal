@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#ifndef PAUL_NO_ACCELEROMETER
 #include "../accelerometer.h"
 #import <IOKit/IOKitLib.h>
 
@@ -146,3 +147,4 @@ bool paul_accelerometer_acceleration(float *x, float *y, float *z)  {
         return false;
     }
 }
+#endif // PAUL_NO_ACCELEROMETER

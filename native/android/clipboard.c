@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
+#ifndef PAUL_NO_CLIPBOARD
 #include "../clipboard.h"
 
 bool paul_clipboard_available(void) {
@@ -26,3 +27,4 @@ const char *paul_clipboard_get(void) {
 }
 
 void paul_clipboard_set(const char *str) {}
+#endif // PAUL_NO_CLIPBOARD

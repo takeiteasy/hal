@@ -15,4 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#include "../file_system.h"
+#ifndef PAUL_NO_FILE_SYSTEM#include "../file_system.h"
+
+#endif // PAUL_NO_FILE_SYSTEM

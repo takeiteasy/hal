@@ -15,4 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#include "../storage_path.h"
+#ifndef PAUL_NO_STORAGE_PATH#include "../storage_path.h"
+
+#endif // PAUL_NO_STORAGE_PATH

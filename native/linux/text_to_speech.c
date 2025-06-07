@@ -15,4 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#include "../text_to_speech.h"
+#ifndef PAUL_NO_TEXT_TO_SPEECH#include "../text_to_speech.h"
+
+#endif // PAUL_NO_TEXT_TO_SPEECH
