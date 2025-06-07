@@ -15,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_BLUETOOTH#include "../bluetooth.h"
+#ifndef PAUL_NO_BLUETOOTH
+#include "../bluetooth.h"
 
 #endif // PAUL_NO_BLUETOOTH

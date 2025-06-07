@@ -102,7 +102,7 @@ def generate_source(name):
         pa = os.path.join(os.getcwd(), f"native/{p}/{name}{ext}")
         with open(pa, "w") as fh:
             fh.write(license)
-            fh.write(f"#ifndef PAUL_NO_{name.upper()}")
+            fh.write(f"#ifndef PAUL_NO_{name.upper()}\n")
             fh.write(f"#include \"../{name}.h\"\n\n")
             fh.write(f"#endif // PAUL_NO_{name.upper()}")
 
