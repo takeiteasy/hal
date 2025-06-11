@@ -9,7 +9,7 @@
 
 | Platform                       | Android | iOS | Windows | macOS | Linux | Web |
 | ------------------------------ |:-------:|:---:|:-------:|:-----:|:-----:|:---:|
-| Accelerometer                  |  TODO   | YES |    NO   |  YES  |  YES  | NO  |
+| Accelerometer                  |  TODO   | YES |    NO   |  YES  |  YES  |  NO |
 | Audio recording                |         |     |         |       |       |     |
 | Barometer                      |         |     |         |       |       |     |
 | Battery                        |         |     |         |       |       |     |
@@ -18,12 +18,12 @@
 | Call                           |         |     |         |       |       |     |
 | Camera (taking picture)        |         |     |         |       |       |     |
 | Compass                        |         |     |         |       |       |     |
-| Clipboard                      |  TODO   | YES |   YES   |  YES  |  YES  | YES |
+| Clipboard                      |   TODO  | YES |   YES   |  YES  |  YES  | YES |
 | CPU count                      |         |     |         |       |       |     |
 | Device name                    |         |     |         |       |       |     |
 | Email (open mail client)       |         |     |         |       |       |     |
-| File chooser (native)          |         |     |         |       |       |     |
-| File system                    |         |     |         |       |       |     |
+| File chooser (native)          |   TODO  | TODO|   WIP   |  WIP  |  WIP  | TODO|
+| File system                    |   TODO  | TODO|   WIP   |  YES  |  WIP  | TODO|
 | Flash                          |         |     |         |       |       |     |
 | GPS                            |         |     |         |       |       |     |
 | Gravity                        |         |     |         |       |       |     |

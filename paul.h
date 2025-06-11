@@ -129,6 +129,10 @@ extern "C" {
 #define PLATFORM_POSIX
 #endif
 
+#ifndef __has_include
+#define __has_include(x) 1
+#endif
+
 #ifndef LANG_CPP
 #if defined(COMPILER_CL) && COMPILER_CL_YEAR < 2017
 #include <windef.h>
@@ -139,13 +143,32 @@ extern "C" {
 #if defined(__STDC__) && __STDC_VERSION__ < 199901L
 typedef enum bool { false = 0, true = !false } bool;
 #else
+#if __has_include(<stdbool.h>)
 #include <stdbool.h>
+#else
+typedef enum bool { false = 0, true = !false } bool;
 #endif
 #endif
 #endif
-
-#ifndef __has_include
-#define __has_include(x) 1
+#endif
+#if __has_include(<stddef.h>)
+#include <stddef.h>
+#else
+#define NULL (void*)0
+#define size_t int
+#define int8_t char
+#define uint8_t unsigned char
+#define int16_t short
+#define uint16_t unsigned short
+#define int32_t int
+#define uint32_t unsigned int
+#ifdef ARCH_64BIT
+#define int64_t long long
+#define uint64_t unsigned long long
+#else
+#define int64_t int
+#define uint64_t unsigned int
+#endif
 #endif
 
 #if defined(PLATFORM_MAC) || defined(PLATFORM_IOS)

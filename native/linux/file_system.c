@@ -17,5 +17,54 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 #ifndef PAUL_NO_FILE_SYSTEM
 #include "../file_system.h"
-#include "../shared/file_system_posix.c"
+#include <unistd.h>
+#include "../shared/file_system.c"
+
+bool paul_file_exists(const char *path) {
+    return false;
+}
+
+bool paul_dir_exists(const char *path) {
+    return false;
+}
+
+const char* paul_get_root_dir(void) {
+    return strdup("/");
+}
+
+const char* paul_working_dir(void) {
+    return NULL;
+}
+
+const char* paul_home_dir(void) {
+    return NULL;
+}
+
+const char* paul_documents_dir(void) {
+    return NULL;
+}
+
+const char* paul_downloads_dir(void) {
+    return NULL;
+}
+
+const char* paul_video_dir(void) {
+    return NULL;
+}
+
+const char* paul_music_dir(void) {
+    return NULL;
+}
+
+const char* paul_picture_dir(void) {
+    return NULL;
+}
+
+const char* paul_application_dir(void) {
+    return NULL;
+}
+
+const char* paul_desktop_dir(void) {
+    return NULL;
+}
 #endif // PAUL_NO_FILE_SYSTEM

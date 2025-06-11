@@ -45,6 +45,7 @@ upper_names = [n.upper() for n in names]
 ignore_files = [
   "accelerometer",
   "clipboard",
+  "file_chooser",
   "file_system",
   "threads"
 ]
