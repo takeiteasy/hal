@@ -15,21 +15,21 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_CLIPBOARD_HEAD
-#define PAUL_CLIPBOARD_HEAD
-#ifdef __cplusplus
-extern "C" {
+#ifndef PAUL_LINUX_INTERNAL_H
+#define PAUL_LINUX_INTERNAL_H
+#ifndef __has_include(x)
+#define __has_include(x) 1
 #endif
 
-#define PAUL_ONLY_CLIPBOARD
-#include "../paul.h"
-
-bool paul_clipboard_available(void);
-// WARNING: This must be released
-const char *paul_clipboard_get(void);
-void paul_clipboard_set(const char *str);
-
-#ifdef __cplusplus
-}
+#if !defined(PAUL_NO_GTK) && __has_include("<gtk/gtk.h>")
+#define PAUL_HAS_GTK
 #endif
-#endif // PAUL_CLIPBOARD_HEAD
+
+#if !defined(PAUL_NO_WAYLAND) && __has_include("<wayland-client.h>") && __has_include("<wayland-util.h>")
+#define PAUL_HAS_WAYLAND
+#endif
+
+#if !defined(PAUL_NO_X11) && __has_include("<X11/Xlib.h>")
+#define PAUL_HAS_WAYLAND
+#endif
+#endif // PAUL_LINUX_INTERNAL_H

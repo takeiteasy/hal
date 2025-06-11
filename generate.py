@@ -45,11 +45,19 @@ upper_names = [n.upper() for n in names]
 ignore_files = [
   "accelerometer",
   "clipboard",
+  "file_system",
   "threads"
 ]
 
+system_backends = {
+  "linux": ["gtk", "wayland", "x11"]
+}
+
 files_backends = {
-  "linux": ["clipboard"]
+  "linux": [
+    "clipboard",
+    "file_chooser"
+  ]
 }
 
 license = """/* https://github.com/takeiteasy/paul
@@ -97,16 +105,12 @@ platforms = [
   "windows"
 ]
 
-platform_backends = {
-  "linux": ["gtk", "wayland", "x11"]
-}
-
 def generate_source(name):
     if name in ignore_files:
         return
     for p in platforms:
         ext = ".m" if p in ["ios", "macos"] else ".c"
-        _use_backend = p in files_backends
+        _use_backend = p in system_backends and name in files_backends[p]
         pa = os.path.join(os.getcwd(), f"native/{p}/{name}{ext}")
         with open(pa, "w") as fh:
             fh.write(license)
@@ -114,20 +118,31 @@ def generate_source(name):
             fh.write(f"#include \"../{name}.h\"\n")
             if _use_backend:
                 fh.write("#include \"internal.h\"\n\n")
-                fh.write("#ifdef ")
-                _backends = platform_backends[p] + ["dummy"]
-                for b in _backends:
+                _backends = system_backends[p] + ["dummy"]
+                for i, b in enumerate(_backends):
                     bpa = os.path.join(os.getcwd(), f"native/{p}/backends/{b}/{name}{ext}")
                     with open(bpa, "w") as bfh:
                         bfh.write(license)
-                        bfh.write(f"#ifndef PAUL_NO_{name.upper()}\n\n")
+                        bfh.write(f"#ifndef PAUL_NO_{name.upper()}\n")
+                        if b != "dummy":
+                            bfh.write(f"#define {name.upper()}_{b.upper()}_UNIMPLEMENTED\n")
+                        else:
+                            bfh.write(f"#include \"../../../{name}.h\"\n")
                         bfh.write(f"#endif // PAUL_NO_{name.upper()}")
-                    fh.write(f"PAUL_HAS_{b}\n")
-                    fh.write(f"#include \"backends/{b}/{name}{ext}\"")
                     if b == "dummy":
+                        fh.write(f"#ifndef {name.upper()}_BACKEND_IMPLEMENTED\n")
+                        fh.write(f"#include \"backends/{b}/{name}{ext}\"\n")
                         fh.write("#endif\n")
                     else:
-                        fh.write(f"#elif ")
+                        if i == 0:
+                            fh.write(f"#if defined(PAUL_HAS_{b.upper()}) && !defined(PAUL_NO_{b.upper()})\n")
+                        else:
+                            fh.write(f"#if !defined({name.upper()}_BACKEND_IMPLEMENTED) && (defined(PAUL_HAS_{b.upper()}) && !defined(PAUL_NO_{b.upper()})))\n")
+                        fh.write(f"#include \"backends/{b}/{name}{ext}\"\n")
+                        fh.write(f"#ifndef {name.upper()}_{b.upper()}_UNIMPLEMENTED\n")
+                        fh.write(f"#define {name.upper()}_BACKEND_IMPLEMENTED\n")
+                        fh.write("#endif\n")
+                        fh.write("#endif\n\n")
             else:
                 fh.write("\n")
             fh.write(f"#endif // PAUL_NO_{name.upper()}")

@@ -17,5 +17,30 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 #ifndef PAUL_NO_FILE_CHOOSER
 #include "../file_chooser.h"
+#include "internal.h"
 
+#if defined(PAUL_HAS_GTK) && !defined(PAUL_NO_GTK)
+#include "backends/gtk/file_chooser.c"
+#ifndef FILE_CHOOSER_GTK_UNIMPLEMENTED
+#define FILE_CHOOSER_BACKEND_IMPLEMENTED
+#endif
+#endif
+
+#if !defined(FILE_CHOOSER_BACKEND_IMPLEMENTED) && (defined(PAUL_HAS_WAYLAND) && !defined(PAUL_NO_WAYLAND)))
+#include "backends/wayland/file_chooser.c"
+#ifndef FILE_CHOOSER_WAYLAND_UNIMPLEMENTED
+#define FILE_CHOOSER_BACKEND_IMPLEMENTED
+#endif
+#endif
+
+#if !defined(FILE_CHOOSER_BACKEND_IMPLEMENTED) && (defined(PAUL_HAS_X11) && !defined(PAUL_NO_X11)))
+#include "backends/x11/file_chooser.c"
+#ifndef FILE_CHOOSER_X11_UNIMPLEMENTED
+#define FILE_CHOOSER_BACKEND_IMPLEMENTED
+#endif
+#endif
+
+#ifndef FILE_CHOOSER_BACKEND_IMPLEMENTED
+#include "backends/dummy/file_chooser.c"
+#endif
 #endif // PAUL_NO_FILE_CHOOSER

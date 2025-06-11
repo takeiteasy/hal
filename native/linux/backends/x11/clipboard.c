@@ -15,10 +15,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-/* Based off: https://github.com/exebook/x11clipboard [UNLICENSED] */
-
 #ifndef PAUL_NO_CLIPBOARD
-#include "../clipboard.h"
+#include "../../../clipboard.h"
+#include "../../internal.h"
 #include <stdio.h>
 #include <string.h>
 #include <X11/Xlib.h>

@@ -15,21 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_CLIPBOARD_HEAD
-#define PAUL_CLIPBOARD_HEAD
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#define PAUL_ONLY_CLIPBOARD
-#include "../paul.h"
-
-bool paul_clipboard_available(void);
-// WARNING: This must be released
-const char *paul_clipboard_get(void);
-void paul_clipboard_set(const char *str);
-
-#ifdef __cplusplus
-}
-#endif
-#endif // PAUL_CLIPBOARD_HEAD
+#ifndef PAUL_NO_FILE_CHOOSER
+#define FILE_CHOOSER_WAYLAND_UNIMPLEMENTED
+#endif // PAUL_NO_FILE_CHOOSER

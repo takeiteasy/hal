@@ -15,21 +15,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_CLIPBOARD_HEAD
-#define PAUL_CLIPBOARD_HEAD
-#ifdef __cplusplus
-extern "C" {
-#endif
+#ifndef PAUL_NO_CLIPBOARD
+#include "../../../clipboard.h"
+#include "../../internal.h"
+#include <gtk/gtk.h>
 
-#define PAUL_ONLY_CLIPBOARD
-#include "../paul.h"
-
-bool paul_clipboard_available(void);
-// WARNING: This must be released
-const char *paul_clipboard_get(void);
-void paul_clipboard_set(const char *str);
-
-#ifdef __cplusplus
+bool paul_clipboard_available(void) {
+    return true;
 }
-#endif
-#endif // PAUL_CLIPBOARD_HEAD
+
+const char *paul_clipboard_get(void) {
+    GtkClipboard *clipboard = gtk_clipboard_get(GDK_SELECTION_CLIPBOARD);
+    gchar *text = gtk_clipboard_wait_for_text(clipboard);
+    return text ? strdup((char*)text) : NULL;
+}
+
+void paul_clipboard_set(const char *str) {
+    GtkClipboard *clipboard = gtk_clipboard_get(GDK_SELECTION_CLIPBOARD);
+    gtk_clipboard_set_text(clipboard, str, -1);
+}
+#endif // PAUL_NO_CLIPBOARD
