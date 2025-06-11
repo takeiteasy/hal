@@ -190,7 +190,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -231,7 +230,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -272,7 +270,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -313,7 +310,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -354,7 +350,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -395,7 +390,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -436,7 +430,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -477,7 +470,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -518,7 +510,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -559,7 +550,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -600,7 +590,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -641,7 +630,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -682,7 +670,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -723,7 +710,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -764,7 +750,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -805,7 +790,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -846,7 +830,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -887,7 +870,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -928,7 +910,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -969,7 +950,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1010,7 +990,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1051,7 +1030,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1092,7 +1070,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1133,7 +1110,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1174,7 +1150,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1215,7 +1190,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1256,7 +1230,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1297,7 +1270,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1338,7 +1310,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SCREENSHOT
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1379,7 +1350,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SCREENSHOT
 #define PAUL_NO_SMS
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1420,7 +1390,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SCREENSHOT
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1429,47 +1398,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_VOIP
 #define PAUL_NO_WIFI
 #endif // PAUL_ONLY_SPEECH_TO_TEXT
-
-#ifdef PAUL_ONLY_STORAGE_PATH
-#define PAUL_NO_ACCELEROMETER
-#define PAUL_NO_AUDIO_RECORDING
-#define PAUL_NO_BAROMETER
-#define PAUL_NO_BATTERY
-#define PAUL_NO_BLUETOOTH
-#define PAUL_NO_BRIGHTNESS
-#define PAUL_NO_CALL
-#define PAUL_NO_CAMERA
-#define PAUL_NO_COMPASS
-#define PAUL_NO_CLIPBOARD
-#define PAUL_NO_CPU_COUNT
-#define PAUL_NO_DEVICE_NAME
-#define PAUL_NO_EMAIL
-#define PAUL_NO_FILE_CHOOSER
-#define PAUL_NO_FILE_SYSTEM
-#define PAUL_NO_FLASH
-#define PAUL_NO_GPS
-#define PAUL_NO_GRAVITY
-#define PAUL_NO_GYROSCOPE
-#define PAUL_NO_HUMIDITY
-#define PAUL_NO_IR_BLASTER
-#define PAUL_NO_KEYSTORE
-#define PAUL_NO_LIGHT
-#define PAUL_NO_MAPS
-#define PAUL_NO_NOTIFICATIONS
-#define PAUL_NO_ORIENTATION
-#define PAUL_NO_PROXIMITY
-#define PAUL_NO_SCREENSHOT
-#define PAUL_NO_SMS
-#define PAUL_NO_SPATIAL_ORIENTATION
-#define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_TEMPERATURE
-#define PAUL_NO_TEXT_TO_SPEECH
-#define PAUL_NO_THREADS
-#define PAUL_NO_UNIQUE_ID
-#define PAUL_NO_VIBRATOR
-#define PAUL_NO_VOIP
-#define PAUL_NO_WIFI
-#endif // PAUL_ONLY_STORAGE_PATH
 
 #ifdef PAUL_ONLY_TEMPERATURE
 #define PAUL_NO_ACCELEROMETER
@@ -1503,7 +1431,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
 #define PAUL_NO_UNIQUE_ID
@@ -1544,7 +1471,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_THREADS
 #define PAUL_NO_UNIQUE_ID
@@ -1585,7 +1511,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_UNIQUE_ID
@@ -1626,7 +1551,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1667,7 +1591,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1708,7 +1631,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1749,7 +1671,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define PAUL_NO_SMS
 #define PAUL_NO_SPATIAL_ORIENTATION
 #define PAUL_NO_SPEECH_TO_TEXT
-#define PAUL_NO_STORAGE_PATH
 #define PAUL_NO_TEMPERATURE
 #define PAUL_NO_TEXT_TO_SPEECH
 #define PAUL_NO_THREADS
@@ -1850,9 +1771,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #endif
 #if !defined(PAUL_NO_SPEECH_TO_TEXT) && __has_include("native/speech_to_text.h")
 #include "native/speech_to_text.h"
-#endif
-#if !defined(PAUL_NO_STORAGE_PATH) && __has_include("native/storage_path.h")
-#include "native/storage_path.h"
 #endif
 #if !defined(PAUL_NO_TEMPERATURE) && __has_include("native/temperature.h")
 #include "native/temperature.h"

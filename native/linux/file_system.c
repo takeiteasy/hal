@@ -17,5 +17,5 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 #ifndef PAUL_NO_FILE_SYSTEM
 #include "../file_system.h"
-
+#include "../shared/file_system_posix.c"
 #endif // PAUL_NO_FILE_SYSTEM

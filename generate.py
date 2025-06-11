@@ -32,7 +32,6 @@ names = [
   "sms",
   "spatial_orientation",
   "speech_to_text",
-  "storage_path",
   "temperature",
   "text_to_speech",
   "threads",
@@ -48,6 +47,10 @@ ignore_files = [
   "clipboard",
   "threads"
 ]
+
+files_backends = {
+  "linux": ["clipboard"]
+}
 
 license = """/* https://github.com/takeiteasy/paul
 
@@ -94,16 +97,39 @@ platforms = [
   "windows"
 ]
 
+platform_backends = {
+  "linux": ["gtk", "wayland", "x11"]
+}
+
 def generate_source(name):
     if name in ignore_files:
         return
     for p in platforms:
         ext = ".m" if p in ["ios", "macos"] else ".c"
+        _use_backend = p in files_backends
         pa = os.path.join(os.getcwd(), f"native/{p}/{name}{ext}")
         with open(pa, "w") as fh:
             fh.write(license)
             fh.write(f"#ifndef PAUL_NO_{name.upper()}\n")
-            fh.write(f"#include \"../{name}.h\"\n\n")
+            fh.write(f"#include \"../{name}.h\"\n")
+            if _use_backend:
+                fh.write("#include \"internal.h\"\n\n")
+                fh.write("#ifdef ")
+                _backends = platform_backends[p] + ["dummy"]
+                for b in _backends:
+                    bpa = os.path.join(os.getcwd(), f"native/{p}/backends/{b}/{name}{ext}")
+                    with open(bpa, "w") as bfh:
+                        bfh.write(license)
+                        bfh.write(f"#ifndef PAUL_NO_{name.upper()}\n\n")
+                        bfh.write(f"#endif // PAUL_NO_{name.upper()}")
+                    fh.write(f"PAUL_HAS_{b}\n")
+                    fh.write(f"#include \"backends/{b}/{name}{ext}\"")
+                    if b == "dummy":
+                        fh.write("#endif\n")
+                    else:
+                        fh.write(f"#elif ")
+            else:
+                fh.write("\n")
             fh.write(f"#endif // PAUL_NO_{name.upper()}")
 
 output = []

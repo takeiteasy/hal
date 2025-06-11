@@ -40,7 +40,6 @@
 | SMS (send messages)            |         |     |         |       |       |     |
 | Spatial Orientation            |         |     |         |       |       |     |
 | Speech to text                 |         |     |         |       |       |     |
-| Storage Path                   |         |     |         |       |       |     |
 | Temperature                    |         |     |         |       |       |     |
 | Text to speech                 |         |     |         |       |       |     |
 | Threads                        |   YES   | YES |   YES   |  YES  |  YES  | [YES](https://emscripten.org/docs/porting/pthreads.html) |
