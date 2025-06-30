@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_THREADS
+#ifndef HAL_NO_THREADS
 #include "../threads.h"
 #include <windows.h>
 #include <time.h>
@@ -37,7 +37,7 @@ static unsigned __stdcall impl_thrd_routine(void *p) {
     return (unsigned)code;
 }
 
-static DWORD impl_xtime2msec(const paul_thrd_timeout *xt) {
+static DWORD impl_xtime2msec(const hal_thrd_timeout *xt) {
     return (DWORD)((xt->sec * 1000u) + (xt->nsec / 1000000));
 }
 
@@ -59,7 +59,7 @@ Note:
   The implementation of condition variable is ported from Boost.Interprocess
   See http://www.boost.org/boost/interprocess/sync/windows/condition.hpp
 */
-static void impl_cond_do_signal(paul_cnd_t *cond, int broadcast) {
+static void impl_cond_do_signal(hal_cnd_t *cond, int broadcast) {
     int nsignal = 0;
 
     EnterCriticalSection(&cond->monitor);
@@ -96,7 +96,7 @@ static void impl_cond_do_signal(paul_cnd_t *cond, int broadcast) {
         ReleaseSemaphore(cond->sem_queue, nsignal, NULL);
 }
 
-static int impl_cond_do_wait(paul_cnd_t *cond, paul_mtx_t *mtx, const paul_thrd_timeout *xt) {
+static int impl_cond_do_wait(hal_cnd_t *cond, hal_mtx_t *mtx, const hal_thrd_timeout *xt) {
     int nleft = 0;
     int ngone = 0;
     int timeout = 0;
@@ -142,16 +142,16 @@ static int impl_cond_do_wait(paul_cnd_t *cond, paul_mtx_t *mtx, const paul_thrd_
     }
 
     mtx_lock(mtx);
-    return timeout ? PAUL_THRD_BUSY : PAUL_THRD_SUCCESS;
+    return timeout ? HAL_THRD_BUSY : HAL_THRD_SUCCESS;
 }
 #endif  // ifndef EMULATED_THREADS_USE_NATIVE_CV
 
 static struct impl_tss_dtor_entry {
-    paul_tss_t key;
+    hal_tss_t key;
     tss_dtor_t dtor;
 } impl_tss_dtor_tbl[EMULATED_THREADS_TSS_DTOR_SLOTNUM];
 
-static int impl_tss_dtor_register(paul_tss_t key, tss_dtor_t dtor) {
+static int impl_tss_dtor_register(hal_tss_t key, tss_dtor_t dtor) {
     int i;
     for (i = 0; i < EMULATED_THREADS_TSS_DTOR_SLOTNUM; i++) {
         if (!impl_tss_dtor_tbl[i].dtor)
@@ -175,11 +175,11 @@ static void impl_tss_dtor_invoke() {
     }
 }
 
-bool paul_threads_available(void) {
+bool hal_threads_available(void) {
     return true;
 }
 
-void paul_call_once(paul_once_flag *flag, void (*func)(void)) {
+void hal_call_once(hal_once_flag *flag, void (*func)(void)) {
     assert(flag && func);
 #ifdef EMULATED_THREADS_USE_NATIVE_CALL_ONCE
     struct impl_call_once_param param;
@@ -196,18 +196,18 @@ void paul_call_once(paul_once_flag *flag, void (*func)(void)) {
 #endif
 }
 
-int paul_cnd_broadcast(paul_cnd_t *cond) {
+int hal_cnd_broadcast(hal_cnd_t *cond) {
     if (!cond)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
 #ifdef EMULATED_THREADS_USE_NATIVE_CV
     WakeAllConditionVariable(&cond->condvar);
 #else
     impl_cond_do_signal(cond, 1);
 #endif
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-void paul_cnd_destroy(paul_cnd_t *cond) {
+void hal_cnd_destroy(hal_cnd_t *cond) {
     assert(cond);
 #ifdef EMULATED_THREADS_USE_NATIVE_CV
     // do nothing
@@ -218,9 +218,9 @@ void paul_cnd_destroy(paul_cnd_t *cond) {
 #endif
 }
 
-int paul_cnd_init(paul_cnd_t *cond) {
+int hal_cnd_init(hal_cnd_t *cond) {
     if (!cond)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
 #ifdef EMULATED_THREADS_USE_NATIVE_CV
     InitializeConditionVariable(&cond->condvar);
 #else
@@ -231,185 +231,185 @@ int paul_cnd_init(paul_cnd_t *cond) {
     cond->sem_gate = CreateSemaphore(NULL, 1, 1, NULL);
     InitializeCriticalSection(&cond->monitor);
 #endif
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-int paul_cnd_signal(paul_cnd_t *cond) {
+int hal_cnd_signal(hal_cnd_t *cond) {
     if (!cond)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
 #ifdef EMULATED_THREADS_USE_NATIVE_CV
     WakeConditionVariable(&cond->condvar);
 #else
     impl_cond_do_signal(cond, 0);
 #endif
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
 // 7.25.3.5
-int paul_cnd_timedwait(paul_cnd_t *cond, paul_mtx_t *mtx, const paul_thrd_timeout *xt) {
+int hal_cnd_timedwait(hal_cnd_t *cond, hal_mtx_t *mtx, const hal_thrd_timeout *xt) {
     if (!cond || !mtx || !xt)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
 #ifdef EMULATED_THREADS_USE_NATIVE_CV
     if (SleepConditionVariableCS(&cond->condvar, &mtx->cs, impl_xtime2msec(xt)))
-        return PAUL_THRD_SUCCESS;
-    return (GetLastError() == ERROR_TIMEOUT) ? PAUL_THRD_BUSY : PAUL_THRD_ERROR;
+        return HAL_THRD_SUCCESS;
+    return (GetLastError() == ERROR_TIMEOUT) ? HAL_THRD_BUSY : HAL_THRD_ERROR;
 #else
     return impl_cond_do_wait(cond, mtx, xt);
 #endif
 }
 
-int paul_cnd_wait(paul_cnd_t *cond, paul_mtx_t *mtx) {
+int hal_cnd_wait(hal_cnd_t *cond, hal_mtx_t *mtx) {
     if (!cond || !mtx)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
 #ifdef EMULATED_THREADS_USE_NATIVE_CV
     SleepConditionVariableCS(&cond->condvar, &mtx->cs, INFINITE);
 #else
     impl_cond_do_wait(cond, mtx, NULL);
 #endif
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-void paul_mtx_destroy(paul_mtx_t *mtx) {
+void hal_mtx_destroy(hal_mtx_t *mtx) {
     assert(mtx);
     DeleteCriticalSection(&mtx->cs);
 }
 
-int paul_mtx_init(paul_mtx_t *mtx, int type) {
+int hal_mtx_init(hal_mtx_t *mtx, int type) {
     if (!mtx)
-        return PAUL_THRD_ERROR;
-    if (type != PAUL_MTX_PLAIN && type != PAUL_MTX_TIMED && type != PAUL_MTX_TRY
-        && type != (PAUL_MTX_PLAIN | PAUL_MTX_RECURSIVE)
-        && type != (PAUL_MTX_TIMED | PAUL_MTX_RECURSIVE)
-        && type != (PAUL_MTX_TRY   | PAUL_MTX_RECURSIVE))
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
+    if (type != HAL_MTX_PLAIN && type != HAL_MTX_TIMED && type != HAL_MTX_TRY
+        && type != (HAL_MTX_PLAIN | HAL_MTX_RECURSIVE)
+        && type != (HAL_MTX_TIMED | HAL_MTX_RECURSIVE)
+        && type != (HAL_MTX_TRY   | HAL_MTX_RECURSIVE))
+        return HAL_THRD_ERROR;
     InitializeCriticalSection(&mtx->cs);
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-int paul_mtx_lock(paul_mtx_t *mtx) {
+int hal_mtx_lock(hal_mtx_t *mtx) {
     if (!mtx)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
     EnterCriticalSection(&mtx->cs);
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-int paul_mtx_timedlock(paul_mtx_t *mtx, const paul_thrd_timeout *xt) {
+int hal_mtx_timedlock(hal_mtx_t *mtx, const hal_thrd_timeout *xt) {
     time_t expire, now;
     if (!mtx || !xt)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
     expire = time(NULL);
     expire += xt->sec;
-    while (PAUL_MTX_TRYlock(mtx) != PAUL_THRD_SUCCESS) {
+    while (HAL_MTX_TRYlock(mtx) != HAL_THRD_SUCCESS) {
         now = time(NULL);
         if (expire < now)
-            return PAUL_THRD_BUSY;
+            return HAL_THRD_BUSY;
         // busy loop!
         thrd_yield();
     }
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-int paul_mtx_trylock(paul_mtx_t *mtx) {
+int hal_mtx_trylock(hal_mtx_t *mtx) {
     if (!mtx)
-        return PAUL_THRD_ERROR;
-    return TryEnterCriticalSection(&mtx->cs) ? PAUL_THRD_SUCCESS : PAUL_THRD_BUSY;
+        return HAL_THRD_ERROR;
+    return TryEnterCriticalSection(&mtx->cs) ? HAL_THRD_SUCCESS : HAL_THRD_BUSY;
 }
 
-int paul_mtx_unlock(paul_mtx_t *mtx) {
+int hal_mtx_unlock(hal_mtx_t *mtx) {
     if (!mtx)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
     LeaveCriticalSection(&mtx->cs);
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-int paul_thrd_create(paul_thrd_t *thr, thrd_start_t func, void *arg) {
+int hal_thrd_create(hal_thrd_t *thr, thrd_start_t func, void *arg) {
     struct impl_thrd_param *pack;
     uintptr_t handle;
     if (!thr || !thr->hndl)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
     if (!(pack = malloc(sizeof(struct impl_thrd_param))))
-        return PAUL_THRD_NOMEM;
+        return HAL_THRD_NOMEM;
     pack->func = func;
     pack->arg = arg;
     handle = _beginthreadex(NULL, 0, impl_thrd_routine, pack, 0, NULL);
     if (handle == 0) {
         if (errno == EAGAIN || errno == EACCES)
-            return PAUL_THRD_NOMEM;
-        return PAUL_THRD_ERROR;
+            return HAL_THRD_NOMEM;
+        return HAL_THRD_ERROR;
     }
     *thr->hndl = handle;
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-paul_thrd_t paul_thrd_current(void) {
-    return (paul_thrd_t){.hndl=GetCurrentThread()};
+hal_thrd_t hal_thrd_current(void) {
+    return (hal_thrd_t){.hndl=GetCurrentThread()};
 }
 
-int paul_thrd_detach(paul_thrd_t thr) {
+int hal_thrd_detach(hal_thrd_t thr) {
     CloseHandle(thr.hndl);
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-int paul_thrd_equal(paul_thrd_t thr0, paul_thrd_t thr1) {
+int hal_thrd_equal(hal_thrd_t thr0, hal_thrd_t thr1) {
     return thr0.hndl == thr1.hndl;
 }
 
-void paul_thrd_exit(int res) {
+void hal_thrd_exit(int res) {
     impl_tss_dtor_invoke();
     _endthreadex((unsigned)res);
 }
 
-int paul_thrd_join(paul_thrd_t thr, int *res) {
+int hal_thrd_join(hal_thrd_t thr, int *res) {
     DWORD w, code;
     w = WaitForSingleObject(thr.hndl, INFINITE);
     if (w != WAIT_OBJECT_0)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
     if (res) {
         if (!GetExitCodeThread(thr.hndl, &code)) {
             CloseHandle(thr.hndl);
-            return PAUL_THRD_ERROR;
+            return HAL_THRD_ERROR;
         }
         *res = (int)code;
     }
     CloseHandle(thr.hndl);
-    return PAUL_THRD_SUCCESS;
+    return HAL_THRD_SUCCESS;
 }
 
-void paul_thrd_sleep(const paul_thrd_timeout *xt) {
+void hal_thrd_sleep(const hal_thrd_timeout *xt) {
     assert(xt);
     Sleep(impl_xtime2msec(xt));
 }
 
-void paul_thrd_yield(void) {
+void hal_thrd_yield(void) {
     SwitchToThread();
 }
 
-int paul_tss_create(paul_tss_t *key, tss_dtor_t dtor) {
+int hal_tss_create(hal_tss_t *key, tss_dtor_t dtor) {
     if (!key)
-        return PAUL_THRD_ERROR;
+        return HAL_THRD_ERROR;
     key->key = TlsAlloc();
     if (dtor) {
         if (impl_tss_dtor_register(key->key, dtor)) {
             TlsFree(key->key);
-            return PAUL_THRD_ERROR;
+            return HAL_THRD_ERROR;
         }
     }
-    return key->key != 0xFFFFFFFF ? PAUL_THRD_SUCCESS : PAUL_THRD_ERROR;
+    return key->key != 0xFFFFFFFF ? HAL_THRD_SUCCESS : HAL_THRD_ERROR;
 }
 
-void paul_tss_delete(paul_tss_t key) {
+void hal_tss_delete(hal_tss_t key) {
     TlsFree(key.key);
 }
 
-void* paul_tss_get(paul_tss_t key) {
+void* hal_tss_get(hal_tss_t key) {
     return TlsGetValue(key.key);
 }
 
-int paul_tss_set(paul_tss_t key, void *val) {
-    return TlsSetValue(key.key, val) ? PAUL_THRD_SUCCESS : PAUL_THRD_ERROR;
+int hal_tss_set(hal_tss_t key, void *val) {
+    return TlsSetValue(key.key, val) ? HAL_THRD_SUCCESS : HAL_THRD_ERROR;
 }
 
-int paul_timeout(paul_thrd_timeout *xt, int base) {
+int hal_timeout(hal_thrd_timeout *xt, int base) {
     if (!xt)
         return 0;
     if (base == TIME_UTC) {
@@ -419,4 +419,4 @@ int paul_timeout(paul_thrd_timeout *xt, int base) {
     }
     return 0;
 }
-#endif // PAUL_NO_THREADS
+#endif // HAL_NO_THREADS

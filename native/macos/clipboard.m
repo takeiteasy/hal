@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,15 +15,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_CLIPBOARD
+#ifndef HAL_NO_CLIPBOARD
 #include "../clipboard.h"
 #import <AppKit/AppKit.h>
 
-bool paul_clipboard_available(void) {
+bool hal_clipboard_available(void) {
     return [NSPasteboard generalPasteboard] != NULL;
 }
 
-const char *paul_clipboard_get(void) {
+const char *hal_clipboard_get(void) {
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
     if ([[pb types] containsObject:NSPasteboardTypeString]) {
         NSString *text = [pb stringForType:NSPasteboardTypeString];
@@ -32,10 +32,10 @@ const char *paul_clipboard_get(void) {
     return NULL;
 }
 
-void paul_clipboard_set(const char *str) {
+void hal_clipboard_set(const char *str) {
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
     [pb clearContents];
     [pb setString:@(str)
           forType:NSPasteboardTypeString];
 }
-#endif // PAUL_NO_CLIPBOARD
+#endif // HAL_NO_CLIPBOARD

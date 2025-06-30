@@ -61,9 +61,9 @@ files_backends = {
   ]
 }
 
-license = """/* https://github.com/takeiteasy/paul
+license = """/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -85,17 +85,17 @@ def generate_header(name):
     uname = name.upper()
     with open(p, "w") as fh:
         fh.write(license)
-        fh.write(f"#ifndef PAUL_{uname}_HEAD\n")
-        fh.write(f"#define PAUL_{uname}_HEAD\n")
+        fh.write(f"#ifndef HAL_{uname}_HEAD\n")
+        fh.write(f"#define HAL_{uname}_HEAD\n")
         fh.write("#ifdef __cplusplus\n")
         fh.write("extern \"C\" {\n")
         fh.write("#endif\n\n")
-        fh.write(f"#define PAUL_ONLY_{name.upper()}\n")
-        fh.write("#include \"../paul.h\"\n\n")
+        fh.write(f"#define HAL_ONLY_{name.upper()}\n")
+        fh.write("#include \"../hal.h\"\n\n")
         fh.write("#ifdef __cplusplus\n")
         fh.write("}\n")
         fh.write("#endif\n")
-        fh.write(f"#endif // PAUL_{uname}_HEAD\n")
+        fh.write(f"#endif // HAL_{uname}_HEAD\n")
 
 platforms = [
   "android",
@@ -115,7 +115,7 @@ def generate_source(name):
         pa = os.path.join(os.getcwd(), f"native/{p}/{name}{ext}")
         with open(pa, "w") as fh:
             fh.write(license)
-            fh.write(f"#ifndef PAUL_NO_{name.upper()}\n")
+            fh.write(f"#ifndef HAL_NO_{name.upper()}\n")
             fh.write(f"#include \"../{name}.h\"\n")
             if _use_backend:
                 fh.write("#include \"internal.h\"\n\n")
@@ -124,21 +124,21 @@ def generate_source(name):
                     bpa = os.path.join(os.getcwd(), f"native/{p}/backends/{b}/{name}{ext}")
                     with open(bpa, "w") as bfh:
                         bfh.write(license)
-                        bfh.write(f"#ifndef PAUL_NO_{name.upper()}\n")
+                        bfh.write(f"#ifndef HAL_NO_{name.upper()}\n")
                         if b != "dummy":
                             bfh.write(f"#define {name.upper()}_{b.upper()}_UNIMPLEMENTED\n")
                         else:
                             bfh.write(f"#include \"../../../{name}.h\"\n")
-                        bfh.write(f"#endif // PAUL_NO_{name.upper()}")
+                        bfh.write(f"#endif // HAL_NO_{name.upper()}")
                     if b == "dummy":
                         fh.write(f"#ifndef {name.upper()}_BACKEND_IMPLEMENTED\n")
                         fh.write(f"#include \"backends/{b}/{name}{ext}\"\n")
                         fh.write("#endif\n")
                     else:
                         if i == 0:
-                            fh.write(f"#if defined(PAUL_HAS_{b.upper()}) && !defined(PAUL_NO_{b.upper()})\n")
+                            fh.write(f"#if defined(HAL_HAS_{b.upper()}) && !defined(HAL_NO_{b.upper()})\n")
                         else:
-                            fh.write(f"#if !defined({name.upper()}_BACKEND_IMPLEMENTED) && (defined(PAUL_HAS_{b.upper()}) && !defined(PAUL_NO_{b.upper()})))\n")
+                            fh.write(f"#if !defined({name.upper()}_BACKEND_IMPLEMENTED) && (defined(HAL_HAS_{b.upper()}) && !defined(HAL_NO_{b.upper()})))\n")
                         fh.write(f"#include \"backends/{b}/{name}{ext}\"\n")
                         fh.write(f"#ifndef {name.upper()}_{b.upper()}_UNIMPLEMENTED\n")
                         fh.write(f"#define {name.upper()}_BACKEND_IMPLEMENTED\n")
@@ -146,16 +146,16 @@ def generate_source(name):
                         fh.write("#endif\n\n")
             else:
                 fh.write("\n")
-            fh.write(f"#endif // PAUL_NO_{name.upper()}")
+            fh.write(f"#endif // HAL_NO_{name.upper()}")
 
 output = []
 
 for n in upper_names:
     on = [nn for nn in upper_names if n != nn]
     block = [
-      f"#ifdef PAUL_ONLY_{n}",
-      "\n".join([f"#define PAUL_NO_{nn}" for nn in on]),
-      f"#endif // PAUL_ONLY_{n}\n",
+      f"#ifdef HAL_ONLY_{n}",
+      "\n".join([f"#define HAL_NO_{nn}" for nn in on]),
+      f"#endif // HAL_ONLY_{n}\n",
     ]
     output.append(block)
 
@@ -163,7 +163,7 @@ for n in upper_names:
     ln = n.lower()
     header = f"\"native/{ln}.h\""
     block = [
-      f"#if !defined(PAUL_NO_{n}) && __has_include({header})",
+      f"#if !defined(HAL_NO_{n}) && __has_include({header})",
       f"#include {header}",
       "#endif"
     ]
@@ -171,7 +171,7 @@ for n in upper_names:
     generate_source(ln)
     output.append(block)
 
-with open(os.path.join(os.getcwd(), "paul.h"), "r+") as fh:
+with open(os.path.join(os.getcwd(), "hal.h"), "r+") as fh:
     lines = [l.rstrip() for l in fh.readlines()]
     header = []
     footer = []

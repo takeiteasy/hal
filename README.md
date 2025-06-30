@@ -1,9 +1,9 @@
-# paul
+# hal
 
 > [!WARNING]
 > Work in progress
 
-**P**latform **A**gnostic **U**tility **L**ibrary -- inspired by [kivy/plyer](https://github.com/kivy/plyer)
+**H**ardware **A**bstraction **L**ibrary -- inspired by [kivy/plyer](https://github.com/kivy/plyer)
 
 ## Platform support
 
@@ -51,7 +51,7 @@
 ## LICENSE
 
 ```
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

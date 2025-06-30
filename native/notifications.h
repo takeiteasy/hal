@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,16 +15,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NOTIFICATIONS_HEAD
-#define PAUL_NOTIFICATIONS_HEAD
+#ifndef HAL_NOTIFICATIONS_HEAD
+#define HAL_NOTIFICATIONS_HEAD
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define PAUL_ONLY_NOTIFICATIONS
-#include "../paul.h"
+#define HAL_ONLY_NOTIFICATIONS
+#include "../hal.h"
 
 #ifdef __cplusplus
 }
 #endif
-#endif // PAUL_NOTIFICATIONS_HEAD
+#endif // HAL_NOTIFICATIONS_HEAD

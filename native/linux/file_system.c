@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,56 +15,56 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_FILE_SYSTEM
+#ifndef HAL_NO_FILE_SYSTEM
 #include "../file_system.h"
 #include <unistd.h>
 #include "../shared/file_system.c"
 
-bool paul_file_exists(const char *path) {
+bool hal_file_exists(const char *path) {
     return false;
 }
 
-bool paul_dir_exists(const char *path) {
+bool hal_dir_exists(const char *path) {
     return false;
 }
 
-const char* paul_get_root_dir(void) {
+const char* hal_get_root_dir(void) {
     return strdup("/");
 }
 
-const char* paul_working_dir(void) {
+const char* hal_working_dir(void) {
     return NULL;
 }
 
-const char* paul_home_dir(void) {
+const char* hal_home_dir(void) {
     return NULL;
 }
 
-const char* paul_documents_dir(void) {
+const char* hal_documents_dir(void) {
     return NULL;
 }
 
-const char* paul_downloads_dir(void) {
+const char* hal_downloads_dir(void) {
     return NULL;
 }
 
-const char* paul_video_dir(void) {
+const char* hal_video_dir(void) {
     return NULL;
 }
 
-const char* paul_music_dir(void) {
+const char* hal_music_dir(void) {
     return NULL;
 }
 
-const char* paul_picture_dir(void) {
+const char* hal_picture_dir(void) {
     return NULL;
 }
 
-const char* paul_application_dir(void) {
+const char* hal_application_dir(void) {
     return NULL;
 }
 
-const char* paul_desktop_dir(void) {
+const char* hal_desktop_dir(void) {
     return NULL;
 }
-#endif // PAUL_NO_FILE_SYSTEM
+#endif // HAL_NO_FILE_SYSTEM

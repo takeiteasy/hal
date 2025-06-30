@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_ACCELEROMETER
+#ifndef HAL_NO_ACCELEROMETER
 #include "../accelerometer.h"
 #import <IOKit/IOKitLib.h>
 
@@ -95,7 +95,7 @@ BAIL:
 
 static Accelerometer* _accelerometer = NULL;
 
-bool paul_accelerometer_available(void) {
+bool hal_accelerometer_available(void) {
     Accelerometer *tmp = [Accelerometer new];
     if (!tmp)
         return false;
@@ -104,37 +104,37 @@ bool paul_accelerometer_available(void) {
     return result;
 }
 
-void paul_accelerometer_enable(void) {
+void hal_accelerometer_enable(void) {
     if (!_accelerometer)
         _accelerometer = [Accelerometer new];
 }
 
-void paul_accelerometer_disable(void) {
+void hal_accelerometer_disable(void) {
     if (_accelerometer) {
         [_accelerometer dealloc];
         _accelerometer = NULL;
     }
 }
 
-bool paul_accelerometer_enabled(void) {
+bool hal_accelerometer_enabled(void) {
     return _accelerometer != NULL;
 }
 
-bool paul_accelerometer_disabled(void) {
+bool hal_accelerometer_disabled(void) {
     return _accelerometer == NULL;
 }
 
-bool paul_accelerometer_toggle(void) {
-    bool state = paul_accelerometer_enabled();
+bool hal_accelerometer_toggle(void) {
+    bool state = hal_accelerometer_enabled();
     if (state)
-        paul_accelerometer_disable();
+        hal_accelerometer_disable();
     else
-        paul_accelerometer_enable();
+        hal_accelerometer_enable();
     return !state;
 }
 
-bool paul_accelerometer_acceleration(float *x, float *y, float *z)  {
-    if (paul_accelerometer_enabled()) {
+bool hal_accelerometer_acceleration(float *x, float *y, float *z)  {
+    if (hal_accelerometer_enabled()) {
         [_accelerometer getCoordsX:x Y:y Z:z];
         return true;
     } else {
@@ -147,4 +147,4 @@ bool paul_accelerometer_acceleration(float *x, float *y, float *z)  {
         return false;
     }
 }
-#endif // PAUL_NO_ACCELEROMETER
+#endif // HAL_NO_ACCELEROMETER

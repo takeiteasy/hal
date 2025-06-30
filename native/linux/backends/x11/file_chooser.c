@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,6 +15,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_FILE_CHOOSER
+#ifndef HAL_NO_FILE_CHOOSER
 #define FILE_CHOOSER_X11_UNIMPLEMENTED
-#endif // PAUL_NO_FILE_CHOOSER
+#endif // HAL_NO_FILE_CHOOSER

@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,24 +15,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_ACCELEROMETER_HEAD
-#define PAUL_ACCELEROMETER_HEAD
+#ifndef HAL_ACCELEROMETER_HEAD
+#define HAL_ACCELEROMETER_HEAD
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define PAUL_ONLY_ACCELEROMETER
-#include "../paul.h"
+#define HAL_ONLY_ACCELEROMETER
+#include "../hal.h"
 
-bool paul_accelerometer_available(void);
-void paul_accelerometer_enable(void);
-void paul_accelerometer_disable(void);
-bool paul_accelerometer_enabled(void);
-bool paul_accelerometer_disabled(void);
-bool paul_accelerometer_toggle(void);
-bool paul_accelerometer_acceleration(float *x, float *y, float *z);
+bool hal_accelerometer_available(void);
+void hal_accelerometer_enable(void);
+void hal_accelerometer_disable(void);
+bool hal_accelerometer_enabled(void);
+bool hal_accelerometer_disabled(void);
+bool hal_accelerometer_toggle(void);
+bool hal_accelerometer_acceleration(float *x, float *y, float *z);
 
 #ifdef __cplusplus
 }
 #endif
-#endif // PAUL_ACCELEROMETER_HEAD
+#endif // HAL_ACCELEROMETER_HEAD

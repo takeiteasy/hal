@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,19 +15,19 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_FILE_SYSTEM
+#ifndef HAL_NO_FILE_SYSTEM
 #include "../file_system.h"
 #include <stdio.h>
 #include <unistd.h>
 #include "../shared/file_system.c"
 #import <Cocoa/Cocoa.h>
 
-bool paul_file_exists(const char *path) {
+bool hal_file_exists(const char *path) {
     return [[NSFileManager defaultManager] fileExistsAtPath:@(path)
                                                 isDirectory:nil];
 }
 
-bool paul_dir_exists(const char *path) {
+bool hal_dir_exists(const char *path) {
     bool result = false;
     [[NSFileManager defaultManager] fileExistsAtPath:@(path)
                                          isDirectory:&result];
@@ -35,21 +35,21 @@ bool paul_dir_exists(const char *path) {
 }
 
 // WARNING: These must be released
-const char* paul_working_dir(void) {
+const char* hal_working_dir(void) {
     NSString *url = [[NSFileManager defaultManager] currentDirectoryPath];
     const char *result = strdup([url UTF8String]);
     [url release];
     return result;
 }
 
-const char* paul_home_dir(void) {
+const char* hal_home_dir(void) {
     NSURL *url = [[NSFileManager defaultManager] homeDirectoryForCurrentUser];
     const char *result = strdup([[url absoluteString] UTF8String]);
     [url release];
     return result;
 }
 
-const char* paul_get_root_dir(void) {
+const char* hal_get_root_dir(void) {
     return strdup("/");
 }
 
@@ -61,32 +61,32 @@ static const char* _storage_path(NSSearchPathDirectory dir) {
     return result;
 }
 
-const char* paul_documents_dir(void) {
+const char* hal_documents_dir(void) {
     return _storage_path(NSDocumentDirectory);
 }
 
-const char* paul_downloads_dir(void) {
+const char* hal_downloads_dir(void) {
     return _storage_path(NSDownloadsDirectory);
 }
 
-const char* paul_video_dir(void) {
+const char* hal_video_dir(void) {
     return _storage_path(NSMoviesDirectory);
 }
 
-const char* paul_music_dir(void) {
+const char* hal_music_dir(void) {
     return _storage_path(NSMusicDirectory);
 }
 
-const char* paul_picture_dir(void) {
+const char* hal_picture_dir(void) {
     return _storage_path(NSPicturesDirectory);
 }
 
-const char* paul_application_dir(void) {
+const char* hal_application_dir(void) {
     return _storage_path(NSApplicationDirectory);
 }
 
-const char* paul_desktop_dir(void) {
+const char* hal_desktop_dir(void) {
     return _storage_path(NSDesktopDirectory);
 }
 
-#endif // PAUL_NO_FILE_SYSTEM
+#endif // HAL_NO_FILE_SYSTEM

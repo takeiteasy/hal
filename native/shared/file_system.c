@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,19 +19,19 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 #include <stdio.h>
 #include <stdlib.h>
 
-bool paul_dir_create(const char *path) {
+bool hal_dir_create(const char *path) {
     return false;
 }
 
-bool paul_path_exists(const char *path) {
-    return paul_file_exists(path) || paul_dir_exists(path);
+bool hal_path_exists(const char *path) {
+    return hal_file_exists(path) || hal_dir_exists(path);
 }
 
-const char* paul_read_file(const char *filename, size_t *file_size) {
+const char* hal_read_file(const char *filename, size_t *file_size) {
     char *result = NULL;
     size_t sz = -1;
     FILE *fh = NULL;
-    if (!paul_file_exists(filename))
+    if (!hal_file_exists(filename))
         goto BAIL;
     if (!(fh = fopen(filename, "rb")))
         goto BAIL;
@@ -53,8 +53,8 @@ BAIL:
     return result;
 }
 
-bool paul_write_file(const char *path, const char *data, size_t data_size, bool overwrite) {
-    if (!overwrite && paul_file_exists(path))
+bool hal_write_file(const char *path, const char *data, size_t data_size, bool overwrite) {
+    if (!overwrite && hal_file_exists(path))
         return false;
     FILE *fh = fopen(path, "wb");
     if (!fh)
@@ -66,46 +66,46 @@ bool paul_write_file(const char *path, const char *data, size_t data_size, bool 
     return false;
 }
 
-size_t paul_file_mod_time(const char *path) {
+size_t hal_file_mod_time(const char *path) {
     return -1;
 }
 
-bool paul_set_working_dir(const char *path) {
+bool hal_set_working_dir(const char *path) {
     return chdir(path) == 0;
 }
 
-const char* paul_file_extension(const char *path) {
+const char* hal_file_extension(const char *path) {
     return NULL;
 }
 
-size_t paul_file_size(const char *path) {
+size_t hal_file_size(const char *path) {
     return -1;
 }
 
-const char* paul_file_name(const char *path) {
+const char* hal_file_name(const char *path) {
     return NULL;
 }
 
-const char* paul_file_name_no_extension(const char *path) {
+const char* hal_file_name_no_extension(const char *path) {
     return NULL;
 }
 
-const char* paul_path_directory(const char *path) {
+const char* hal_path_directory(const char *path) {
     return NULL;
 }
 
-const char* paul_path_parent(const char *path) {
+const char* hal_path_parent(const char *path) {
     return NULL;
 }
 
-const char* paul_resolve_path(const char *path) {
+const char* hal_resolve_path(const char *path) {
     return NULL;
 }
 
-const char* paul_join_path(const char *a, const char *b) {
+const char* hal_join_path(const char *a, const char *b) {
     return NULL;
 }
 
-const char* paul_join_paths(int n, ...) {
+const char* hal_join_paths(int n, ...) {
     return NULL;
 }

@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,25 +15,25 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_CLIPBOARD
+#ifndef HAL_NO_CLIPBOARD
 #include "../clipboard.h"
 #include "internal.h"
 
-#if defined(PAUL_HAS_GTK) && !defined(PAUL_NO_GTK)
+#if defined(HAL_HAS_GTK) && !defined(HAL_NO_GTK)
 #include "backends/gtk/clipboard.c"
 #ifndef CLIPBOARD_GTK_UNIMPLEMENTED
 #define CLIPBOARD_BACKEND_IMPLEMENTED
 #endif
 #endif
 
-#if !defined(CLIPBOARD_BACKEND_IMPLEMENTED) && (defined(PAUL_HAS_WAYLAND) && !defined(PAUL_NO_WAYLAND)))
+#if !defined(CLIPBOARD_BACKEND_IMPLEMENTED) && (defined(HAL_HAS_WAYLAND) && !defined(HAL_NO_WAYLAND)))
 #include "backends/wayland/clipboard.c"
 #ifndef CLIPBOARD_WAYLAND_UNIMPLEMENTED
 #define CLIPBOARD_BACKEND_IMPLEMENTED
 #endif
 #endif
 
-#if !defined(CLIPBOARD_BACKEND_IMPLEMENTED) && (defined(PAUL_HAS_X11) && !defined(PAUL_NO_X11)))
+#if !defined(CLIPBOARD_BACKEND_IMPLEMENTED) && (defined(HAL_HAS_X11) && !defined(HAL_NO_X11)))
 #include "backends/x11/clipboard.c"
 #ifndef CLIPBOARD_X11_UNIMPLEMENTED
 #define CLIPBOARD_BACKEND_IMPLEMENTED
@@ -43,4 +43,4 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 #ifndef CLIPBOARD_BACKEND_IMPLEMENTED
 #include "backends/dummy/clipboard.c"
 #endif
-#endif // PAUL_NO_CLIPBOARD
+#endif // HAL_NO_CLIPBOARD

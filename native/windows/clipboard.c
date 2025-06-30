@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,15 +15,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_CLIPBOARD
+#ifndef HAL_NO_CLIPBOARD
 #include "../clipboard.h"
 #include <windows.h>
 
-bool paul_clipboard_available(void) {
+bool hal_clipboard_available(void) {
     return IsClipboardFormatAvailable(CF_TEXT);
 }
 
-const char *paul_clipboard_get(void) {
+const char *hal_clipboard_get(void) {
     OpenClipboard(NULL);
     char *result = NULL;
     if (!IsClipboardFormatAvailable(CF_TEXT))
@@ -39,7 +39,7 @@ BAIL:
     return result;
 }
 
-void paul_clipboard_set(const char *str) {
+void hal_clipboard_set(const char *str) {
     size_t length = strlen(str);
     HGLOBAL hMem = GlobalAlloc(GMEM_MOVEABLE, length + 1);
     if (!hMem)
@@ -52,4 +52,4 @@ void paul_clipboard_set(const char *str) {
     GlobalUnlock(hMem);
     CloseClipboard();
 }
-#endif // PAUL_NO_CLIPBOARD
+#endif // HAL_NO_CLIPBOARD

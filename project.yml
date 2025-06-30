@@ -1,4 +1,4 @@
-name: paul
+name: hal
 
 options:
   bundleIdPrefix: io.github.takeiteasy
@@ -11,13 +11,13 @@ settings:
   CLANG_WARN_DOCUMENTATION_COMMENTS: false
 
 targets:
-  paul:
+  hal:
     type: library.dynamic
     platform: macOS
     info:
         path: Info.plist
     sources:
-        - path: paul.h
+        - path: hal.h
         - path: native/macos
         - path: native/
           type: folder

@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_ACCELEROMETER
+#ifndef HAL_NO_ACCELEROMETER
 #include "../accelerometer.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,31 +27,31 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 static bool _enabled = false;
 
-bool paul_accelerometer_available(void) {
-    return paul_accelerometer_acceleration(NULL, NULL, NULL);
+bool hal_accelerometer_available(void) {
+    return hal_accelerometer_acceleration(NULL, NULL, NULL);
 }
 
-void paul_accelerometer_enable(void) {
+void hal_accelerometer_enable(void) {
     _enabled = true;
 }
 
-void paul_accelerometer_disable(void) {
+void hal_accelerometer_disable(void) {
     _enabled = false;
 }
 
-bool paul_accelerometer_enabled(void) {
+bool hal_accelerometer_enabled(void) {
     return _enabled == true;
 }
 
-bool paul_accelerometer_disabled(void) {
+bool hal_accelerometer_disabled(void) {
     return _enabled != true;
 }
 
-bool paul_accelerometer_toggle(void) {
-    if (paul_accelerometer_enabled())
-        paul_accelerometer_disable();
+bool hal_accelerometer_toggle(void) {
+    if (hal_accelerometer_enabled())
+        hal_accelerometer_disable();
     else
-        paul_accelerometer_enable();
+        hal_accelerometer_enable();
 }
 
 static char _peek(FILE *fh, int cursor) {
@@ -150,8 +150,8 @@ BAIL:
     return result;
 }
 
-bool paul_accelerometer_acceleration(float *x, float *y, float *z) {
-    if (paul_accelerometer_disabled)
+bool hal_accelerometer_acceleration(float *x, float *y, float *z) {
+    if (hal_accelerometer_disabled)
         goto BAIL;
     struct dirent *entry;
     DIR *dir = opendir("/sys/devices/platform/");
@@ -178,4 +178,4 @@ BAIL:
         *z = -1;
     return false;
 }
-#endif // PAUL_NO_ACCELEROMETER
+#endif // HAL_NO_ACCELEROMETER

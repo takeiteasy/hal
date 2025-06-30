@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,16 +15,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_BAROMETER_HEAD
-#define PAUL_BAROMETER_HEAD
+#ifndef HAL_BAROMETER_HEAD
+#define HAL_BAROMETER_HEAD
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define PAUL_ONLY_BAROMETER
-#include "../paul.h"
+#define HAL_ONLY_BAROMETER
+#include "../hal.h"
 
 #ifdef __cplusplus
 }
 #endif
-#endif // PAUL_BAROMETER_HEAD
+#endif // HAL_BAROMETER_HEAD

@@ -1,6 +1,6 @@
-/* https://github.com/takeiteasy/paul
+/* https://github.com/takeiteasy/hal
 
-paul Copyright (C) 2025 George Watson
+hal Copyright (C) 2025 George Watson
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 /* Based off: https://github.com/RobLoach/emscripten_clipboard [Zlib] */
 
-#ifndef PAUL_NO_CLIPBOARD
+#ifndef HAL_NO_CLIPBOARD
 #include "../clipboard.h"
 #include <string.h>
 #include <emscripten.h>
@@ -46,13 +46,13 @@ static void _init(void) {
     clipboard.initialized = true;
 }
 
-bool paul_clipboard_available(void) {
+bool hal_clipboard_available(void) {
     if (_clipboard.initialized)
         _init();
     return true;
 }
 
-const char *paul_clipboard_get(void) {
+const char *hal_clipboard_get(void) {
     if (_clipboard.initialized)
         _init();
     return strdup(_clipboard.text);
@@ -62,7 +62,7 @@ EM_JS(void, emscripten_clipboard__write_text, (const char* text), {
     navigator.clipboard.writeText(UTF8ToString(text));
 })
 
-void paul_clipboard_set(const char *str) {
+void hal_clipboard_set(const char *str) {
     if (_clipboard.initialized)
         _init();
     // Make sure it doesn't exceed the maximum length.
@@ -76,4 +76,4 @@ void paul_clipboard_set(const char *str) {
     // Tell the browser there is new clipboard text.
     emscripten_clipboard__write_text(clipboard->text);
 }
-#endif // PAUL_NO_CLIPBOARD
+#endif // HAL_NO_CLIPBOARD
