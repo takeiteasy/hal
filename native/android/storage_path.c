@@ -15,10 +15,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef HAL_NO_FILE_SYSTEM
-#include "../file_system.h"
-#include <unistd.h>
-#include "../shared/file_system.c"
+#ifndef HAL_NO_STORAGE_PATH
+#include "../storage_path.h"
+
+bool hal_path_exists(const char *path) {
+    return false;
+}
 
 bool hal_file_exists(const char *path) {
     return false;
@@ -28,8 +30,16 @@ bool hal_dir_exists(const char *path) {
     return false;
 }
 
+const char* hal_get_working_dir(void) {
+    return NULL;
+}
+
+bool hal_set_working_dir(const char *path) {
+    return false;
+}
+
 const char* hal_get_root_dir(void) {
-    return strdup("/");
+    return NULL;
 }
 
 const char* hal_working_dir(void) {
@@ -67,4 +77,4 @@ const char* hal_application_dir(void) {
 const char* hal_desktop_dir(void) {
     return NULL;
 }
-#endif // HAL_NO_FILE_SYSTEM
+#endif // HAL_NO_STORAGE_PATH

@@ -9,7 +9,7 @@
 
 | Platform                       | Android | iOS | Windows | macOS | Linux | Web |
 | ------------------------------ |:-------:|:---:|:-------:|:-----:|:-----:|:---:|
-| Accelerometer                  |  TODO   | YES |    NO   |  YES  |  YES  |  NO |
+| Accelerometer                  | WIP     | YES | NO      | YES   | YES   | NO  |
 | Audio recording                |         |     |         |       |       |     |
 | Barometer                      |         |     |         |       |       |     |
 | Battery                        |         |     |         |       |       |     |
@@ -18,12 +18,11 @@
 | Call                           |         |     |         |       |       |     |
 | Camera (taking picture)        |         |     |         |       |       |     |
 | Compass                        |         |     |         |       |       |     |
-| Clipboard                      |   TODO  | YES |   YES   |  YES  |  YES  | YES |
+| Clipboard                      | WIP     | YES | YES     | YES   | YES   | YES |
 | CPU count                      |         |     |         |       |       |     |
 | Device name                    |         |     |         |       |       |     |
 | Email (open mail client)       |         |     |         |       |       |     |
-| File chooser (native)          |   TODO  | TODO|   WIP   |  WIP  |  WIP  | TODO|
-| File system                    |   TODO  | TODO|   WIP   |  YES  |  WIP  | TODO|
+| File chooser (native)          |         |     |         |       |       |     |
 | Flash                          |         |     |         |       |       |     |
 | GPS                            |         |     |         |       |       |     |
 | Gravity                        |         |     |         |       |       |     |
@@ -40,9 +39,10 @@
 | SMS (send messages)            |         |     |         |       |       |     |
 | Spatial Orientation            |         |     |         |       |       |     |
 | Speech to text                 |         |     |         |       |       |     |
+| Storage Paths                  | WIP     | WIP | WIP     | YES   | WIP   | WIP |
 | Temperature                    |         |     |         |       |       |     |
 | Text to speech                 |         |     |         |       |       |     |
-| Threads                        |   YES   | YES |   YES   |  YES  |  YES  | [YES](https://emscripten.org/docs/porting/pthreads.html) |
+| Threads                        | YES     | YES | YES     | YES   | YES   | [YES](https://emscripten.org/docs/porting/pthreads.html) |
 | Unique ID                      |         |     |         |       |       |     |
 | Vibrator                       |         |     |         |       |       |     |
 | Voip                           |         |     |         |       |       |     |

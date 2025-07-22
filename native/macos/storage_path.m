@@ -15,23 +15,40 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef HAL_NO_FILE_SYSTEM
-#include "../file_system.h"
+#ifndef HAL_NO_STORAGE_PATH
+#include "../storage_path.h"
 #include <stdio.h>
 #include <unistd.h>
-#include "../shared/file_system.c"
 #import <Cocoa/Cocoa.h>
 
+bool hal_path_exists(const char *path) {
+    return [[NSFileManager defaultManager] fileExistsAtPath:@(path)];
+}
+
 bool hal_file_exists(const char *path) {
-    return [[NSFileManager defaultManager] fileExistsAtPath:@(path)
-                                                isDirectory:nil];
+    bool is_dir = false;
+    bool exists = [[NSFileManager defaultManager] fileExistsAtPath:@(path)
+                                                       isDirectory:&is_dir];
+    return exists && !is_dir;
 }
 
 bool hal_dir_exists(const char *path) {
-    bool result = false;
+    bool is_dir = false;
     [[NSFileManager defaultManager] fileExistsAtPath:@(path)
-                                         isDirectory:&result];
-    return result;
+                                         isDirectory:&is_dir];
+    return is_dir;
+}
+
+const char* hal_get_working_dir(void) {
+    static char buffer[MAX_PATH] = {'\0'};
+    if (buffer[0] == '\0')
+        if (!getcwd(buffer, MAX_PATH))
+            return NULL;
+    return buffer;
+}
+
+bool hal_set_working_dir(const char *path) {
+    return chdir(path) == 0;
 }
 
 // WARNING: These must be released
@@ -89,4 +106,4 @@ const char* hal_desktop_dir(void) {
     return _storage_path(NSDesktopDirectory);
 }
 
-#endif // HAL_NO_FILE_SYSTEM
+#endif // HAL_NO_STORAGE_PATH

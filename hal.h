@@ -1,19 +1,19 @@
 /* hal.h -- https://github.com/takeiteasy/hal
 
-hal Copyright (C) 2025 George Watson
+ hal Copyright (C) 2025 George Watson
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
 #ifndef HAL_HEAD
 #define HAL_HEAD
@@ -196,7 +196,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -213,6 +212,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -236,7 +236,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -253,6 +252,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -276,7 +276,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -293,6 +292,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -316,7 +316,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -333,6 +332,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -356,7 +356,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -373,6 +372,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -396,7 +396,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -413,6 +412,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -436,7 +436,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -453,6 +452,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -476,7 +476,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -493,6 +492,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -516,7 +516,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -533,6 +532,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -556,7 +556,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -573,6 +572,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -596,7 +596,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -613,6 +612,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -636,7 +636,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_CPU_COUNT
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -653,6 +652,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -676,7 +676,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_CPU_COUNT
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -693,6 +692,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -716,7 +716,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_CPU_COUNT
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -733,6 +732,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -741,46 +741,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_VOIP
 #define HAL_NO_WIFI
 #endif // HAL_ONLY_FILE_CHOOSER
-
-#ifdef HAL_ONLY_FILE_SYSTEM
-#define HAL_NO_ACCELEROMETER
-#define HAL_NO_AUDIO_RECORDING
-#define HAL_NO_BAROMETER
-#define HAL_NO_BATTERY
-#define HAL_NO_BLUETOOTH
-#define HAL_NO_BRIGHTNESS
-#define HAL_NO_CALL
-#define HAL_NO_CAMERA
-#define HAL_NO_COMPASS
-#define HAL_NO_CLIPBOARD
-#define HAL_NO_CPU_COUNT
-#define HAL_NO_DEVICE_NAME
-#define HAL_NO_EMAIL
-#define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FLASH
-#define HAL_NO_GPS
-#define HAL_NO_GRAVITY
-#define HAL_NO_GYROSCOPE
-#define HAL_NO_HUMIDITY
-#define HAL_NO_IR_BLASTER
-#define HAL_NO_KEYSTORE
-#define HAL_NO_LIGHT
-#define HAL_NO_MAPS
-#define HAL_NO_NOTIFICATIONS
-#define HAL_NO_ORIENTATION
-#define HAL_NO_PROXIMITY
-#define HAL_NO_SCREENSHOT
-#define HAL_NO_SMS
-#define HAL_NO_SPATIAL_ORIENTATION
-#define HAL_NO_SPEECH_TO_TEXT
-#define HAL_NO_TEMPERATURE
-#define HAL_NO_TEXT_TO_SPEECH
-#define HAL_NO_THREADS
-#define HAL_NO_UNIQUE_ID
-#define HAL_NO_VIBRATOR
-#define HAL_NO_VOIP
-#define HAL_NO_WIFI
-#endif // HAL_ONLY_FILE_SYSTEM
 
 #ifdef HAL_ONLY_FLASH
 #define HAL_NO_ACCELEROMETER
@@ -797,7 +757,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -813,6 +772,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -837,7 +797,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -853,6 +812,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -877,7 +837,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GYROSCOPE
@@ -893,6 +852,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -917,7 +877,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -933,6 +892,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -957,7 +917,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -973,6 +932,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -997,7 +957,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1013,6 +972,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1037,7 +997,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1053,6 +1012,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1077,7 +1037,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1093,6 +1052,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1117,7 +1077,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1133,6 +1092,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1157,7 +1117,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1173,6 +1132,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1197,7 +1157,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1213,6 +1172,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1237,7 +1197,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1253,6 +1212,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1277,7 +1237,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1293,6 +1252,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1317,7 +1277,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1333,6 +1292,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SCREENSHOT
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1357,7 +1317,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1373,6 +1332,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SCREENSHOT
 #define HAL_NO_SMS
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1397,7 +1357,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1413,6 +1372,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SCREENSHOT
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1422,7 +1382,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_WIFI
 #endif // HAL_ONLY_SPEECH_TO_TEXT
 
-#ifdef HAL_ONLY_TEMPERATURE
+#ifdef HAL_ONLY_STORAGE_PATH
 #define HAL_NO_ACCELEROMETER
 #define HAL_NO_AUDIO_RECORDING
 #define HAL_NO_BAROMETER
@@ -1437,7 +1397,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1454,6 +1413,47 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_TEMPERATURE
+#define HAL_NO_TEXT_TO_SPEECH
+#define HAL_NO_THREADS
+#define HAL_NO_UNIQUE_ID
+#define HAL_NO_VIBRATOR
+#define HAL_NO_VOIP
+#define HAL_NO_WIFI
+#endif // HAL_ONLY_STORAGE_PATH
+
+#ifdef HAL_ONLY_TEMPERATURE
+#define HAL_NO_ACCELEROMETER
+#define HAL_NO_AUDIO_RECORDING
+#define HAL_NO_BAROMETER
+#define HAL_NO_BATTERY
+#define HAL_NO_BLUETOOTH
+#define HAL_NO_BRIGHTNESS
+#define HAL_NO_CALL
+#define HAL_NO_CAMERA
+#define HAL_NO_COMPASS
+#define HAL_NO_CLIPBOARD
+#define HAL_NO_CPU_COUNT
+#define HAL_NO_DEVICE_NAME
+#define HAL_NO_EMAIL
+#define HAL_NO_FILE_CHOOSER
+#define HAL_NO_FLASH
+#define HAL_NO_GPS
+#define HAL_NO_GRAVITY
+#define HAL_NO_GYROSCOPE
+#define HAL_NO_HUMIDITY
+#define HAL_NO_IR_BLASTER
+#define HAL_NO_KEYSTORE
+#define HAL_NO_LIGHT
+#define HAL_NO_MAPS
+#define HAL_NO_NOTIFICATIONS
+#define HAL_NO_ORIENTATION
+#define HAL_NO_PROXIMITY
+#define HAL_NO_SCREENSHOT
+#define HAL_NO_SMS
+#define HAL_NO_SPATIAL_ORIENTATION
+#define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
 #define HAL_NO_UNIQUE_ID
@@ -1477,7 +1477,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1494,6 +1493,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_THREADS
 #define HAL_NO_UNIQUE_ID
@@ -1517,7 +1517,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1534,6 +1533,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_UNIQUE_ID
@@ -1557,7 +1557,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1574,6 +1573,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1597,7 +1597,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1614,6 +1613,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1637,7 +1637,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1654,6 +1653,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1677,7 +1677,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_DEVICE_NAME
 #define HAL_NO_EMAIL
 #define HAL_NO_FILE_CHOOSER
-#define HAL_NO_FILE_SYSTEM
 #define HAL_NO_FLASH
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
@@ -1694,6 +1693,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_SMS
 #define HAL_NO_SPATIAL_ORIENTATION
 #define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGE_PATH
 #define HAL_NO_TEMPERATURE
 #define HAL_NO_TEXT_TO_SPEECH
 #define HAL_NO_THREADS
@@ -1744,9 +1744,6 @@ typedef enum bool { false = 0, true = !false } bool;
 #if !defined(HAL_NO_FILE_CHOOSER) && __has_include("native/file_chooser.h")
 #include "native/file_chooser.h"
 #endif
-#if !defined(HAL_NO_FILE_SYSTEM) && __has_include("native/file_system.h")
-#include "native/file_system.h"
-#endif
 #if !defined(HAL_NO_FLASH) && __has_include("native/flash.h")
 #include "native/flash.h"
 #endif
@@ -1794,6 +1791,9 @@ typedef enum bool { false = 0, true = !false } bool;
 #endif
 #if !defined(HAL_NO_SPEECH_TO_TEXT) && __has_include("native/speech_to_text.h")
 #include "native/speech_to_text.h"
+#endif
+#if !defined(HAL_NO_STORAGE_PATH) && __has_include("native/storage_path.h")
+#include "native/storage_path.h"
 #endif
 #if !defined(HAL_NO_TEMPERATURE) && __has_include("native/temperature.h")
 #include "native/temperature.h"

@@ -15,55 +15,66 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef PAUL_NO_FILE_SYSTEM
-#include "../file_system.h"
-#include "../shared/file_system.c"
+#ifndef PAUL_NO_STORAGE_PATH
+#include "../storage_path.h"
 
-bool paul_file_exists(const char *path) {
+bool hal_path_exists(const char *path) {
     return false;
 }
 
-bool paul_dir_exists(const char *path) {
+bool hal_file_exists(const char *path) {
     return false;
 }
 
-const char* paul_get_root_dir(void) {
+bool hal_dir_exists(const char *path) {
+    return false;
+}
+
+const char* hal_get_working_dir(void) {
     return NULL;
 }
 
-const char* paul_working_dir(void) {
+bool hal_set_working_dir(const char *path) {
+    return false;
+}
+
+const char* hal_get_root_dir(void) {
     return NULL;
 }
 
-const char* paul_home_dir(void) {
+const char* hal_working_dir(void) {
     return NULL;
 }
 
-const char* paul_documents_dir(void) {
+const char* hal_home_dir(void) {
     return NULL;
 }
 
-const char* paul_downloads_dir(void) {
+const char* hal_documents_dir(void) {
     return NULL;
 }
 
-const char* paul_video_dir(void) {
+const char* hal_downloads_dir(void) {
     return NULL;
 }
 
-const char* paul_music_dir(void) {
+const char* hal_video_dir(void) {
     return NULL;
 }
 
-const char* paul_picture_dir(void) {
+const char* hal_music_dir(void) {
     return NULL;
 }
 
-const char* paul_application_dir(void) {
+const char* hal_picture_dir(void) {
     return NULL;
 }
 
-const char* paul_desktop_dir(void) {
+const char* hal_application_dir(void) {
     return NULL;
 }
-#endif // PAUL_NO_FILE_SYSTEM
+
+const char* hal_desktop_dir(void) {
+    return NULL;
+}
+#endif // PAUL_NO_STORAGE_PATH

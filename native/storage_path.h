@@ -15,25 +15,39 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 
-#ifndef HAL_FILE_SYSTEM_HEAD
-#define HAL_FILE_SYSTEM_HEAD
+#ifndef HAL_STORAGE_PATH_HEAD
+#define HAL_STORAGE_PATH_HEAD
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define HAL_ONLY_FILE_SYSTEM
+#define HAL_ONLY_STORAGE_PATH
 #include "../hal.h"
 #include <stdarg.h>
 #include <string.h>
 
+#if defined(PLATFORM_MACOS)
+#define MAX_PATH 255
+#elif defined(PLATFORM_WINDOWS)
+#define MAX_PATH 256
+#elif defined(PLATFORM_LINUX)
+#define MAX_PATH 4096
+#else
+#define MAX_PATH 1024
+#endif
+
+#ifdef PLATFORM_WINDOWS
+#define PATH_SEPERATOR '\\'
+#define PATH_SEPERATOR_STR "\\"
+#else
+#define PATH_SEPERATOR '/'
+#define PATH_SEPERATOR_STR "/"
+#endif
+
 bool hal_path_exists(const char *path);
 bool hal_file_exists(const char *path);
 bool hal_dir_exists(const char *path);
-bool hal_dir_create(const char *path);
-// WARNING: This must be released
-const char* hal_read_file(const char *path, size_t *file_size);
-bool hal_write_file(const char *path, const char *data, size_t data_size, bool overwrite_existing);
-size_t hal_file_mod_time(const char *path);
+const char* hal_get_working_dir(void);
 bool hal_set_working_dir(const char *path);
 
 // WARNING: The following must be released
@@ -48,18 +62,7 @@ const char* hal_picture_dir(void);
 const char* hal_application_dir(void);
 const char* hal_desktop_dir(void);
 
-const char* hal_file_extension(const char *path);
-size_t hal_file_size(const char *path);
-const char* hal_file_name(const char *path);
-// WARNING: The following must be released
-const char* hal_file_name_no_extension(const char *path);
-const char* hal_path_directory(const char *path);
-const char* hal_path_parent(const char *path);
-const char* hal_resolve_path(const char *path);
-const char* hal_join_path(const char *a, const char *b);
-const char* hal_join_paths(int n, ...);
-
 #ifdef __cplusplus
 }
 #endif
-#endif // HAL_FILE_SYSTEM_HEAD
+#endif // HAL_STORAGE_PATH_HEAD
