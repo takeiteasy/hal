@@ -6,7 +6,6 @@ build/
 .vscode/
 .ropeproject/
 **/.ropeproject/
-cmake/HalModules.cmake
 *.a
 *.so
 *.dylib

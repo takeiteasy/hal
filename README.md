@@ -22,8 +22,9 @@
 | CPU count                      | YES     | YES | YES     | YES   | YES   | YES |
 | Device name                    | YES     | YES | YES     | YES   | YES   | NO  |
 | Email (open mail client)       |         |     |         |       |       |     |
+| Environment                    | YES     | NO  | YES     | YES   | YES   | NO  |
 | File Chooser                   |         |     |         |       |       |     |
-| File System                    |         |     |         |       |       |     |
+| Filesystem                     | YES     | YES | YES     | YES   | YES   | YES |
 | Flash                          | YES     | YES | NO      | NO    | NO    | NO  |
 | GPS                            |         |     |         |       |       |     |
 | Gravity                        | YES     | YES | NO      | NO    | NO    | NO  |
@@ -36,9 +37,12 @@
 | Notifications                  |         |     |         |       |       |     |
 | Orientation                    |         |     |         |       |       |     |
 | Proximity                      | YES     | YES | NO      | NO    | NO    | NO  |
+| Path Utils                     | YES     | YES | YES     | YES   | YES   | YES |
 | Screenshot                     |         |     |         |       |       |     |
 | SMS (send messages)            | YES     | YES | YES     | NO    | NO    | NO  |
 | Spatial Orientation            | YES     | YES | NO      | NO    | NO    | NO  |
+| Shell                          | NO      | NO  | NO      | YES   | YES   | NO  |
+| Storage Path                   | YES     | YES | YES     | YES   | YES   | NO  |
 | Speech to Text                 |         |     |         |       |       |     |
 | Temperature                    | YES     | NO  | NO      | NO    | NO    | NO  |
 | Text to Speech                 |         |     |         |       |       |     |
