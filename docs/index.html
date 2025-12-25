@@ -1,0 +1,790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ascii">
+
+	<title>API Reference: </title>
+
+	<!-- A big scary CSS block -->
+	<style type="text/css"><!--#pagehead { FONT-WEIGHT: bold; FONT-SIZE: 32px; COLOR: #000000; FONT-FAMILY: lucida grande, geneva, helvetica, arial, sans-serif; } td { font-size: 10px; } a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #0000ff;} a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #0000ff;} a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #ff6600;} a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #ff6600;} a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #ff6600;} h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;} body {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10pt;} --></style>
+	<!-- End big scary CSS block -->
+
+	</head>
+	<meta name="ROBOTS" content="NOINDEX">
+
+<body bgcolor="#ffffff">
+
+<a name="MYTAG"></a>
+
+<center>
+
+<!-- start of header -->
+<!--#include virtual="/path/to/header.html"-->
+<!-- end of header -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="600">
+		<tr height="5">
+				<td width="600" height="5">
+<br>
+				</td>
+			</tr>
+			<tr>
+				<td width="600">
+					<div id="pagehead"></div>
+				</td>
+			</tr>
+			<tr height="10">
+				<td width="600" height="10">
+<br>
+				</td>
+			</tr>
+			<tr>
+
+    <td valign="top" width="600"><font face="Geneva,Helvetica,Arial" size="2"><span id="bodytext">  </span></font></td>
+			</tr>
+			<tr height="10">
+				<td height="10" width="600"></td>
+			</tr>
+			<tr height="5">
+				<td height="5" width="600">
+					<hr alt="">
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td width="600" align="center" valign="top">
+<h2>Headers</h2>
+
+      <blockquote class="groupindent">
+<table border="0" cellpadding="1" cellspacing="0" width="420">
+<tr>
+<td width="33%">
+<a name="group___header_AC" href="accelerometer_h/index.html">accelerometer</a><br>
+</td>
+<td width="33%">
+<a name="group___header_FI" href="filesystem_h/index.html">filesystem</a><br>
+</td>
+<td width="33%">
+<a name="group___header_PR" href="proximity_h/index.html">proximity</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a name="group___header_BA" href="barometer_h/index.html">barometer</a><br>
+</td>
+<td width="33%">
+<a name="group___header_FL" href="flash_h/index.html">flash</a><br>
+</td>
+<td width="33%">
+<a name="group___header_SM" href="sms_h/index.html">sms</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a href="battery_h/index.html">battery</a><br>
+</td>
+<td width="33%">
+<a name="group___header_GR" href="gravity_h/index.html">gravity</a><br>
+</td>
+<td width="33%">
+<a name="group___header_SP" href="spatial_orientation_h/index.html">spatial_orientation</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a name="group___header_BR" href="brightness_h/index.html">brightness</a><br>
+</td>
+<td width="33%">
+<a name="group___header_GY" href="gyroscope_h/index.html">gyroscope</a><br>
+</td>
+<td width="33%">
+<a name="group___header_TE" href="temperature_h/index.html">temperature</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a name="group___header_CO" href="compass_h/index.html">compass</a><br>
+</td>
+<td width="33%">
+<a name="group___header_HA" href="hal_h/index.html">hal</a><br>
+</td>
+<td width="33%">
+<a name="group___header_TH" href="threads_h/index.html">threads</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a name="group___header_CP" href="cpu_count_h/index.html">cpu_count</a><br>
+</td>
+<td width="33%">
+<a name="group___header_HU" href="humidity_h/index.html">humidity</a><br>
+</td>
+<td width="33%">
+<a name="group___header_UN" href="unique_id_h/index.html">unique_id</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a name="group___header_DE" href="device_name_h/index.html">device_name</a><br>
+</td>
+<td width="33%">
+<a name="group___header_LI" href="light_h/index.html">light</a><br>
+</td>
+<td width="33%">
+<a name="group___header_VI" href="vibrator_h/index.html">vibrator</a><br>
+</td>
+</tr>
+</table>
+</blockquote>
+
+<h2>Functions</h2>
+      <blockquote class="letterlist"><table width="80%"><tr><td>
+<a href="#group___function_DI">D</a>&#160;<span class="hierpipe">|</span> 
+<a href="#group___function_EN">E</a>&#160;<span class="hierpipe">|</span> 
+<a href="#group___function_FI">F</a>&#160;<span class="hierpipe">|</span> 
+<a href="#group___function_HA">H</a>&#160;<span class="hierpipe">|</span> 
+<a href="#group___function_IO">I</a>&#160;<span class="hierpipe">|</span> 
+<a href="#group___function_PA">P</a>&#160;<span class="hierpipe">|</span> 
+<a href="#group___function_SH">S</a>
+</td></tr></table></blockquote>
+<blockquote class="groupindent">
+<table border="0" cellpadding="1" cellspacing="0" width="420">
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_copy" name="group___function_DI" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_copy">directory_copy</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_device_name_available" retarget="yes" href="device_name_h/index.html#//apple_ref/c/func/hal_device_name_available">hal_device_name_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_join" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_join">hal_thrd_join</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_create" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_create">directory_create</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_device_name_get" retarget="yes" href="device_name_h/index.html#//apple_ref/c/func/hal_device_name_get">hal_device_name_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_sleep" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_sleep">hal_thrd_sleep</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_delete" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_delete">directory_delete</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_flash_available" retarget="yes" href="flash_h/index.html#//apple_ref/c/func/hal_flash_available">hal_flash_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_yield" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_yield">hal_thrd_yield</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_exists" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_exists">directory_exists</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_flash_off" retarget="yes" href="flash_h/index.html#//apple_ref/c/func/hal_flash_off">hal_flash_off</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_threads_available" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_threads_available">hal_threads_available</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_file_count" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_file_count">directory_file_count</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_flash_on" retarget="yes" href="flash_h/index.html#//apple_ref/c/func/hal_flash_on">hal_flash_on</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_timeout" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_timeout">hal_timeout</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_glob" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_glob">directory_glob</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_flash_toggle" retarget="yes" href="flash_h/index.html#//apple_ref/c/func/hal_flash_toggle">hal_flash_toggle</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_tss_create" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_tss_create">hal_tss_create</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_item_count" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_item_count">directory_item_count</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gravity_available" retarget="yes" href="gravity_h/index.html#//apple_ref/c/func/hal_gravity_available">hal_gravity_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_tss_delete" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_tss_delete">hal_tss_delete</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_iter" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_iter">directory_iter</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gravity_disable" retarget="yes" href="gravity_h/index.html#//apple_ref/c/func/hal_gravity_disable">hal_gravity_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_tss_get" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_tss_get">hal_tss_get</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_iter_end" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_iter_end">directory_iter_end</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gravity_enable" retarget="yes" href="gravity_h/index.html#//apple_ref/c/func/hal_gravity_enable">hal_gravity_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_tss_set" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_tss_set">hal_tss_set</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_rename" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_rename">directory_rename</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gravity_enabled" retarget="yes" href="gravity_h/index.html#//apple_ref/c/func/hal_gravity_enabled">hal_gravity_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_unique_id_available" retarget="yes" href="unique_id_h/index.html#//apple_ref/c/func/hal_unique_id_available">hal_unique_id_available</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/directory_size" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/directory_size">directory_size</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gravity_get" retarget="yes" href="gravity_h/index.html#//apple_ref/c/func/hal_gravity_get">hal_gravity_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_unique_id_get" retarget="yes" href="unique_id_h/index.html#//apple_ref/c/func/hal_unique_id_get">hal_unique_id_get</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/environment_variable" name="group___function_EN" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/environment_variable">environment_variable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gyroscope_available" retarget="yes" href="gyroscope_h/index.html#//apple_ref/c/func/hal_gyroscope_available">hal_gyroscope_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_vibrator_available" retarget="yes" href="vibrator_h/index.html#//apple_ref/c/func/hal_vibrator_available">hal_vibrator_available</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/file_copy" name="group___function_FI" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/file_copy">file_copy</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gyroscope_disable" retarget="yes" href="gyroscope_h/index.html#//apple_ref/c/func/hal_gyroscope_disable">hal_gyroscope_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_vibrator_cancel" retarget="yes" href="vibrator_h/index.html#//apple_ref/c/func/hal_vibrator_cancel">hal_vibrator_cancel</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/file_delete" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/file_delete">file_delete</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gyroscope_enable" retarget="yes" href="gyroscope_h/index.html#//apple_ref/c/func/hal_gyroscope_enable">hal_gyroscope_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_vibrator_vibrate" retarget="yes" href="vibrator_h/index.html#//apple_ref/c/func/hal_vibrator_vibrate">hal_vibrator_vibrate</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/file_exists" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/file_exists">file_exists</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gyroscope_enabled" retarget="yes" href="gyroscope_h/index.html#//apple_ref/c/func/hal_gyroscope_enabled">hal_gyroscope_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_advance" name="group___function_IO" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_advance">io_advance</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/file_read" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/file_read">file_read</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_gyroscope_get" retarget="yes" href="gyroscope_h/index.html#//apple_ref/c/func/hal_gyroscope_get">hal_gyroscope_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_close" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_close">io_close</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/file_rename" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/file_rename">file_rename</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_humidity_available" retarget="yes" href="humidity_h/index.html#//apple_ref/c/func/hal_humidity_available">hal_humidity_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_eof" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_eof">io_eof</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/file_size" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/file_size">file_size</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_humidity_disable" retarget="yes" href="humidity_h/index.html#//apple_ref/c/func/hal_humidity_disable">hal_humidity_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_flush" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_flush">io_flush</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_acceleration" name="group___function_HA" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_acceleration">hal_accelerometer_acceleration</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_humidity_enable" retarget="yes" href="humidity_h/index.html#//apple_ref/c/func/hal_humidity_enable">hal_humidity_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_open" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_open">io_open</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_available" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_available">hal_accelerometer_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_humidity_enabled" retarget="yes" href="humidity_h/index.html#//apple_ref/c/func/hal_humidity_enabled">hal_humidity_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_read" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_read">io_read</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_disable" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_disable">hal_accelerometer_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_humidity_get" retarget="yes" href="humidity_h/index.html#//apple_ref/c/func/hal_humidity_get">hal_humidity_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_read_line" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_read_line">io_read_line</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_disabled" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_disabled">hal_accelerometer_disabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_light_available" retarget="yes" href="light_h/index.html#//apple_ref/c/func/hal_light_available">hal_light_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_seek" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_seek">io_seek</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_enable" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_enable">hal_accelerometer_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_light_disable" retarget="yes" href="light_h/index.html#//apple_ref/c/func/hal_light_disable">hal_light_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_tell" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_tell">io_tell</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_enabled" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_enabled">hal_accelerometer_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_light_enable" retarget="yes" href="light_h/index.html#//apple_ref/c/func/hal_light_enable">hal_light_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_truncate" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_truncate">io_truncate</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_accelerometer_toggle" retarget="yes" href="accelerometer_h/index.html#//apple_ref/c/func/hal_accelerometer_toggle">hal_accelerometer_toggle</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_light_enabled" retarget="yes" href="light_h/index.html#//apple_ref/c/func/hal_light_enabled">hal_light_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_valid" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_valid">io_valid</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_available" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_available">hal_barometer_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_light_get" retarget="yes" href="light_h/index.html#//apple_ref/c/func/hal_light_get">hal_light_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_write" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_write">io_write</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_disable" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_disable">hal_barometer_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_mtx_destroy" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_mtx_destroy">hal_mtx_destroy</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/io_write_string" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/io_write_string">io_write_string</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_disabled" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_disabled">hal_barometer_disabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_mtx_init" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_mtx_init">hal_mtx_init</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_exists" name="group___function_PA" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_exists">path_exists</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_enable" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_enable">hal_barometer_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_mtx_lock" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_mtx_lock">hal_mtx_lock</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_application_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_application_dir">path_get_application_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_enabled" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_enabled">hal_barometer_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_mtx_timedlock" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_mtx_timedlock">hal_mtx_timedlock</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_desktop_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_desktop_dir">path_get_desktop_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_pressure" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_pressure">hal_barometer_pressure</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_mtx_trylock" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_mtx_trylock">hal_mtx_trylock</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_directory_name" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_directory_name">path_get_directory_name</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_barometer_toggle" retarget="yes" href="barometer_h/index.html#//apple_ref/c/func/hal_barometer_toggle">hal_barometer_toggle</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_mtx_unlock" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_mtx_unlock">hal_mtx_unlock</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_documents_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_documents_dir">path_get_documents_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_battery_available" retarget="yes" href="battery_h/index.html#//apple_ref/c/func/hal_battery_available">hal_battery_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_proximity_available" retarget="yes" href="proximity_h/index.html#//apple_ref/c/func/hal_proximity_available">hal_proximity_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_downloads_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_downloads_dir">path_get_downloads_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_battery_is_charging" retarget="yes" href="battery_h/index.html#//apple_ref/c/func/hal_battery_is_charging">hal_battery_is_charging</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_proximity_disable" retarget="yes" href="proximity_h/index.html#//apple_ref/c/func/hal_proximity_disable">hal_proximity_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_file_extension" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_file_extension">path_get_file_extension</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_battery_is_plugged" retarget="yes" href="battery_h/index.html#//apple_ref/c/func/hal_battery_is_plugged">hal_battery_is_plugged</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_proximity_enable" retarget="yes" href="proximity_h/index.html#//apple_ref/c/func/hal_proximity_enable">hal_proximity_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_file_name" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_file_name">path_get_file_name</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_battery_level" retarget="yes" href="battery_h/index.html#//apple_ref/c/func/hal_battery_level">hal_battery_level</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_proximity_enabled" retarget="yes" href="proximity_h/index.html#//apple_ref/c/func/hal_proximity_enabled">hal_proximity_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_file_name_no_extension" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_file_name_no_extension">path_get_file_name_no_extension</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_battery_status" retarget="yes" href="battery_h/index.html#//apple_ref/c/func/hal_battery_status">hal_battery_status</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_proximity_get" retarget="yes" href="proximity_h/index.html#//apple_ref/c/func/hal_proximity_get">hal_proximity_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_home_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_home_dir">path_get_home_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_brightness_available" retarget="yes" href="brightness_h/index.html#//apple_ref/c/func/hal_brightness_available">hal_brightness_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_proximity_is_near" retarget="yes" href="proximity_h/index.html#//apple_ref/c/func/hal_proximity_is_near">hal_proximity_is_near</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_music_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_music_dir">path_get_music_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_brightness_get" retarget="yes" href="brightness_h/index.html#//apple_ref/c/func/hal_brightness_get">hal_brightness_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_sms_available" retarget="yes" href="sms_h/index.html#//apple_ref/c/func/hal_sms_available">hal_sms_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_parent_directory" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_parent_directory">path_get_parent_directory</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_brightness_set" retarget="yes" href="brightness_h/index.html#//apple_ref/c/func/hal_brightness_set">hal_brightness_set</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_sms_send" retarget="yes" href="sms_h/index.html#//apple_ref/c/func/hal_sms_send">hal_sms_send</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_picture_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_picture_dir">path_get_picture_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_call_once" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_call_once">hal_call_once</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_spatial_orientation_available" retarget="yes" href="spatial_orientation_h/index.html#//apple_ref/c/func/hal_spatial_orientation_available">hal_spatial_orientation_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_root_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_root_dir">path_get_root_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cnd_broadcast" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_cnd_broadcast">hal_cnd_broadcast</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_spatial_orientation_disable" retarget="yes" href="spatial_orientation_h/index.html#//apple_ref/c/func/hal_spatial_orientation_disable">hal_spatial_orientation_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_video_dir" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_video_dir">path_get_video_dir</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cnd_destroy" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_cnd_destroy">hal_cnd_destroy</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_spatial_orientation_enable" retarget="yes" href="spatial_orientation_h/index.html#//apple_ref/c/func/hal_spatial_orientation_enable">hal_spatial_orientation_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_get_working_directory" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_get_working_directory">path_get_working_directory</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cnd_init" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_cnd_init">hal_cnd_init</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_spatial_orientation_enabled" retarget="yes" href="spatial_orientation_h/index.html#//apple_ref/c/func/hal_spatial_orientation_enabled">hal_spatial_orientation_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_glob" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_glob">path_glob</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cnd_signal" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_cnd_signal">hal_cnd_signal</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_spatial_orientation_get" retarget="yes" href="spatial_orientation_h/index.html#//apple_ref/c/func/hal_spatial_orientation_get">hal_spatial_orientation_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_glob_block" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_glob_block">path_glob_block</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cnd_timedwait" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_cnd_timedwait">hal_cnd_timedwait</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_temperature_available" retarget="yes" href="temperature_h/index.html#//apple_ref/c/func/hal_temperature_available">hal_temperature_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_join" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_join">path_join</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cnd_wait" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_cnd_wait">hal_cnd_wait</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_temperature_disable" retarget="yes" href="temperature_h/index.html#//apple_ref/c/func/hal_temperature_disable">hal_temperature_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_join_va" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_join_va">path_join_va</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_compass_available" retarget="yes" href="compass_h/index.html#//apple_ref/c/func/hal_compass_available">hal_compass_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_temperature_enable" retarget="yes" href="temperature_h/index.html#//apple_ref/c/func/hal_temperature_enable">hal_temperature_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_resolve" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_resolve">path_resolve</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_compass_disable" retarget="yes" href="compass_h/index.html#//apple_ref/c/func/hal_compass_disable">hal_compass_disable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_temperature_enabled" retarget="yes" href="temperature_h/index.html#//apple_ref/c/func/hal_temperature_enabled">hal_temperature_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_set_working_directory" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_set_working_directory">path_set_working_directory</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_compass_enable" retarget="yes" href="compass_h/index.html#//apple_ref/c/func/hal_compass_enable">hal_compass_enable</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_temperature_get" retarget="yes" href="temperature_h/index.html#//apple_ref/c/func/hal_temperature_get">hal_temperature_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_split" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_split">path_split</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_compass_enabled" retarget="yes" href="compass_h/index.html#//apple_ref/c/func/hal_compass_enabled">hal_compass_enabled</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_create" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_create">hal_thrd_create</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_walk" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_walk">path_walk</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_compass_get" retarget="yes" href="compass_h/index.html#//apple_ref/c/func/hal_compass_get">hal_compass_get</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_current" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_current">hal_thrd_current</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_walk_block" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_walk_block">path_walk_block</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cpu_count_available" retarget="yes" href="cpu_count_h/index.html#//apple_ref/c/func/hal_cpu_count_available">hal_cpu_count_available</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_detach" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_detach">hal_thrd_detach</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/path_without_file_name" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/path_without_file_name">path_without_file_name</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cpu_count_logical" retarget="yes" href="cpu_count_h/index.html#//apple_ref/c/func/hal_cpu_count_logical">hal_cpu_count_logical</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_equal" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_equal">hal_thrd_equal</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/shell" name="group___function_SH" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/shell">shell</a><br>
+</td>
+</tr>
+<tr>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_cpu_count_physical" retarget="yes" href="cpu_count_h/index.html#//apple_ref/c/func/hal_cpu_count_physical">hal_cpu_count_physical</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/hal_thrd_exit" retarget="yes" href="threads_h/index.html#//apple_ref/c/func/hal_thrd_exit">hal_thrd_exit</a><br>
+</td>
+<td width="33%">
+<a logicalpath="//apple_ref/c/func/shell_fmt" retarget="yes" href="filesystem_h/index.html#//apple_ref/c/func/shell_fmt">shell_fmt</a><br>
+</td>
+</tr>
+</table>
+</blockquote>
+
+    </td>
+			</tr>
+		</table>
+
+
+<!-- start of footer -->
+<!-- START FOOTER TABLE -->
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr><td width="600"><div style="min-width: 1px; width: 1px; min-height: 48px; height: 48px;"></div></td></tr>
+<tr><td bgcolor="#919699" colspan="2"><div style="width: 600px; min-width: 600px; height: 1px; min-height: 1px;"></div></td></tr>
+<tr><td><div style="width: 1; min-width: 1; height: 17px; min-height: 17px;"></div></td></tr>
+<tr>
+	<td>
+	<div align="center">
+	
+	</div>
+	</td>
+</tr>
+</table>
+</center>
+<!-- END FOOTER TABLE -->
+
+<!-- end of footer -->
+
+
+
+
+
+</body>
+
+</html>

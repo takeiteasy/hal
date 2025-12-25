@@ -9,42 +9,42 @@
 
 | Platform                       | Android | iOS | Windows | macOS | Linux | Web |
 | ------------------------------ |:-------:|:---:|:-------:|:-----:|:-----:|:---:|
-| Accelerometer                  | WIP     | YES | NO      | YES   | YES   | NO  |
+| Accelerometer                  | YES     | YES | NO      | YES   | YES   | NO  |
 | Audio recording                |         |     |         |       |       |     |
-| Barometer                      |         |     |         |       |       |     |
-| Battery                        |         |     |         |       |       |     |
+| Barometer                      | YES     | YES | NO      | NO    | NO    | NO  |
+| Battery                        | YES     | YES | YES     | YES   | YES   | YES |
 | Bluetooth                      |         |     |         |       |       |     |
-| Brightness                     |         |     |         |       |       |     |
+| Brightness                     | YES     | YES | YES     | YES   | YES   | NO  |
 | Call                           |         |     |         |       |       |     |
 | Camera (taking picture)        |         |     |         |       |       |     |
-| Compass                        |         |     |         |       |       |     |
-| Clipboard                      | WIP     | YES | YES     | YES   | YES   | YES |
-| CPU count                      |         |     |         |       |       |     |
-| Device name                    |         |     |         |       |       |     |
+| Compass                        | YES     | YES | NO      | NO    | NO    | NO  |
+| Clipboard                      |         |     |         |       |       |     |
+| CPU count                      | YES     | YES | YES     | YES   | YES   | YES |
+| Device name                    | YES     | YES | YES     | YES   | YES   | NO  |
 | Email (open mail client)       |         |     |         |       |       |     |
-| File chooser (native)          |         |     |         |       |       |     |
-| Flash                          |         |     |         |       |       |     |
+| File Chooser                   |         |     |         |       |       |     |
+| File System                    |         |     |         |       |       |     |
+| Flash                          | YES     | YES | NO      | NO    | NO    | NO  |
 | GPS                            |         |     |         |       |       |     |
-| Gravity                        |         |     |         |       |       |     |
-| Gyroscope                      |         |     |         |       |       |     |
-| Humidity                       |         |     |         |       |       |     |
+| Gravity                        | YES     | YES | NO      | NO    | NO    | NO  |
+| Gyroscope                      | YES     | YES | NO      | NO    | NO    | NO  |
+| Humidity                       | YES     | NO  | NO      | NO    | NO    | NO  |
 | IR Blaster                     |         |     |         |       |       |     |
 | Keystore                       |         |     |         |       |       |     |
-| Light                          |         |     |         |       |       |     |
+| Light                          | YES     | NO  | NO      | NO    | NO    | NO  |
 | Maps                           |         |     |         |       |       |     |
 | Notifications                  |         |     |         |       |       |     |
 | Orientation                    |         |     |         |       |       |     |
-| Proximity                      |         |     |         |       |       |     |
+| Proximity                      | YES     | YES | NO      | NO    | NO    | NO  |
 | Screenshot                     |         |     |         |       |       |     |
-| SMS (send messages)            |         |     |         |       |       |     |
-| Spatial Orientation            |         |     |         |       |       |     |
-| Speech to text                 |         |     |         |       |       |     |
-| Storage Paths                  | WIP     | WIP | WIP     | YES   | WIP   | WIP |
-| Temperature                    |         |     |         |       |       |     |
-| Text to speech                 |         |     |         |       |       |     |
+| SMS (send messages)            | YES     | YES | YES     | NO    | NO    | NO  |
+| Spatial Orientation            | YES     | YES | NO      | NO    | NO    | NO  |
+| Speech to Text                 |         |     |         |       |       |     |
+| Temperature                    | YES     | NO  | NO      | NO    | NO    | NO  |
+| Text to Speech                 |         |     |         |       |       |     |
 | Threads                        | YES     | YES | YES     | YES   | YES   | [YES](https://emscripten.org/docs/porting/pthreads.html) |
-| Unique ID                      |         |     |         |       |       |     |
-| Vibrator                       |         |     |         |       |       |     |
+| Unique ID                      | YES     | YES | YES     | YES   | YES   | NO  |
+| Vibrator                       | YES     | YES | NO      | NO    | NO    | NO  |
 | Voip                           |         |     |         |       |       |     |
 | Wifi                           |         |     |         |       |       |     |
 
