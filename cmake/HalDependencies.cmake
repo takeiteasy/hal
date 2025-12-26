@@ -59,6 +59,11 @@ function(hal_add_module_dependencies MODULE_NAME)
       # iOS gamepad uses GameController framework
       find_library(GAMECONTROLLER_FRAMEWORK GameController REQUIRED)
       list(APPEND HAL_LINK_LIBRARIES ${GAMECONTROLLER_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "clipboard")
+      # iOS clipboard uses UIPasteboard from UIKit framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(UIKIT_FRAMEWORK UIKit REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${UIKIT_FRAMEWORK})
     endif()
     # Add more iOS-specific dependencies as modules are implemented
   endif()
@@ -91,6 +96,11 @@ function(hal_add_module_dependencies MODULE_NAME)
       # macOS gamepad uses IOKit HID
       find_library(IOKIT_FRAMEWORK IOKit REQUIRED)
       list(APPEND HAL_LINK_LIBRARIES ${IOKIT_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "clipboard")
+      # macOS clipboard uses NSPasteboard from AppKit framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(APPKIT_FRAMEWORK AppKit REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${APPKIT_FRAMEWORK})
     endif()
     # Add more macOS-specific dependencies as modules are implemented
   endif()
