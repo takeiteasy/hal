@@ -18,6 +18,7 @@ names = [
   "file_chooser",
   "filesystem",
   "flash",
+  "gamepad",
   "gps",
   "gravity",
   "gyroscope",

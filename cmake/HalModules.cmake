@@ -19,6 +19,7 @@ set(HAL_ALL_MODULES
   file_chooser
   filesystem
   flash
+  gamepad
   gps
   gravity
   gyroscope
@@ -64,6 +65,7 @@ option(HAL_ENABLE_ENVIRONMENT "Enable environment module" ON)
 option(HAL_ENABLE_FILE_CHOOSER "Enable file chooser module" ON)
 option(HAL_ENABLE_FILESYSTEM "Enable filesystem module" ON)
 option(HAL_ENABLE_FLASH "Enable flash module" ON)
+option(HAL_ENABLE_GAMEPAD "Enable gamepad module" ON)
 option(HAL_ENABLE_GPS "Enable gps module" ON)
 option(HAL_ENABLE_GRAVITY "Enable gravity module" ON)
 option(HAL_ENABLE_GYROSCOPE "Enable gyroscope module" ON)

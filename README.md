@@ -26,6 +26,7 @@
 | File Chooser                   |         |     |         |       |       |     |
 | Filesystem                     | YES     | YES | YES     | YES   | YES   | YES |
 | Flash                          | YES     | YES | NO      | NO    | NO    | NO  |
+| Gamepad                        | YES     | YES | YES     | YES   | YES   | YES |
 | GPS                            |         |     |         |       |       |     |
 | Gravity                        | YES     | YES | NO      | NO    | NO    | NO  |
 | Gyroscope                      | YES     | YES | NO      | NO    | NO    | NO  |

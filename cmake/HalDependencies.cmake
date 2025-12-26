@@ -55,6 +55,10 @@ function(hal_add_module_dependencies MODULE_NAME)
       list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${UIKIT_FRAMEWORK})
     elseif(MODULE_NAME STREQUAL "threads")
       # iOS uses POSIX threads (already in libc)
+    elseif(MODULE_NAME STREQUAL "gamepad")
+      # iOS gamepad uses GameController framework
+      find_library(GAMECONTROLLER_FRAMEWORK GameController REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${GAMECONTROLLER_FRAMEWORK})
     endif()
     # Add more iOS-specific dependencies as modules are implemented
   endif()
@@ -83,6 +87,10 @@ function(hal_add_module_dependencies MODULE_NAME)
       list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${IOKIT_FRAMEWORK})
     elseif(MODULE_NAME STREQUAL "threads")
       # macOS uses POSIX threads (already in libc)
+    elseif(MODULE_NAME STREQUAL "gamepad")
+      # macOS gamepad uses IOKit HID
+      find_library(IOKIT_FRAMEWORK IOKit REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${IOKIT_FRAMEWORK})
     endif()
     # Add more macOS-specific dependencies as modules are implemented
   endif()
@@ -91,6 +99,10 @@ function(hal_add_module_dependencies MODULE_NAME)
   if(HAL_PLATFORM_LINUX)
     if(MODULE_NAME STREQUAL "threads")
       # Linux uses POSIX threads
+      find_package(Threads REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES Threads::Threads)
+    elseif(MODULE_NAME STREQUAL "gamepad")
+      # Linux gamepad uses POSIX threads for device polling
       find_package(Threads REQUIRED)
       list(APPEND HAL_LINK_LIBRARIES Threads::Threads)
     endif()
@@ -102,6 +114,9 @@ function(hal_add_module_dependencies MODULE_NAME)
   if(HAL_PLATFORM_WINDOWS)
     if(MODULE_NAME STREQUAL "threads")
       # Windows thread API is in kernel32.lib (linked by default)
+    elseif(MODULE_NAME STREQUAL "gamepad")
+      # Windows gamepad uses XInput and DirectInput
+      list(APPEND HAL_LINK_LIBRARIES dinput8 xinput)
     endif()
     # Add more Windows-specific dependencies as modules are implemented
   endif()

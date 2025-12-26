@@ -1,0 +1,1304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+    <title>gamepad.h</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script>
+<script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script>
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//apple_ref/doc/header/gamepad.h;   name=gamepad.h -->
+<a name="//apple_ref/doc/header/gamepad.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="gamepad.h">gamepad.h</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox">
+<tr>
+<td scope="row"><b>Includes:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text">
+<a machinegenerated="true" href="../hal_h/index.html#//apple_ref/doc/header/hal.h" logicalPath="//apple_ref/doc/header/hal.h" target="_top">"hal.h"</a></div></div></td>
+</tr>
+</table></div>
+<h2>Introduction</h2>
+<p><!-- headerDoc=abstract;uid=//apple_ref/doc/header/gamepad.h;name=start --><!-- begin abstract -->Use the links in the table of contents to the left to access the documentation.<br>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/doc/header/gamepad.h;name=end --></p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_functions"></a>
+<h2 class="h2tight">Functions</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_add_mapping" target="_top">hal_gamepad_add_mapping</a></tt></dt>
+<dd><p>Add a custom controller mapping
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_available" target="_top">hal_gamepad_available</a></tt></dt>
+<dd><p>Check if gamepad functionality is available
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_detect_devices" target="_top">hal_gamepad_detect_devices</a></tt></dt>
+<dd><p>Poll for newly attached gamepad devices
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_device_at" target="_top">hal_gamepad_device_at</a></tt></dt>
+<dd><p>Get a gamepad device by index
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_get_axis" target="_top">hal_gamepad_get_axis</a></tt></dt>
+<dd><p>Get standard axis value using mapping
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_get_button" target="_top">hal_gamepad_get_button</a></tt></dt>
+<dd><p>Get standard button state using mapping
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_get_mapping" target="_top">hal_gamepad_get_mapping</a></tt></dt>
+<dd><p>Get the mapping string for a device
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_init" target="_top">hal_gamepad_init</a></tt></dt>
+<dd><p>Initialize the gamepad subsystem and detect initial devices
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_is_mapped" target="_top">hal_gamepad_is_mapped</a></tt></dt>
+<dd><p>Check if device has a known mapping
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_load_mappings" target="_top">hal_gamepad_load_mappings</a></tt></dt>
+<dd><p>Load controller mappings from a file
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_num_devices" target="_top">hal_gamepad_num_devices</a></tt></dt>
+<dd><p>Get the count of connected gamepads
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_process_events" target="_top">hal_gamepad_process_events</a></tt></dt>
+<dd><p>Process pending input events from all connected gamepads
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_set_attach_callback" target="_top">hal_gamepad_set_attach_callback</a></tt></dt>
+<dd><p>Register a callback for device attachment events
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_set_axis_callback" target="_top">hal_gamepad_set_axis_callback</a></tt></dt>
+<dd><p>Register a callback for axis movement events
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_set_button_down_callback" target="_top">hal_gamepad_set_button_down_callback</a></tt></dt>
+<dd><p>Register a callback for button press events
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_set_button_up_callback" target="_top">hal_gamepad_set_button_up_callback</a></tt></dt>
+<dd><p>Register a callback for button release events
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_set_remove_callback" target="_top">hal_gamepad_set_remove_callback</a></tt></dt>
+<dd><p>Register a callback for device removal events
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/hal_gamepad_shutdown" target="_top">hal_gamepad_shutdown</a></tt></dt>
+<dd><p>Shut down the gamepad subsystem and release all resources
+</p></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_add_mapping;   name=hal_gamepad_add_mapping -->
+<a name="//apple_ref/c/func/hal_gamepad_add_mapping"></a>
+<h3><a name="hal_gamepad_add_mapping">hal_gamepad_add_mapping</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_add_mapping;name=start --><!-- begin abstract --></p>
+<p>Add a custom controller mapping
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_add_mapping;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_add_mapping;name=start --><!-- a logicalPath="//apple_ref/c/cl/bool //apple_ref/c/tdef/bool //apple_ref/c/tag/bool //apple_ref/c/struct/bool //apple_ref/c/intf/bool //apple_ref/doc/anysymbol/bool" machineGenerated="true" --><span class="type">bool</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_add_mapping" logicalPath="//apple_ref/c/instm/hal_gamepad_add_mapping //apple_ref/c/clm/hal_gamepad_add_mapping //apple_ref/c/intfcm/hal_gamepad_add_mapping //apple_ref/c/intfm/hal_gamepad_add_mapping //apple_ref/c/func/hal_gamepad_add_mapping" target="_top"><span class="function">hal_gamepad_add_mapping</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><span class="param">mapping_string</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_add_mapping;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_add_mapping/mapping_string;   name=mapping_string -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_add_mapping/mapping_string"></a>
+<code>mapping_string</code>
+</dt>
+<dd><p>SDL-format mapping string (GUID,name,mappings...,platform:X)</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Returns true if the mapping was added successfully
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_add_mapping;name=start --><p>The mapping string format matches SDL's gamecontrollerdb.txt format.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_add_mapping;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_available;   name=hal_gamepad_available -->
+<a name="//apple_ref/c/func/hal_gamepad_available"></a>
+<h3><a name="hal_gamepad_available">hal_gamepad_available</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_available;name=start --><!-- begin abstract --></p>
+<p>Check if gamepad functionality is available
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_available;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_available;name=start --><!-- a logicalPath="//apple_ref/c/cl/bool //apple_ref/c/tdef/bool //apple_ref/c/tag/bool //apple_ref/c/struct/bool //apple_ref/c/intf/bool //apple_ref/doc/anysymbol/bool" machineGenerated="true" --><span class="type">bool</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_available" logicalPath="//apple_ref/c/instm/hal_gamepad_available //apple_ref/c/clm/hal_gamepad_available //apple_ref/c/intfcm/hal_gamepad_available //apple_ref/c/intfm/hal_gamepad_available //apple_ref/c/func/hal_gamepad_available" target="_top"><span class="function">hal_gamepad_available</span></a>(
+    <span class="param">void</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_available;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Returns true if gamepad support is available on this platform
+
+<!-- end return value --></p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_detect_devices;   name=hal_gamepad_detect_devices -->
+<a name="//apple_ref/c/func/hal_gamepad_detect_devices"></a>
+<h3><a name="hal_gamepad_detect_devices">hal_gamepad_detect_devices</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_detect_devices;name=start --><!-- begin abstract --></p>
+<p>Poll for newly attached gamepad devices
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_detect_devices;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_detect_devices;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_detect_devices" logicalPath="//apple_ref/c/instm/hal_gamepad_detect_devices //apple_ref/c/clm/hal_gamepad_detect_devices //apple_ref/c/intfcm/hal_gamepad_detect_devices //apple_ref/c/intfm/hal_gamepad_detect_devices //apple_ref/c/func/hal_gamepad_detect_devices" target="_top"><span class="function">hal_gamepad_detect_devices</span></a>(
+    <span class="param">void</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_detect_devices;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_detect_devices;name=start --><p>Call this periodically to detect hot-plugged devices. Connected
+devices will trigger the attach callback if one is registered.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_detect_devices;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_device_at;   name=hal_gamepad_device_at -->
+<a name="//apple_ref/c/func/hal_gamepad_device_at"></a>
+<h3><a name="hal_gamepad_device_at">hal_gamepad_device_at</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_device_at;name=start --><!-- begin abstract --></p>
+<p>Get a gamepad device by index
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_device_at;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_device_at;name=start --><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_device_at" logicalPath="//apple_ref/c/instm/hal_gamepad_device_at //apple_ref/c/clm/hal_gamepad_device_at //apple_ref/c/intfcm/hal_gamepad_device_at //apple_ref/c/intfm/hal_gamepad_device_at //apple_ref/c/func/hal_gamepad_device_at" target="_top"><span class="function">hal_gamepad_device_at</span></a>(
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">index</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_device_at;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_device_at/index;   name=index -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_device_at/index"></a>
+<code>index</code>
+</dt>
+<dd><p>Index of the device to retrieve (0 to num_devices-1)</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Pointer to the device, or NULL if index is out of range
+
+<!-- end return value --></p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_get_axis;   name=hal_gamepad_get_axis -->
+<a name="//apple_ref/c/func/hal_gamepad_get_axis"></a>
+<h3><a name="hal_gamepad_get_axis">hal_gamepad_get_axis</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_get_axis;name=start --><!-- begin abstract --></p>
+<p>Get standard axis value using mapping
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_get_axis;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_get_axis;name=start --><!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_get_axis" logicalPath="//apple_ref/c/instm/hal_gamepad_get_axis //apple_ref/c/clm/hal_gamepad_get_axis //apple_ref/c/intfcm/hal_gamepad_get_axis //apple_ref/c/intfm/hal_gamepad_get_axis //apple_ref/c/func/hal_gamepad_get_axis" target="_top"><span class="function">hal_gamepad_get_axis</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>,
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_axis_t" logicalPath="//apple_ref/c/cl/hal_gamepad_axis_t //apple_ref/c/tdef/hal_gamepad_axis_t" target="_top"><span class="type">hal_gamepad_axis_t</span></a> <span class="param">axis</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_get_axis;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_get_axis/device;   name=device -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_get_axis/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The gamepad device</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_get_axis/axis;   name=axis -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_get_axis/axis"></a>
+<code>axis</code>
+</dt>
+<dd><p>Standard axis from hal_gamepad_axis_t</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Axis value in range [-1.0, 1.0], or 0 if unmapped
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_get_axis;name=start --><p>Returns the mapped axis value, translating from device-specific
+axis indices to standard layout.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_get_axis;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_get_button;   name=hal_gamepad_get_button -->
+<a name="//apple_ref/c/func/hal_gamepad_get_button"></a>
+<h3><a name="hal_gamepad_get_button">hal_gamepad_get_button</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_get_button;name=start --><!-- begin abstract --></p>
+<p>Get standard button state using mapping
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_get_button;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_get_button;name=start --><!-- a logicalPath="//apple_ref/c/cl/bool //apple_ref/c/tdef/bool //apple_ref/c/tag/bool //apple_ref/c/struct/bool //apple_ref/c/intf/bool //apple_ref/doc/anysymbol/bool" machineGenerated="true" --><span class="type">bool</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_get_button" logicalPath="//apple_ref/c/instm/hal_gamepad_get_button //apple_ref/c/clm/hal_gamepad_get_button //apple_ref/c/intfcm/hal_gamepad_get_button //apple_ref/c/intfm/hal_gamepad_get_button //apple_ref/c/func/hal_gamepad_get_button" target="_top"><span class="function">hal_gamepad_get_button</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>,
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_button_t" logicalPath="//apple_ref/c/cl/hal_gamepad_button_t //apple_ref/c/tdef/hal_gamepad_button_t" target="_top"><span class="type">hal_gamepad_button_t</span></a> <span class="param">button</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_get_button;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_get_button/device;   name=device -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_get_button/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The gamepad device</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_get_button/button;   name=button -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_get_button/button"></a>
+<code>button</code>
+</dt>
+<dd><p>Standard button from hal_gamepad_button_t</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>True if button is pressed, false otherwise
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_get_button;name=start --><p>Returns the mapped button state, translating from device-specific
+button indices to standard layout.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_get_button;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_get_mapping;   name=hal_gamepad_get_mapping -->
+<a name="//apple_ref/c/func/hal_gamepad_get_mapping"></a>
+<h3><a name="hal_gamepad_get_mapping">hal_gamepad_get_mapping</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_get_mapping;name=start --><!-- begin abstract --></p>
+<p>Get the mapping string for a device
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_get_mapping;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_get_mapping;name=start --><span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_get_mapping" logicalPath="//apple_ref/c/instm/hal_gamepad_get_mapping //apple_ref/c/clm/hal_gamepad_get_mapping //apple_ref/c/intfcm/hal_gamepad_get_mapping //apple_ref/c/intfm/hal_gamepad_get_mapping //apple_ref/c/func/hal_gamepad_get_mapping" target="_top"><span class="function">hal_gamepad_get_mapping</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_get_mapping;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_get_mapping/device;   name=device -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_get_mapping/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The gamepad device</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Mapping string if available, NULL otherwise
+
+<!-- end return value --></p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_init;   name=hal_gamepad_init -->
+<a name="//apple_ref/c/func/hal_gamepad_init"></a>
+<h3><a name="hal_gamepad_init">hal_gamepad_init</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_init;name=start --><!-- begin abstract --></p>
+<p>Initialize the gamepad subsystem and detect initial devices
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_init;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_init;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_init" logicalPath="//apple_ref/c/instm/hal_gamepad_init //apple_ref/c/clm/hal_gamepad_init //apple_ref/c/intfcm/hal_gamepad_init //apple_ref/c/intfm/hal_gamepad_init //apple_ref/c/func/hal_gamepad_init" target="_top"><span class="function">hal_gamepad_init</span></a>(
+    <span class="param">void</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_init;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_init;name=start --><p>Call this before any other hal_gamepad_* functions. Register attach
+callbacks before calling this if you want to receive events for
+initially connected devices.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_init;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_is_mapped;   name=hal_gamepad_is_mapped -->
+<a name="//apple_ref/c/func/hal_gamepad_is_mapped"></a>
+<h3><a name="hal_gamepad_is_mapped">hal_gamepad_is_mapped</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_is_mapped;name=start --><!-- begin abstract --></p>
+<p>Check if device has a known mapping
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_is_mapped;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_is_mapped;name=start --><!-- a logicalPath="//apple_ref/c/cl/bool //apple_ref/c/tdef/bool //apple_ref/c/tag/bool //apple_ref/c/struct/bool //apple_ref/c/intf/bool //apple_ref/doc/anysymbol/bool" machineGenerated="true" --><span class="type">bool</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_is_mapped" logicalPath="//apple_ref/c/instm/hal_gamepad_is_mapped //apple_ref/c/clm/hal_gamepad_is_mapped //apple_ref/c/intfcm/hal_gamepad_is_mapped //apple_ref/c/intfm/hal_gamepad_is_mapped //apple_ref/c/func/hal_gamepad_is_mapped" target="_top"><span class="function">hal_gamepad_is_mapped</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_is_mapped;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_is_mapped/device;   name=device -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_is_mapped/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The gamepad device</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>True if a mapping exists for this device
+
+<!-- end return value --></p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_load_mappings;   name=hal_gamepad_load_mappings -->
+<a name="//apple_ref/c/func/hal_gamepad_load_mappings"></a>
+<h3><a name="hal_gamepad_load_mappings">hal_gamepad_load_mappings</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_load_mappings;name=start --><!-- begin abstract --></p>
+<p>Load controller mappings from a file
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_load_mappings;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_load_mappings;name=start --><!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_load_mappings" logicalPath="//apple_ref/c/instm/hal_gamepad_load_mappings //apple_ref/c/clm/hal_gamepad_load_mappings //apple_ref/c/intfcm/hal_gamepad_load_mappings //apple_ref/c/intfm/hal_gamepad_load_mappings //apple_ref/c/func/hal_gamepad_load_mappings" target="_top"><span class="function">hal_gamepad_load_mappings</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><span class="param">filename</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_load_mappings;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_load_mappings/filename;   name=filename -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_load_mappings/filename"></a>
+<code>filename</code>
+</dt>
+<dd><p>Path to a gamecontrollerdb.txt file</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Number of mappings loaded, or -1 on error
+
+<!-- end return value --></p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_num_devices;   name=hal_gamepad_num_devices -->
+<a name="//apple_ref/c/func/hal_gamepad_num_devices"></a>
+<h3><a name="hal_gamepad_num_devices">hal_gamepad_num_devices</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_num_devices;name=start --><!-- begin abstract --></p>
+<p>Get the count of connected gamepads
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_num_devices;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_num_devices;name=start --><span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_num_devices" logicalPath="//apple_ref/c/instm/hal_gamepad_num_devices //apple_ref/c/clm/hal_gamepad_num_devices //apple_ref/c/intfcm/hal_gamepad_num_devices //apple_ref/c/intfm/hal_gamepad_num_devices //apple_ref/c/func/hal_gamepad_num_devices" target="_top"><span class="function">hal_gamepad_num_devices</span></a>(
+    <span class="param">void</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_num_devices;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The number of currently connected gamepad devices
+
+<!-- end return value --></p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_process_events;   name=hal_gamepad_process_events -->
+<a name="//apple_ref/c/func/hal_gamepad_process_events"></a>
+<h3><a name="hal_gamepad_process_events">hal_gamepad_process_events</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_process_events;name=start --><!-- begin abstract --></p>
+<p>Process pending input events from all connected gamepads
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_process_events;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_process_events;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_process_events" logicalPath="//apple_ref/c/instm/hal_gamepad_process_events //apple_ref/c/clm/hal_gamepad_process_events //apple_ref/c/intfcm/hal_gamepad_process_events //apple_ref/c/intfm/hal_gamepad_process_events //apple_ref/c/func/hal_gamepad_process_events" target="_top"><span class="function">hal_gamepad_process_events</span></a>(
+    <span class="param">void</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_process_events;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_process_events;name=start --><p>Call this in your main loop to receive button and axis callbacks.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/hal_gamepad_process_events;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_set_attach_callback;   name=hal_gamepad_set_attach_callback -->
+<a name="//apple_ref/c/func/hal_gamepad_set_attach_callback"></a>
+<h3><a name="hal_gamepad_set_attach_callback">hal_gamepad_set_attach_callback</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_attach_callback;name=start --><!-- begin abstract --></p>
+<p>Register a callback for device attachment events
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_attach_callback;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_attach_callback;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_set_attach_callback" logicalPath="//apple_ref/c/instm/hal_gamepad_set_attach_callback //apple_ref/c/clm/hal_gamepad_set_attach_callback //apple_ref/c/intfcm/hal_gamepad_set_attach_callback //apple_ref/c/intfm/hal_gamepad_set_attach_callback //apple_ref/c/func/hal_gamepad_set_attach_callback" target="_top"><span class="function">hal_gamepad_set_attach_callback</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_attach_callback_t" logicalPath="//apple_ref/c/cl/hal_gamepad_attach_callback_t //apple_ref/c/tdef/hal_gamepad_attach_callback_t" target="_top"><span class="type">hal_gamepad_attach_callback_t</span></a> <span class="param">callback</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_attach_callback;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_attach_callback/callback;   name=callback -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_attach_callback/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Function to call when a device is attached, or NULL to unregister</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_attach_callback/context;   name=context -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_attach_callback/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User data to pass to the callback</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_set_axis_callback;   name=hal_gamepad_set_axis_callback -->
+<a name="//apple_ref/c/func/hal_gamepad_set_axis_callback"></a>
+<h3><a name="hal_gamepad_set_axis_callback">hal_gamepad_set_axis_callback</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_axis_callback;name=start --><!-- begin abstract --></p>
+<p>Register a callback for axis movement events
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_axis_callback;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_axis_callback;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_set_axis_callback" logicalPath="//apple_ref/c/instm/hal_gamepad_set_axis_callback //apple_ref/c/clm/hal_gamepad_set_axis_callback //apple_ref/c/intfcm/hal_gamepad_set_axis_callback //apple_ref/c/intfm/hal_gamepad_set_axis_callback //apple_ref/c/func/hal_gamepad_set_axis_callback" target="_top"><span class="function">hal_gamepad_set_axis_callback</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_axis_callback_t" logicalPath="//apple_ref/c/cl/hal_gamepad_axis_callback_t //apple_ref/c/tdef/hal_gamepad_axis_callback_t" target="_top"><span class="type">hal_gamepad_axis_callback_t</span></a> <span class="param">callback</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_axis_callback;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_axis_callback/callback;   name=callback -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_axis_callback/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Function to call when an axis value changes, or NULL to unregister</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_axis_callback/context;   name=context -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_axis_callback/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User data to pass to the callback</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_set_button_down_callback;   name=hal_gamepad_set_button_down_callback -->
+<a name="//apple_ref/c/func/hal_gamepad_set_button_down_callback"></a>
+<h3><a name="hal_gamepad_set_button_down_callback">hal_gamepad_set_button_down_callback</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_button_down_callback;name=start --><!-- begin abstract --></p>
+<p>Register a callback for button press events
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_button_down_callback;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_button_down_callback;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_set_button_down_callback" logicalPath="//apple_ref/c/instm/hal_gamepad_set_button_down_callback //apple_ref/c/clm/hal_gamepad_set_button_down_callback //apple_ref/c/intfcm/hal_gamepad_set_button_down_callback //apple_ref/c/intfm/hal_gamepad_set_button_down_callback //apple_ref/c/func/hal_gamepad_set_button_down_callback" target="_top"><span class="function">hal_gamepad_set_button_down_callback</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_button_callback_t" logicalPath="//apple_ref/c/cl/hal_gamepad_button_callback_t //apple_ref/c/tdef/hal_gamepad_button_callback_t" target="_top"><span class="type">hal_gamepad_button_callback_t</span></a> <span class="param">callback</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_button_down_callback;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_button_down_callback/callback;   name=callback -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_button_down_callback/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Function to call when a button is pressed, or NULL to unregister</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_button_down_callback/context;   name=context -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_button_down_callback/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User data to pass to the callback</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_set_button_up_callback;   name=hal_gamepad_set_button_up_callback -->
+<a name="//apple_ref/c/func/hal_gamepad_set_button_up_callback"></a>
+<h3><a name="hal_gamepad_set_button_up_callback">hal_gamepad_set_button_up_callback</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_button_up_callback;name=start --><!-- begin abstract --></p>
+<p>Register a callback for button release events
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_button_up_callback;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_button_up_callback;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_set_button_up_callback" logicalPath="//apple_ref/c/instm/hal_gamepad_set_button_up_callback //apple_ref/c/clm/hal_gamepad_set_button_up_callback //apple_ref/c/intfcm/hal_gamepad_set_button_up_callback //apple_ref/c/intfm/hal_gamepad_set_button_up_callback //apple_ref/c/func/hal_gamepad_set_button_up_callback" target="_top"><span class="function">hal_gamepad_set_button_up_callback</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_button_callback_t" logicalPath="//apple_ref/c/cl/hal_gamepad_button_callback_t //apple_ref/c/tdef/hal_gamepad_button_callback_t" target="_top"><span class="type">hal_gamepad_button_callback_t</span></a> <span class="param">callback</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_button_up_callback;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_button_up_callback/callback;   name=callback -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_button_up_callback/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Function to call when a button is released, or NULL to unregister</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_button_up_callback/context;   name=context -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_button_up_callback/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User data to pass to the callback</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_set_remove_callback;   name=hal_gamepad_set_remove_callback -->
+<a name="//apple_ref/c/func/hal_gamepad_set_remove_callback"></a>
+<h3><a name="hal_gamepad_set_remove_callback">hal_gamepad_set_remove_callback</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_remove_callback;name=start --><!-- begin abstract --></p>
+<p>Register a callback for device removal events
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_set_remove_callback;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_remove_callback;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_set_remove_callback" logicalPath="//apple_ref/c/instm/hal_gamepad_set_remove_callback //apple_ref/c/clm/hal_gamepad_set_remove_callback //apple_ref/c/intfcm/hal_gamepad_set_remove_callback //apple_ref/c/intfm/hal_gamepad_set_remove_callback //apple_ref/c/func/hal_gamepad_set_remove_callback" target="_top"><span class="function">hal_gamepad_set_remove_callback</span></a>(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_remove_callback_t" logicalPath="//apple_ref/c/cl/hal_gamepad_remove_callback_t //apple_ref/c/tdef/hal_gamepad_remove_callback_t" target="_top"><span class="type">hal_gamepad_remove_callback_t</span></a> <span class="param">callback</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_set_remove_callback;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_remove_callback/callback;   name=callback -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_remove_callback/callback"></a>
+<code>callback</code>
+</dt>
+<dd><p>Function to call when a device is removed, or NULL to unregister</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/hal_gamepad_set_remove_callback/context;   name=context -->
+<a name="//apple_ref/doc/functionparam/hal_gamepad_set_remove_callback/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User data to pass to the callback</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/hal_gamepad_shutdown;   name=hal_gamepad_shutdown -->
+<a name="//apple_ref/c/func/hal_gamepad_shutdown"></a>
+<h3><a name="hal_gamepad_shutdown">hal_gamepad_shutdown</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_shutdown;name=start --><!-- begin abstract --></p>
+<p>Shut down the gamepad subsystem and release all resources
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/hal_gamepad_shutdown;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_shutdown;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/hal_gamepad_shutdown" logicalPath="//apple_ref/c/instm/hal_gamepad_shutdown //apple_ref/c/clm/hal_gamepad_shutdown //apple_ref/c/intfcm/hal_gamepad_shutdown //apple_ref/c/intfm/hal_gamepad_shutdown //apple_ref/c/func/hal_gamepad_shutdown" target="_top"><span class="function">hal_gamepad_shutdown</span></a>(
+    <span class="param">void</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/hal_gamepad_shutdown;name=end --></pre>
+</div>
+<hr class="betweenSections">
+<a name="HeaderDoc_datatypes"></a>
+<h2 class="h2tight">Typedefs</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_attach_callback_t" target="_top">hal_gamepad_attach_callback_t</a></tt></dt>
+<dd><p>Callback invoked when a gamepad is connected
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_axis" target="_top">hal_gamepad_axis</a></tt></dt>
+<dd><p>Standard gamepad axis indices
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_axis_callback_t" target="_top">hal_gamepad_axis_callback_t</a></tt></dt>
+<dd><p>Callback invoked when an axis value changes
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_axis_t" target="_top">hal_gamepad_axis_t</a></tt></dt>
+<dd><p>Standard gamepad axis indices
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_button" target="_top">hal_gamepad_button</a></tt></dt>
+<dd><p>Standard gamepad button indices (Xbox-style layout)
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_button_callback_t" target="_top">hal_gamepad_button_callback_t</a></tt></dt>
+<dd><p>Callback invoked on button press or release
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_button_t" target="_top">hal_gamepad_button_t</a></tt></dt>
+<dd><p>Standard gamepad button indices (Xbox-style layout)
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" target="_top">hal_gamepad_device_t</a></tt></dt>
+<dd><p>Represents a connected gamepad device
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/hal_gamepad_remove_callback_t" target="_top">hal_gamepad_remove_callback_t</a></tt></dt>
+<dd><p>Callback invoked when a gamepad is disconnected
+</p></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_attach_callback_t;   name=hal_gamepad_attach_callback_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_attach_callback_t"></a>
+<h3><a name="hal_gamepad_attach_callback_t">hal_gamepad_attach_callback_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_attach_callback_t;name=start --><!-- begin abstract --></p>
+<p>Callback invoked when a gamepad is connected
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_attach_callback_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_attach_callback_t;name=start --><span class="keyword">typedef</span> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> ( <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_attach_callback_t" logicalPath="//apple_ref/c/instm/hal_gamepad_attach_callback_t //apple_ref/c/clm/hal_gamepad_attach_callback_t //apple_ref/c/intfcm/hal_gamepad_attach_callback_t //apple_ref/c/intfm/hal_gamepad_attach_callback_t //apple_ref/c/func/hal_gamepad_attach_callback_t //apple_ref/c/ftmplt/hal_gamepad_attach_callback_t //apple_ref/c/defn/hal_gamepad_attach_callback_t //apple_ref/c/macro/hal_gamepad_attach_callback_t //apple_ref/doc/anysymbol/hal_gamepad_attach_callback_t" target="_top"><span class="function">hal_gamepad_attach_callback_t</span></a>)(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_attach_callback_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_attach_callback_t/device;   name=device -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_attach_callback_t/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The newly attached device</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_attach_callback_t/context;   name=context -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_attach_callback_t/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User-provided context pointer</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_axis;   name=hal_gamepad_axis -->
+<a name="//apple_ref/c/tdef/hal_gamepad_axis"></a>
+<h3><a name="hal_gamepad_axis">hal_gamepad_axis</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_axis;name=start --><!-- begin abstract --></p>
+<p>Standard gamepad axis indices
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_axis;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_axis;name=start --><span class="keyword">typedef</span> <span class="keyword">enum</span> { 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTX" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTX" target="_top"><span class="var">HAL_GAMEPAD_AXIS_LEFTX</span></a> = <span class="number">0</span>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTY" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTY" target="_top"><span class="var">HAL_GAMEPAD_AXIS_LEFTY</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTX" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTX" target="_top"><span class="var">HAL_GAMEPAD_AXIS_RIGHTX</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTY" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTY" target="_top"><span class="var">HAL_GAMEPAD_AXIS_RIGHTY</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTTRIGGER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTTRIGGER" target="_top"><span class="var">HAL_GAMEPAD_AXIS_LEFTTRIGGER</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTTRIGGER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTTRIGGER" target="_top"><span class="var">HAL_GAMEPAD_AXIS_RIGHTTRIGGER</span></a>, 
+    <!-- a logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_MAX //apple_ref/c/data/HAL_GAMEPAD_AXIS_MAX //apple_ref/c/clconst/HAL_GAMEPAD_AXIS_MAX " machineGenerated="true" --><span class="var">HAL_GAMEPAD_AXIS_MAX</span><!-- /a --> 
+} <!-- a logicalPath="//apple_ref/c/econst/hal_gamepad_axis_t //apple_ref/c/data/hal_gamepad_axis_t //apple_ref/c/clconst/hal_gamepad_axis_t " machineGenerated="true" --><span class="var">hal_gamepad_axis_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_axis;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTX"><code>HAL_GAMEPAD_AXIS_LEFTX</code></a></dt>
+<dd><p>Left stick X axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTY"><code>HAL_GAMEPAD_AXIS_LEFTY</code></a></dt>
+<dd><p>Left stick Y axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTX"><code>HAL_GAMEPAD_AXIS_RIGHTX</code></a></dt>
+<dd><p>Right stick X axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTY"><code>HAL_GAMEPAD_AXIS_RIGHTY</code></a></dt>
+<dd><p>Right stick Y axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTTRIGGER"><code>HAL_GAMEPAD_AXIS_LEFTTRIGGER</code></a></dt>
+<dd><p>Left trigger (L2/LT)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTTRIGGER"><code>HAL_GAMEPAD_AXIS_RIGHTTRIGGER</code></a></dt>
+<dd><p>Right trigger (R2/RT)</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/c/tdef/hal_gamepad_axis_t" logicalPath="//apple_ref/c/tdef/hal_gamepad_axis_t" target="_top">hal_gamepad_axis_t</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_axis_callback_t;   name=hal_gamepad_axis_callback_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_axis_callback_t"></a>
+<h3><a name="hal_gamepad_axis_callback_t">hal_gamepad_axis_callback_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_axis_callback_t;name=start --><!-- begin abstract --></p>
+<p>Callback invoked when an axis value changes
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_axis_callback_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_axis_callback_t;name=start --><span class="keyword">typedef</span> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> ( <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_axis_callback_t" logicalPath="//apple_ref/c/instm/hal_gamepad_axis_callback_t //apple_ref/c/clm/hal_gamepad_axis_callback_t //apple_ref/c/intfcm/hal_gamepad_axis_callback_t //apple_ref/c/intfm/hal_gamepad_axis_callback_t //apple_ref/c/func/hal_gamepad_axis_callback_t //apple_ref/c/ftmplt/hal_gamepad_axis_callback_t //apple_ref/c/defn/hal_gamepad_axis_callback_t //apple_ref/c/macro/hal_gamepad_axis_callback_t //apple_ref/doc/anysymbol/hal_gamepad_axis_callback_t" target="_top"><span class="function">hal_gamepad_axis_callback_t</span></a>)(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>,
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">axis_id</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">value</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">last_value</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/double //apple_ref/c/tdef/double //apple_ref/c/tag/double //apple_ref/c/struct/double //apple_ref/c/intf/double //apple_ref/doc/anysymbol/double" machineGenerated="true" --><span class="type">double</span><!-- /a --> <span class="param">timestamp</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_axis_callback_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/device;   name=device -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The device generating the event</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/axis_id;   name=axis_id -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/axis_id"></a>
+<code>axis_id</code>
+</dt>
+<dd><p>Index of the axis</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/value;   name=value -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/value"></a>
+<code>value</code>
+</dt>
+<dd><p>Current axis value [-1.0, 1.0]</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/last_value;   name=last_value -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/last_value"></a>
+<code>last_value</code>
+</dt>
+<dd><p>Previous axis value</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/timestamp;   name=timestamp -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/timestamp"></a>
+<code>timestamp</code>
+</dt>
+<dd><p>Event timestamp in seconds</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/context;   name=context -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_axis_callback_t/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User-provided context pointer</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_axis_t;   name=hal_gamepad_axis_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_axis_t"></a>
+<h3><a name="hal_gamepad_axis_t">hal_gamepad_axis_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_axis_t;name=start --><!-- begin abstract --></p>
+<p>Standard gamepad axis indices
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_axis_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_axis_t;name=start --><span class="keyword">typedef</span> <span class="keyword">enum</span> { 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTX" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTX" target="_top"><span class="var">HAL_GAMEPAD_AXIS_LEFTX</span></a> = <span class="number">0</span>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTY" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTY" target="_top"><span class="var">HAL_GAMEPAD_AXIS_LEFTY</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTX" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTX" target="_top"><span class="var">HAL_GAMEPAD_AXIS_RIGHTX</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTY" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTY" target="_top"><span class="var">HAL_GAMEPAD_AXIS_RIGHTY</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTTRIGGER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTTRIGGER" target="_top"><span class="var">HAL_GAMEPAD_AXIS_LEFTTRIGGER</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTTRIGGER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTTRIGGER" target="_top"><span class="var">HAL_GAMEPAD_AXIS_RIGHTTRIGGER</span></a>, 
+    <!-- a logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_MAX //apple_ref/c/data/HAL_GAMEPAD_AXIS_MAX //apple_ref/c/clconst/HAL_GAMEPAD_AXIS_MAX " machineGenerated="true" --><span class="var">HAL_GAMEPAD_AXIS_MAX</span><!-- /a --> 
+} <!-- a logicalPath="//apple_ref/c/econst/hal_gamepad_axis_t //apple_ref/c/data/hal_gamepad_axis_t //apple_ref/c/clconst/hal_gamepad_axis_t " machineGenerated="true" --><span class="var">hal_gamepad_axis_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_axis_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTX_DONTLINK_0"><code>HAL_GAMEPAD_AXIS_LEFTX</code></a></dt>
+<dd><p>Left stick X axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTY_DONTLINK_0"><code>HAL_GAMEPAD_AXIS_LEFTY</code></a></dt>
+<dd><p>Left stick Y axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTX_DONTLINK_0"><code>HAL_GAMEPAD_AXIS_RIGHTX</code></a></dt>
+<dd><p>Right stick X axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTY_DONTLINK_0"><code>HAL_GAMEPAD_AXIS_RIGHTY</code></a></dt>
+<dd><p>Right stick Y axis</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_LEFTTRIGGER_DONTLINK_0"><code>HAL_GAMEPAD_AXIS_LEFTTRIGGER</code></a></dt>
+<dd><p>Left trigger (L2/LT)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_AXIS_RIGHTTRIGGER_DONTLINK_0"><code>HAL_GAMEPAD_AXIS_RIGHTTRIGGER</code></a></dt>
+<dd><p>Right trigger (R2/RT)</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/c/tdef/hal_gamepad_axis" logicalPath="//apple_ref/c/tdef/hal_gamepad_axis" target="_top">hal_gamepad_axis</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_button;   name=hal_gamepad_button -->
+<a name="//apple_ref/c/tdef/hal_gamepad_button"></a>
+<h3><a name="hal_gamepad_button">hal_gamepad_button</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_button;name=start --><!-- begin abstract --></p>
+<p>Standard gamepad button indices (Xbox-style layout)
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_button;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_button;name=start --><span class="keyword">typedef</span> <span class="keyword">enum</span> { 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_A" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_A" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_A</span></a> = <span class="number">0</span>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_B" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_B" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_B</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_X" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_X" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_X</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_Y" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_Y" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_Y</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_BACK" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_BACK" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_BACK</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_GUIDE" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_GUIDE" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_GUIDE</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_START" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_START" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_START</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSTICK" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSTICK" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_LEFTSTICK</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSTICK" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSTICK" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_RIGHTSTICK</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSHOULDER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSHOULDER" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_LEFTSHOULDER</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSHOULDER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSHOULDER" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_RIGHTSHOULDER</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_UP" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_UP" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_UP</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_DOWN" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_DOWN" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_DOWN</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_LEFT" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_LEFT" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_LEFT</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_RIGHT" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_RIGHT" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_RIGHT</span></a>, 
+    <!-- a logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_MAX //apple_ref/c/data/HAL_GAMEPAD_BUTTON_MAX //apple_ref/c/clconst/HAL_GAMEPAD_BUTTON_MAX " machineGenerated="true" --><span class="var">HAL_GAMEPAD_BUTTON_MAX</span><!-- /a --> 
+} <!-- a logicalPath="//apple_ref/c/econst/hal_gamepad_button_t //apple_ref/c/data/hal_gamepad_button_t //apple_ref/c/clconst/hal_gamepad_button_t " machineGenerated="true" --><span class="var">hal_gamepad_button_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_button;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_A"><code>HAL_GAMEPAD_BUTTON_A</code></a></dt>
+<dd><p>A button (cross on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_B"><code>HAL_GAMEPAD_BUTTON_B</code></a></dt>
+<dd><p>B button (circle on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_X"><code>HAL_GAMEPAD_BUTTON_X</code></a></dt>
+<dd><p>X button (square on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_Y"><code>HAL_GAMEPAD_BUTTON_Y</code></a></dt>
+<dd><p>Y button (triangle on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_BACK"><code>HAL_GAMEPAD_BUTTON_BACK</code></a></dt>
+<dd><p>Back/Select button</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_GUIDE"><code>HAL_GAMEPAD_BUTTON_GUIDE</code></a></dt>
+<dd><p>Guide/Home button</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_START"><code>HAL_GAMEPAD_BUTTON_START</code></a></dt>
+<dd><p>Start/Options button</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSTICK"><code>HAL_GAMEPAD_BUTTON_LEFTSTICK</code></a></dt>
+<dd><p>Left stick click (L3)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSTICK"><code>HAL_GAMEPAD_BUTTON_RIGHTSTICK</code></a></dt>
+<dd><p>Right stick click (R3)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSHOULDER"><code>HAL_GAMEPAD_BUTTON_LEFTSHOULDER</code></a></dt>
+<dd><p>Left shoulder (L1/LB)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSHOULDER"><code>HAL_GAMEPAD_BUTTON_RIGHTSHOULDER</code></a></dt>
+<dd><p>Right shoulder (R1/RB)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_UP"><code>HAL_GAMEPAD_BUTTON_DPAD_UP</code></a></dt>
+<dd><p>D-pad up</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_DOWN"><code>HAL_GAMEPAD_BUTTON_DPAD_DOWN</code></a></dt>
+<dd><p>D-pad down</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_LEFT"><code>HAL_GAMEPAD_BUTTON_DPAD_LEFT</code></a></dt>
+<dd><p>D-pad left</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_RIGHT"><code>HAL_GAMEPAD_BUTTON_DPAD_RIGHT</code></a></dt>
+<dd><p>D-pad right</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/c/tdef/hal_gamepad_button_t" logicalPath="//apple_ref/c/tdef/hal_gamepad_button_t" target="_top">hal_gamepad_button_t</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_button_callback_t;   name=hal_gamepad_button_callback_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_button_callback_t"></a>
+<h3><a name="hal_gamepad_button_callback_t">hal_gamepad_button_callback_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_button_callback_t;name=start --><!-- begin abstract --></p>
+<p>Callback invoked on button press or release
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_button_callback_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_button_callback_t;name=start --><span class="keyword">typedef</span> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> ( <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_button_callback_t" logicalPath="//apple_ref/c/instm/hal_gamepad_button_callback_t //apple_ref/c/clm/hal_gamepad_button_callback_t //apple_ref/c/intfcm/hal_gamepad_button_callback_t //apple_ref/c/intfm/hal_gamepad_button_callback_t //apple_ref/c/func/hal_gamepad_button_callback_t //apple_ref/c/ftmplt/hal_gamepad_button_callback_t //apple_ref/c/defn/hal_gamepad_button_callback_t //apple_ref/c/macro/hal_gamepad_button_callback_t //apple_ref/doc/anysymbol/hal_gamepad_button_callback_t" target="_top"><span class="function">hal_gamepad_button_callback_t</span></a>)(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>,
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">button_id</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/double //apple_ref/c/tdef/double //apple_ref/c/tag/double //apple_ref/c/struct/double //apple_ref/c/intf/double //apple_ref/doc/anysymbol/double" machineGenerated="true" --><span class="type">double</span><!-- /a --> <span class="param">timestamp</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_button_callback_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/device;   name=device -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The device generating the event</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/button_id;   name=button_id -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/button_id"></a>
+<code>button_id</code>
+</dt>
+<dd><p>Index of the button</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/timestamp;   name=timestamp -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/timestamp"></a>
+<code>timestamp</code>
+</dt>
+<dd><p>Event timestamp in seconds</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/context;   name=context -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_button_callback_t/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User-provided context pointer</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_button_t;   name=hal_gamepad_button_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_button_t"></a>
+<h3><a name="hal_gamepad_button_t">hal_gamepad_button_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_button_t;name=start --><!-- begin abstract --></p>
+<p>Standard gamepad button indices (Xbox-style layout)
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_button_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_button_t;name=start --><span class="keyword">typedef</span> <span class="keyword">enum</span> { 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_A" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_A" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_A</span></a> = <span class="number">0</span>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_B" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_B" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_B</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_X" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_X" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_X</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_Y" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_Y" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_Y</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_BACK" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_BACK" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_BACK</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_GUIDE" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_GUIDE" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_GUIDE</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_START" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_START" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_START</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSTICK" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSTICK" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_LEFTSTICK</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSTICK" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSTICK" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_RIGHTSTICK</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSHOULDER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSHOULDER" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_LEFTSHOULDER</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSHOULDER" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSHOULDER" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_RIGHTSHOULDER</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_UP" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_UP" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_UP</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_DOWN" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_DOWN" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_DOWN</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_LEFT" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_LEFT" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_LEFT</span></a>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_RIGHT" logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_RIGHT" target="_top"><span class="var">HAL_GAMEPAD_BUTTON_DPAD_RIGHT</span></a>, 
+    <!-- a logicalPath="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_MAX //apple_ref/c/data/HAL_GAMEPAD_BUTTON_MAX //apple_ref/c/clconst/HAL_GAMEPAD_BUTTON_MAX " machineGenerated="true" --><span class="var">HAL_GAMEPAD_BUTTON_MAX</span><!-- /a --> 
+} <!-- a logicalPath="//apple_ref/c/econst/hal_gamepad_button_t //apple_ref/c/data/hal_gamepad_button_t //apple_ref/c/clconst/hal_gamepad_button_t " machineGenerated="true" --><span class="var">hal_gamepad_button_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_button_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Constants</font></h5>
+<div class="param_indent">
+<dl>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_A_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_A</code></a></dt>
+<dd><p>A button (cross on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_B_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_B</code></a></dt>
+<dd><p>B button (circle on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_X_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_X</code></a></dt>
+<dd><p>X button (square on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_Y_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_Y</code></a></dt>
+<dd><p>Y button (triangle on PlayStation)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_BACK_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_BACK</code></a></dt>
+<dd><p>Back/Select button</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_GUIDE_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_GUIDE</code></a></dt>
+<dd><p>Guide/Home button</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_START_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_START</code></a></dt>
+<dd><p>Start/Options button</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSTICK_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_LEFTSTICK</code></a></dt>
+<dd><p>Left stick click (L3)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSTICK_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_RIGHTSTICK</code></a></dt>
+<dd><p>Right stick click (R3)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_LEFTSHOULDER_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_LEFTSHOULDER</code></a></dt>
+<dd><p>Left shoulder (L1/LB)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_RIGHTSHOULDER_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_RIGHTSHOULDER</code></a></dt>
+<dd><p>Right shoulder (R1/RB)</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_UP_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_DPAD_UP</code></a></dt>
+<dd><p>D-pad up</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_DOWN_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_DPAD_DOWN</code></a></dt>
+<dd><p>D-pad down</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_LEFT_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_DPAD_LEFT</code></a></dt>
+<dd><p>D-pad left</p></dd>
+<dt><a name="//apple_ref/c/econst/HAL_GAMEPAD_BUTTON_DPAD_RIGHT_DONTLINK_0"><code>HAL_GAMEPAD_BUTTON_DPAD_RIGHT</code></a></dt>
+<dd><p>D-pad right</p></dd>
+</dl>
+</div>
+<p><b>See Also</b></p>
+<div class="list_indent"><dl>
+<dt><p><a href="index.html#//apple_ref/c/tdef/hal_gamepad_button" logicalPath="//apple_ref/c/tdef/hal_gamepad_button" target="_top">hal_gamepad_button</a></p></dt>
+<dd></dd>
+</dl></div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_device_t;   name=hal_gamepad_device_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_device_t"></a>
+<h3><a name="hal_gamepad_device_t">hal_gamepad_device_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_device_t;name=start --><!-- begin abstract --></p>
+<p>Represents a connected gamepad device
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_device_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_device_t;name=start --><span class="keyword">typedef</span> <span class="keyword">struct</span> <!-- a logicalPath="//apple_ref/c/cl/hal_gamepad_device //apple_ref/c/tdef/hal_gamepad_device //apple_ref/c/tag/hal_gamepad_device //apple_ref/c/struct/hal_gamepad_device //apple_ref/c/intf/hal_gamepad_device //apple_ref/doc/anysymbol/hal_gamepad_device" machineGenerated="true" --><span class="type">hal_gamepad_device</span><!-- /a --> { 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/device_id //apple_ref/c/data/device_id //apple_ref/c/clconst/device_id " machineGenerated="true" --><span class="var">device_id</span><!-- /a -->; 
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//apple_ref/c/econst/description //apple_ref/c/data/description //apple_ref/c/clconst/description " machineGenerated="true" --><span class="var">description</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/vendor_id //apple_ref/c/data/vendor_id //apple_ref/c/clconst/vendor_id " machineGenerated="true" --><span class="var">vendor_id</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/product_id //apple_ref/c/data/product_id //apple_ref/c/clconst/product_id " machineGenerated="true" --><span class="var">product_id</span><!-- /a -->; 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/num_axes //apple_ref/c/data/num_axes //apple_ref/c/clconst/num_axes " machineGenerated="true" --><span class="var">num_axes</span><!-- /a -->; 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/num_buttons //apple_ref/c/data/num_buttons //apple_ref/c/clconst/num_buttons " machineGenerated="true" --><span class="var">num_buttons</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//apple_ref/c/econst/axis_states //apple_ref/c/data/axis_states //apple_ref/c/clconst/axis_states " machineGenerated="true" --><span class="var">axis_states</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/bool //apple_ref/c/tdef/bool //apple_ref/c/tag/bool //apple_ref/c/struct/bool //apple_ref/c/intf/bool //apple_ref/doc/anysymbol/bool" machineGenerated="true" --><span class="type">bool</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//apple_ref/c/econst/button_states //apple_ref/c/data/button_states //apple_ref/c/clconst/button_states " machineGenerated="true" --><span class="var">button_states</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//apple_ref/c/econst/private_data //apple_ref/c/data/private_data //apple_ref/c/clconst/private_data " machineGenerated="true" --><span class="var">private_data</span><!-- /a -->; 
+} <!-- a logicalPath="//apple_ref/c/econst/hal_gamepad_device_t //apple_ref/c/data/hal_gamepad_device_t //apple_ref/c/clconst/hal_gamepad_device_t " machineGenerated="true" --><span class="var">hal_gamepad_device_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_device_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Fields</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/device_id;   name=device_id -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/device_id"></a>
+<code>device_id</code>
+</dt>
+<dd><p>Unique device identifier for this session</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/description;   name=description -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/description"></a>
+<code>description</code>
+</dt>
+<dd><p>Human-readable device name</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/vendor_id;   name=vendor_id -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/vendor_id"></a>
+<code>vendor_id</code>
+</dt>
+<dd><p>USB vendor ID</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/product_id;   name=product_id -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/product_id"></a>
+<code>product_id</code>
+</dt>
+<dd><p>USB product ID</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/num_axes;   name=num_axes -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/num_axes"></a>
+<code>num_axes</code>
+</dt>
+<dd><p>Number of analog axes on this device</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/num_buttons;   name=num_buttons -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/num_buttons"></a>
+<code>num_buttons</code>
+</dt>
+<dd><p>Number of buttons on this device</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/axis_states;   name=axis_states -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/axis_states"></a>
+<code>axis_states</code>
+</dt>
+<dd><p>Array of current axis values [-1.0, 1.0]</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/button_states;   name=button_states -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/button_states"></a>
+<code>button_states</code>
+</dt>
+<dd><p>Array of current button states (pressed/released)</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/hal_gamepad_device_t/private_data;   name=private_data -->
+<a name="//apple_ref/doc/structfield/hal_gamepad_device_t/private_data"></a>
+<code>private_data</code>
+</dt>
+<dd><p>Platform-specific internal data (do not access)</p></dd>
+</dl>
+</div>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/hal_gamepad_remove_callback_t;   name=hal_gamepad_remove_callback_t -->
+<a name="//apple_ref/c/tdef/hal_gamepad_remove_callback_t"></a>
+<h3><a name="hal_gamepad_remove_callback_t">hal_gamepad_remove_callback_t</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_remove_callback_t;name=start --><!-- begin abstract --></p>
+<p>Callback invoked when a gamepad is disconnected
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/hal_gamepad_remove_callback_t;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_remove_callback_t;name=start --><span class="keyword">typedef</span> <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> ( <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_remove_callback_t" logicalPath="//apple_ref/c/instm/hal_gamepad_remove_callback_t //apple_ref/c/clm/hal_gamepad_remove_callback_t //apple_ref/c/intfcm/hal_gamepad_remove_callback_t //apple_ref/c/intfm/hal_gamepad_remove_callback_t //apple_ref/c/func/hal_gamepad_remove_callback_t //apple_ref/c/ftmplt/hal_gamepad_remove_callback_t //apple_ref/c/defn/hal_gamepad_remove_callback_t //apple_ref/c/macro/hal_gamepad_remove_callback_t //apple_ref/doc/anysymbol/hal_gamepad_remove_callback_t" target="_top"><span class="function">hal_gamepad_remove_callback_t</span></a>)(
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/hal_gamepad_device_t" logicalPath="//apple_ref/c/cl/hal_gamepad_device_t //apple_ref/c/tdef/hal_gamepad_device_t" target="_top"><span class="type">hal_gamepad_device_t</span></a> <span class="type">*</span><span class="param">device</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">context</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/hal_gamepad_remove_callback_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_remove_callback_t/device;   name=device -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_remove_callback_t/device"></a>
+<code>device</code>
+</dt>
+<dd><p>The device being removed</p></dd>
+<dt>
+<!-- headerDoc=typedeffield;  uid=//apple_ref/doc/typedeffield/hal_gamepad_remove_callback_t/context;   name=context -->
+<a name="//apple_ref/doc/typedeffield/hal_gamepad_remove_callback_t/context"></a>
+<code>context</code>
+</dt>
+<dd><p>User-provided context pointer</p></dd>
+</dl>
+</div>
+<p class="gapBeforeFooter"> </p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_timestamp">Last Updated: Friday, December 26, 2025
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>

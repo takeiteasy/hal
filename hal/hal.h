@@ -213,6 +213,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -257,6 +258,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -301,6 +303,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -345,6 +348,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -389,6 +393,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -433,6 +438,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -477,6 +483,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -521,6 +528,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -565,6 +573,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -609,6 +618,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -653,6 +663,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -697,6 +708,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -741,6 +753,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -785,6 +798,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -829,6 +843,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_ENVIRONMENT
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -873,6 +888,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_ENVIRONMENT
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -917,6 +933,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_ENVIRONMENT
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -944,6 +961,51 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_WIFI
 #endif // HAL_ONLY_FLASH
 
+#ifdef HAL_ONLY_GAMEPAD
+#define HAL_NO_ACCELEROMETER
+#define HAL_NO_AUDIO_RECORDING
+#define HAL_NO_BAROMETER
+#define HAL_NO_BATTERY
+#define HAL_NO_BLUETOOTH
+#define HAL_NO_BRIGHTNESS
+#define HAL_NO_CALL
+#define HAL_NO_CAMERA
+#define HAL_NO_COMPASS
+#define HAL_NO_CLIPBOARD
+#define HAL_NO_CPU_COUNT
+#define HAL_NO_DEVICE_NAME
+#define HAL_NO_EMAIL
+#define HAL_NO_ENVIRONMENT
+#define HAL_NO_FILE_CHOOSER
+#define HAL_NO_FILESYSTEM
+#define HAL_NO_FLASH
+#define HAL_NO_GPS
+#define HAL_NO_GRAVITY
+#define HAL_NO_GYROSCOPE
+#define HAL_NO_HUMIDITY
+#define HAL_NO_IR_BLASTER
+#define HAL_NO_KEYSTORE
+#define HAL_NO_LIGHT
+#define HAL_NO_MAPS
+#define HAL_NO_NOTIFICATIONS
+#define HAL_NO_ORIENTATION
+#define HAL_NO_PATH_UTILS
+#define HAL_NO_PROXIMITY
+#define HAL_NO_SCREENSHOT
+#define HAL_NO_SHELL
+#define HAL_NO_SMS
+#define HAL_NO_SPATIAL_ORIENTATION
+#define HAL_NO_SPEECH_TO_TEXT
+#define HAL_NO_STORAGEPATH
+#define HAL_NO_TEMPERATURE
+#define HAL_NO_TEXT_TO_SPEECH
+#define HAL_NO_THREADS
+#define HAL_NO_UNIQUE_ID
+#define HAL_NO_VIBRATOR
+#define HAL_NO_VOIP
+#define HAL_NO_WIFI
+#endif // HAL_ONLY_GAMEPAD
+
 #ifdef HAL_ONLY_GPS
 #define HAL_NO_ACCELEROMETER
 #define HAL_NO_AUDIO_RECORDING
@@ -962,6 +1024,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
 #define HAL_NO_HUMIDITY
@@ -1006,6 +1069,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GYROSCOPE
 #define HAL_NO_HUMIDITY
@@ -1050,6 +1114,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_HUMIDITY
@@ -1094,6 +1159,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1138,6 +1204,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1182,6 +1249,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1226,6 +1294,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1270,6 +1339,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1314,6 +1384,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1358,6 +1429,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1402,6 +1474,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1446,6 +1519,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1490,6 +1564,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1534,6 +1609,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1578,6 +1654,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1622,6 +1699,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1666,6 +1744,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1710,6 +1789,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1754,6 +1834,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1798,6 +1879,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1842,6 +1924,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1886,6 +1969,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1930,6 +2014,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -1974,6 +2059,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -2018,6 +2104,7 @@ typedef enum bool { false = 0, true = !false } bool;
 #define HAL_NO_FILE_CHOOSER
 #define HAL_NO_FILESYSTEM
 #define HAL_NO_FLASH
+#define HAL_NO_GAMEPAD
 #define HAL_NO_GPS
 #define HAL_NO_GRAVITY
 #define HAL_NO_GYROSCOPE
@@ -2094,6 +2181,9 @@ typedef enum bool { false = 0, true = !false } bool;
 #endif
 #if !defined(HAL_NO_FLASH) && __has_include("native/flash.h")
 #include "native/flash.h"
+#endif
+#if !defined(HAL_NO_GAMEPAD) && __has_include("native/gamepad.h")
+#include "native/gamepad.h"
 #endif
 #if !defined(HAL_NO_GPS) && __has_include("native/gps.h")
 #include "native/gps.h"

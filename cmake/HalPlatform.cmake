@@ -68,6 +68,14 @@ function(hal_add_module_sources MODULE_NAME)
     endif()
   endif()
 
+  # Add additional sources for specific modules
+  if(MODULE_NAME STREQUAL "gamepad")
+    set(MAPPING_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/src/gamepad_mapping.c")
+    if(EXISTS "${MAPPING_SOURCE}")
+      list(APPEND HAL_SOURCES "${MAPPING_SOURCE}")
+    endif()
+  endif()
+
   # Fallback to dummy implementation
   if(NOT SOURCE_FILE)
     set(DUMMY_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/src/dummy_${MODULE_NAME}.c")
