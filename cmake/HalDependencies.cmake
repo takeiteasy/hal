@@ -70,6 +70,21 @@ function(hal_add_module_dependencies MODULE_NAME)
       find_library(UIKIT_FRAMEWORK UIKit REQUIRED)
       find_library(UNIFORMTYPEIDENTIFIERS_FRAMEWORK UniformTypeIdentifiers REQUIRED)
       list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${UIKIT_FRAMEWORK} ${UNIFORMTYPEIDENTIFIERS_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "gps")
+      # iOS GPS uses CoreLocation framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(CORELOCATION_FRAMEWORK CoreLocation REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${CORELOCATION_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "bluetooth")
+      # iOS bluetooth uses CoreBluetooth framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(COREBLUETOOTH_FRAMEWORK CoreBluetooth REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${COREBLUETOOTH_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "notification")
+      # iOS notifications use UserNotifications framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(USERNOTIFICATIONS_FRAMEWORK UserNotifications REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${USERNOTIFICATIONS_FRAMEWORK})
     endif()
     # Add more iOS-specific dependencies as modules are implemented
   endif()
@@ -113,6 +128,26 @@ function(hal_add_module_dependencies MODULE_NAME)
       find_library(APPKIT_FRAMEWORK AppKit REQUIRED)
       find_library(UNIFORMTYPEIDENTIFIERS_FRAMEWORK UniformTypeIdentifiers REQUIRED)
       list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${APPKIT_FRAMEWORK} ${UNIFORMTYPEIDENTIFIERS_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "wifi")
+      # macOS wifi uses CoreWLAN framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(COREWLAN_FRAMEWORK CoreWLAN REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${COREWLAN_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "bluetooth")
+      # macOS bluetooth uses IOBluetooth framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(IOBLUETOOTH_FRAMEWORK IOBluetooth REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${IOBLUETOOTH_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "keystore")
+      # macOS keystore uses Security framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(SECURITY_FRAMEWORK Security REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${SECURITY_FRAMEWORK})
+    elseif(MODULE_NAME STREQUAL "notification")
+      # macOS notifications use UserNotifications framework
+      find_library(FOUNDATION_FRAMEWORK Foundation REQUIRED)
+      find_library(USERNOTIFICATIONS_FRAMEWORK UserNotifications REQUIRED)
+      list(APPEND HAL_LINK_LIBRARIES ${FOUNDATION_FRAMEWORK} ${USERNOTIFICATIONS_FRAMEWORK})
     endif()
     # Add more macOS-specific dependencies as modules are implemented
   endif()

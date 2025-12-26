@@ -13,30 +13,30 @@
 | Audio recording                |         |     |         |       |       |     |
 | Barometer                      | YES     | YES | NO      | NO    | NO    | NO  |
 | Battery                        | YES     | YES | YES     | YES   | YES   | YES |
-| Bluetooth                      |         |     |         |       |       |     |
+| Bluetooth                      | YES     | YES | NO      | YES   | NO    | NO  |
 | Brightness                     | YES     | YES | YES     | YES   | YES   | NO  |
-| Call                           |         |     |         |       |       |     |
-| Camera (taking picture)        |         |     |         |       |       |     |
+| Call                           | YES     | YES | NO      | NO    | NO    | NO  |
+| Camera (taking picture)        | YES     | YES | NO      | NO    | NO    | NO  |
 | Compass                        | YES     | YES | NO      | NO    | NO    | NO  |
 | Clipboard                      | YES     | YES | YES     | YES   | YES   | YES |
 | CPU count                      | YES     | YES | YES     | YES   | YES   | YES |
 | Device name                    | YES     | YES | YES     | YES   | YES   | NO  |
-| Email (open mail client)       |         |     |         |       |       |     |
+| Email (open mail client)       | YES     | YES | YES     | YES   | YES   | YES |
 | Environment                    | YES     | NO  | YES     | YES   | YES   | NO  |
 | File Chooser                   | YES     | YES | YES     | YES   | YES   | [PARTIAL](https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications) |
 | Filesystem                     | YES     | YES | YES     | YES   | YES   | YES |
 | Flash                          | YES     | YES | NO      | NO    | NO    | NO  |
 | Gamepad                        | YES     | YES | YES     | YES   | YES   | YES |
-| GPS                            |         |     |         |       |       |     |
+| GPS                            | YES     | YES | NO      | NO    | NO    | YES |
 | Gravity                        | YES     | YES | NO      | NO    | NO    | NO  |
 | Gyroscope                      | YES     | YES | NO      | NO    | NO    | NO  |
 | Humidity                       | YES     | NO  | NO      | NO    | NO    | NO  |
-| IR Blaster                     |         |     |         |       |       |     |
-| Keystore                       |         |     |         |       |       |     |
+| IR Blaster                     | YES     | NO  | NO      | NO    | NO    | NO  |
+| Keystore                       | YES     | YES | YES     | YES   | YES   | NO  |
 | Light                          | YES     | NO  | NO      | NO    | NO    | NO  |
-| Maps                           |         |     |         |       |       |     |
-| Notifications                  |         |     |         |       |       |     |
-| Orientation                    |         |     |         |       |       |     |
+| Maps                           | YES     | YES | YES     | YES   | YES   | YES |
+| Notifications                  | YES     | YES | YES     | YES   | YES   | NO  |
+| Orientation                    | YES     | YES | NO      | NO    | NO    | NO  |
 | Proximity                      | YES     | YES | NO      | NO    | NO    | NO  |
 | Path Utils                     | YES     | YES | YES     | YES   | YES   | YES |
 | Screenshot                     |         |     |         |       |       |     |
@@ -51,7 +51,7 @@
 | Unique ID                      | YES     | YES | YES     | YES   | YES   | NO  |
 | Vibrator                       | YES     | YES | NO      | NO    | NO    | NO  |
 | Voip                           |         |     |         |       |       |     |
-| Wifi                           |         |     |         |       |       |     |
+| Wifi                           | YES     | NO  | YES     | YES   | YES   | NO  |
 
 ## LICENSE
 
