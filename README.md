@@ -23,7 +23,7 @@
 | Device name                    | YES     | YES | YES     | YES   | YES   | NO  |
 | Email (open mail client)       |         |     |         |       |       |     |
 | Environment                    | YES     | NO  | YES     | YES   | YES   | NO  |
-| File Chooser                   |         |     |         |       |       |     |
+| File Chooser                   | YES     | YES | YES     | YES   | YES   | [PARTIAL](https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications) |
 | Filesystem                     | YES     | YES | YES     | YES   | YES   | YES |
 | Flash                          | YES     | YES | NO      | NO    | NO    | NO  |
 | Gamepad                        | YES     | YES | YES     | YES   | YES   | YES |
