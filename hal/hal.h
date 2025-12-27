@@ -97,6 +97,8 @@ extern "C" {
 #define ARCH_ARM64
 #elif defined(__arm__)
 #define ARCH_ARM32
+#elif defined(__wasm32__) || defined(__wasm__)
+#define ARCH_WASM32
 #else
 #error architecture not supported yet
 #endif
@@ -127,7 +129,7 @@ extern "C" {
 
 #if defined(ARCH_X64) || defined(ARCH_ARM64)
 #define ARCH_64BIT
-#elif defined(ARCH_X86) || defined(ARCH_ARM32)
+#elif defined(ARCH_X86) || defined(ARCH_ARM32) || defined(ARCH_WASM32)
 #define ARCH_32BIT
 #else
 #error architecture not supported yet
