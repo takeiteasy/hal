@@ -24,43 +24,20 @@
 #include <stdlib.h>
 
 /* Callback storage */
-static hal_gamepad_attach_callback_t hal_gamepad_attach_cb = NULL;
-static hal_gamepad_remove_callback_t hal_gamepad_remove_cb = NULL;
-static hal_gamepad_button_callback_t hal_gamepad_button_down_cb = NULL;
-static hal_gamepad_button_callback_t hal_gamepad_button_up_cb = NULL;
-static hal_gamepad_axis_callback_t hal_gamepad_axis_cb = NULL;
+/* Callback storage shared declarations */
+extern hal_gamepad_attach_callback_t hal_gamepad_attach_cb;
+extern hal_gamepad_remove_callback_t hal_gamepad_remove_cb;
+extern hal_gamepad_button_callback_t hal_gamepad_button_down_cb;
+extern hal_gamepad_button_callback_t hal_gamepad_button_up_cb;
+extern hal_gamepad_axis_callback_t hal_gamepad_axis_cb;
 
-static void *hal_gamepad_attach_ctx = NULL;
-static void *hal_gamepad_remove_ctx = NULL;
-static void *hal_gamepad_button_down_ctx = NULL;
-static void *hal_gamepad_button_up_ctx = NULL;
-static void *hal_gamepad_axis_ctx = NULL;
+extern void *hal_gamepad_attach_ctx;
+extern void *hal_gamepad_remove_ctx;
+extern void *hal_gamepad_button_down_ctx;
+extern void *hal_gamepad_button_up_ctx;
+extern void *hal_gamepad_axis_ctx;
 
-/* Callback registration implementations */
-void hal_gamepad_set_attach_callback(hal_gamepad_attach_callback_t callback, void *context) {
-    hal_gamepad_attach_cb = callback;
-    hal_gamepad_attach_ctx = context;
-}
-
-void hal_gamepad_set_remove_callback(hal_gamepad_remove_callback_t callback, void *context) {
-    hal_gamepad_remove_cb = callback;
-    hal_gamepad_remove_ctx = context;
-}
-
-void hal_gamepad_set_button_down_callback(hal_gamepad_button_callback_t callback, void *context) {
-    hal_gamepad_button_down_cb = callback;
-    hal_gamepad_button_down_ctx = context;
-}
-
-void hal_gamepad_set_button_up_callback(hal_gamepad_button_callback_t callback, void *context) {
-    hal_gamepad_button_up_cb = callback;
-    hal_gamepad_button_up_ctx = context;
-}
-
-void hal_gamepad_set_axis_callback(hal_gamepad_axis_callback_t callback, void *context) {
-    hal_gamepad_axis_cb = callback;
-    hal_gamepad_axis_ctx = context;
-}
+/* Callback registration implementations moved to gamepad_common.c */
 
 /* Event types for queued events */
 typedef enum {
