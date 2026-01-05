@@ -33,7 +33,6 @@ set(HAL_ALL_MODULES
   path_utils
   proximity
   screenshot
-  shell
   sms
   spatial_orientation
   speech_to_text
@@ -79,7 +78,6 @@ option(HAL_ENABLE_ORIENTATION "Enable orientation module" ON)
 option(HAL_ENABLE_PATH_UTILS "Enable path utils module" ON)
 option(HAL_ENABLE_PROXIMITY "Enable proximity module" ON)
 option(HAL_ENABLE_SCREENSHOT "Enable screenshot module" ON)
-option(HAL_ENABLE_SHELL "Enable shell module" ON)
 option(HAL_ENABLE_SMS "Enable sms module" ON)
 option(HAL_ENABLE_SPATIAL_ORIENTATION "Enable spatial orientation module" ON)
 option(HAL_ENABLE_SPEECH_TO_TEXT "Enable speech to text module" ON)

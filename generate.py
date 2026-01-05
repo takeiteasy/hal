@@ -32,7 +32,6 @@ names = [
   "path_utils",
   "proximity",
   "screenshot",
-  "shell",
   "sms",
   "spatial_orientation",
   "speech_to_text",

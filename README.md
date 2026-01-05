@@ -42,7 +42,6 @@
 | Screenshot                     |         |     |         |       |       |     |
 | SMS (send messages)            | YES     | YES | YES     | NO    | NO    | NO  |
 | Spatial Orientation            | YES     | YES | NO      | NO    | NO    | NO  |
-| Shell                          | NO      | NO  | YES     | YES   | YES   | NO  |
 | Storage Path                   | YES     | YES | YES     | YES   | YES   | NO  |
 | Speech to Text                 |         |     |         |       |       |     |
 | Temperature                    | YES     | NO  | NO      | NO    | NO    | NO  |
